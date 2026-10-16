@@ -48,18 +48,27 @@ export default function LeaderView({ data, code }: { data: Payload; code: string
     soundRef.current = sound;
   }, [sound]);
 
+  const [auto, setAuto] = useLocal<boolean>("ml-auto", true);
+
   useEffect(() => {
     if (!running) return;
-    tick.current = window.setInterval(() => {
-      setRemaining((r) => {
-        if (r === 1 && soundRef.current) playGong();
-        return r - 1;
-      });
-    }, 1000);
+    tick.current = window.setInterval(() => setRemaining((r) => r - 1), 1000);
     return () => {
       if (tick.current) window.clearInterval(tick.current);
     };
   }, [running, setRemaining]);
+
+  // When a step's clock reaches zero: ring the gong, then move to the next step if auto advance is on.
+  useEffect(() => {
+    if (!running || remaining !== 0) return;
+    if (soundRef.current) playGong();
+    if (auto && idx < AGENDA.length - 1) {
+      const n = idx + 1;
+      setIdx(n);
+      setRemaining(AGENDA[n].minutes * 60);
+    }
+    // On the last step the clock keeps counting up so you can see the overrun.
+  }, [remaining, running, auto, idx, setIdx, setRemaining]);
 
   function goTo(i: number) {
     const n = Math.max(0, Math.min(AGENDA.length - 1, i));
@@ -122,6 +131,13 @@ export default function LeaderView({ data, code }: { data: Payload; code: string
               </button>
               <button className="btn sm ghost" onClick={resetAll}>
                 Reset all
+              </button>
+              <button
+                className="btn sm ghost"
+                onClick={() => setAuto(!auto)}
+                title={auto ? "Next step starts by itself when the clock hits zero" : "Clock counts up past zero until you press Next step"}
+              >
+                {auto ? "Auto advance on" : "Auto advance off"}
               </button>
               <button
                 className="btn sm ghost"
