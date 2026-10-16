@@ -64,7 +64,7 @@ export default function Overview() {
             <AgendaRow key={a.id} a={a} />
           ))}
         </div>
-        <div className="part-tag">Who plays whom · Round 2 continues Round 1, partners tag in</div>
+        <div className="part-tag">Who plays whom in each round</div>
         <table className="roster">
           <thead>
             <tr>
