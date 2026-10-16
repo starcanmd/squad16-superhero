@@ -115,9 +115,8 @@ export const AGENDA: AgendaItem[] = [
     label: "Strengths and areas for improvement",
     minutes: 18,
     detail: [
-      "Each person, including the Fellow, shares their top 2 team strengths and top 2 areas for improvement with rationale",
-      "Brief examples that highlight each issue",
-      "2.5 minutes per person",
+      "Each person, including the Fellow, shares their top 2 team strengths and top 2 areas for improvement with rationale and brief examples that highlight each issue",
+      "Each person will be given 2.5 minutes to share",
     ],
     leadNotes: ["Seven people at 2.5 minutes is 17.5 minutes. Keep a visible timer", "Go in a set order so nobody stalls"],
   },
