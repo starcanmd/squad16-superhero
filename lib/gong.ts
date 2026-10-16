@@ -27,35 +27,36 @@ export function playGong(volume = 0.9) {
   const t0 = c.currentTime;
 
   const master = c.createGain();
+  // Soft bloom instead of a hard strike, then a long even tail.
   master.gain.setValueAtTime(0.0001, t0);
-  master.gain.exponentialRampToValueAtTime(volume, t0 + 0.012);
-  master.gain.exponentialRampToValueAtTime(volume * 0.6, t0 + 0.6);
-  master.gain.exponentialRampToValueAtTime(0.0001, t0 + 7);
+  master.gain.exponentialRampToValueAtTime(volume * 0.7, t0 + 0.06);
+  master.gain.exponentialRampToValueAtTime(volume, t0 + 0.35);
+  master.gain.exponentialRampToValueAtTime(volume * 0.5, t0 + 2.5);
+  master.gain.exponentialRampToValueAtTime(0.0001, t0 + 9);
 
   // A gentle low pass takes the edge off the attack so it reads as metal, not a beep.
   const lp = c.createBiquadFilter();
   lp.type = "lowpass";
-  lp.frequency.setValueAtTime(5200, t0);
-  lp.frequency.exponentialRampToValueAtTime(900, t0 + 5.5);
-  lp.Q.value = 0.7;
+  lp.frequency.setValueAtTime(2600, t0);
+  lp.frequency.exponentialRampToValueAtTime(700, t0 + 6);
+  lp.Q.value = 0.5;
 
   master.connect(lp);
   lp.connect(c.destination);
 
-  // Inharmonic partials give the shimmer. Ratios loosely follow a tam-tam spectrum.
-  const base = 92;
+  // Deeper fundamental that carries the tone, with a few warm overtones.
+  // Ratios sit close to a singing bowl, which reads calm but still fills a room.
+  const base = 82;
   const partials: [number, number, number][] = [
     // ratio, relative gain, decay seconds
-    [1.0, 1.0, 6.5],
-    [1.52, 0.55, 5.5],
-    [2.0, 0.42, 5.0],
-    [2.49, 0.38, 4.6],
-    [3.01, 0.3, 4.0],
-    [3.76, 0.22, 3.6],
-    [4.53, 0.18, 3.0],
-    [5.4, 0.12, 2.6],
-    [6.8, 0.08, 2.0],
-    [8.3, 0.06, 1.6],
+    [1.0, 1.0, 9.0],
+    [1.5, 0.3, 7.5],
+    [2.0, 0.45, 7.0],
+    [2.72, 0.28, 6.0],
+    [3.0, 0.2, 5.5],
+    [4.08, 0.14, 4.5],
+    [5.2, 0.08, 3.5],
+    [6.6, 0.04, 2.5],
   ];
 
   for (const [ratio, g, decay] of partials) {
@@ -72,7 +73,7 @@ export function playGong(volume = 0.9) {
 
     const env = c.createGain();
     env.gain.setValueAtTime(0.0001, t0);
-    env.gain.exponentialRampToValueAtTime(g * 0.5, t0 + 0.02 + ratio * 0.004);
+    env.gain.exponentialRampToValueAtTime(g * 0.5, t0 + 0.05 + ratio * 0.01);
     env.gain.exponentialRampToValueAtTime(0.0001, t0 + decay);
 
     osc.connect(env);
@@ -85,19 +86,19 @@ export function playGong(volume = 0.9) {
   }
 
   // Short noise burst for the mallet strike.
-  const len = Math.floor(c.sampleRate * 0.08);
+  const len = Math.floor(c.sampleRate * 0.05);
   const buf = c.createBuffer(1, len, c.sampleRate);
   const data = buf.getChannelData(0);
   for (let i = 0; i < len; i++) data[i] = (Math.random() * 2 - 1) * (1 - i / len);
   const noise = c.createBufferSource();
   noise.buffer = buf;
   const nGain = c.createGain();
-  nGain.gain.setValueAtTime(0.25, t0);
-  nGain.gain.exponentialRampToValueAtTime(0.0001, t0 + 0.09);
+  nGain.gain.setValueAtTime(0.08, t0);
+  nGain.gain.exponentialRampToValueAtTime(0.0001, t0 + 0.06);
   const nFilter = c.createBiquadFilter();
   nFilter.type = "bandpass";
-  nFilter.frequency.value = 1800;
-  nFilter.Q.value = 0.8;
+  nFilter.frequency.value = 900;
+  nFilter.Q.value = 1.2;
   noise.connect(nFilter);
   nFilter.connect(nGain);
   nGain.connect(master);
