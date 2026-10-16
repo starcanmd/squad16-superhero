@@ -246,7 +246,7 @@ export const PREP_TASKS: PrepTask[] = [
 ];
 
 export const ROSTER = [
-  { name: "Serim Tarcan", r1: "Casey Parker (VC)", r2: "Feedback partner to Casey", side: "vc", extra: "Meeting Lead" },
+  { name: "Serim Tarcan", r1: "Casey Parker (VC)", r2: "Feedback partner to Casey", side: "vc" },
   { name: "Ellis Wilder", r1: "Feedback partner to Casey", r2: "Casey Parker (VC)", side: "vc" },
   { name: "Vanessa Sims", r1: "Quinn Nguyen (VC)", r2: "Quinn Nguyen (VC)", side: "vc", extra: "Fellow" },
   { name: "Yash Saraf", r1: "Ren Ito (Co-founder)", r2: "Feedback partner to Ren", side: "cofounder" },
