@@ -90,10 +90,14 @@ export const AGENDA: AgendaItem[] = [
     minutes: 8,
     detail: [
       "Take a moment to de-role and let go of the feelings the case generated",
-      "Feedback in pairs using the Action and Impact model",
-      "How well did the person handle the key leadership issues?",
-      "Which behaviors were most effective, which least?",
-      "What did we learn?",
+      {
+        text: "Provide feedback in pairs using the Action and Impact model and the following questions",
+        sub: [
+          "How well did the person handle the key leadership issues?",
+          "Which behaviors were most effective, which least?",
+          "What did we learn?",
+        ],
+      },
     ],
     leadNotes: ["Call the de-role explicitly before anyone speaks", "Ask the squad to take a few breaths before Part 2"],
   },
