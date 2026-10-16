@@ -307,3 +307,54 @@ textarea.notes {
 .insight b { font-weight: 500; font-size: 14px; color: var(--green); }
 .insight p { font-size: 14px; margin: 0; }
 @media (max-width: 640px) { .insight { grid-template-columns: 1fr; gap: 4px; } }
+
+/* ---------- Mobile pass ---------- */
+@media (max-width: 820px) {
+  .topbar-inner {
+    height: auto; padding: 10px 0 8px; display: grid; grid-template-columns: 1fr auto; row-gap: 8px; align-items: center;
+  }
+  .brand { font-size: 15px; }
+  .who { justify-self: end; }
+  .tabs {
+    grid-column: 1 / -1; display: flex; gap: 6px; overflow-x: auto; white-space: nowrap; scrollbar-width: none;
+    margin: 0 -20px; padding: 0 20px 2px;
+  }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tab { flex: 0 0 auto; padding: 7px 13px; font-size: 13.5px; }
+
+  .hero { padding: 28px 0 16px; }
+  .hero h1, .hero-split h1 { font-size: 34px; }
+  .hero p { font-size: 16px; margin-top: 12px; }
+  .chips { gap: 6px; margin-top: 16px; }
+  .chip { font-size: 12px; padding: 5px 10px; }
+  .eyebrow { font-size: 11px; }
+  .section { padding: 20px 0; }
+  .section-head { flex-direction: column; align-items: flex-start; gap: 4px; margin-bottom: 12px; }
+  .section-head h2 { font-size: 26px; }
+  .card { padding: 16px; }
+  .agenda-row { grid-template-columns: 44px 1fr; gap: 12px; padding: 14px; }
+  .agenda-row .min { font-size: 22px; }
+
+  /* Tables scroll instead of squeezing */
+  table.roster { display: block; overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch; }
+  table.roster th, table.roster td { padding: 10px 12px; }
+
+  /* Individual view */
+  .role-hero .big { font-size: 28px; }
+  .rate-opts { flex-wrap: wrap; }
+  .rate { padding: 5px 11px; font-size: 12.5px; }
+
+  /* Lab lead view */
+  .timer-bar { grid-template-columns: 1fr; padding: 16px; }
+  .timer-bar .clock { font-size: 56px; text-align: left; }
+  .timer-bar .name { font-size: 24px; }
+  .step { grid-template-columns: 20px 44px 1fr auto; gap: 8px; padding: 9px 10px; font-size: 13px; }
+  .tally { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .nom { grid-template-columns: 30px 1fr; }
+  .gate { margin: 36px auto; }
+  .gate form { flex-direction: column; }
+  .gate .btn { width: 100%; }
+}
+
+.t-short { display: none; }
+@media (max-width: 820px) { .t-full { display: none; } .t-short { display: inline; } .tabs { margin: 0; padding: 0; } }
