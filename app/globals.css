@@ -361,3 +361,5 @@ textarea.notes {
 .inline-gate input:focus { outline: 2px solid var(--yellow); border-color: transparent; }
 .inline-gate .err { margin-top: 0; flex-basis: 100%; }
 @media (max-width: 640px) { .inline-gate .btn { width: 100%; } }
+
+.gate input.code, .inline-gate input.code { text-transform: uppercase; letter-spacing: 0.08em; font-variant-numeric: tabular-nums; }

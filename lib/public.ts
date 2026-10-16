@@ -167,7 +167,7 @@ export const PREP_TASKS: PrepTask[] = [
     id: "read-case",
     title: "Read your version of the case",
     detail:
-      "Open Individual view, enter your Stanford email, and read the case pack for your side. VCs have the VC version, co-founders have the co-founder version. Read the whole thing once, then reread the section on your character.",
+      "Open Individual view, enter your passcode, and read the case pack for your side. VCs have the VC version, co-founders have the co-founder version. Read the whole thing once, then reread the section on your character.",
     who: "everyone",
   },
   {

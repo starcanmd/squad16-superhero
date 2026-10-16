@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { findPerson } from "@/lib/content";
+import { authPerson } from "@/lib/content";
 import { setJSON, getJSON } from "@/lib/store";
 import { ALL_ITEMS, type Submission } from "@/lib/public";
 
@@ -8,16 +8,16 @@ export const runtime = "nodejs";
 const VALID = new Set(ALL_ITEMS.map((i) => i.id));
 
 export async function POST(req: Request) {
-  let email = "", data: Partial<Submission> = {};
+  let code = "", data: Partial<Submission> = {};
   try {
     const b = await req.json();
-    email = String(b?.email ?? "");
+    code = String(b?.code ?? "");
     data = b?.submission ?? {};
   } catch {
     return NextResponse.json({ error: "Bad request" }, { status: 400 });
   }
-  const person = findPerson(email);
-  if (!person) return NextResponse.json({ error: "Forbidden" }, { status: 403 });
+  const person = authPerson(code);
+  if (!person) return NextResponse.json({ error: "Passcode not recognized." }, { status: 403 });
 
   const ratings: Submission["ratings"] = {};
   for (const [k, v] of Object.entries(data.ratings ?? {})) {

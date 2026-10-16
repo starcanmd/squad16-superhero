@@ -5,11 +5,11 @@ import AssessmentForm from "./AssessmentForm";
 
 export default function MyView({
   data,
-  email,
+  code,
   onData,
 }: {
   data: Payload;
-  email: string;
+  code: string;
   onData: (next: Payload) => void;
 }) {
   const { person, pack } = data;
@@ -137,7 +137,7 @@ export default function MyView({
       )}
 
       <AssessmentForm
-        email={email}
+        code={code}
         existing={data.submission}
         onSaved={(submission: Submission, checks) => onData({ ...data, submission, checks })}
       />

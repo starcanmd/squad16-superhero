@@ -10,11 +10,11 @@ export default function Gate({
 }: {
   title: string;
   blurb: string;
-  onSubmit: (email: string) => void;
+  onSubmit: (code: string) => void;
   busy: boolean;
   error: string | null;
 }) {
-  const [email, setEmail] = useState("");
+  const [code, setCode] = useState("");
   return (
     <div className="gate wrap">
       <h2 className="serif">{title}</h2>
@@ -22,18 +22,20 @@ export default function Gate({
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          if (email.trim()) onSubmit(email.trim());
+          if (code.trim()) onSubmit(code.trim());
         }}
       >
         <input
-          type="email"
-          placeholder="sunetid@stanford.edu"
-          value={email}
-          autoComplete="email"
-          onChange={(e) => setEmail(e.target.value)}
-          aria-label="Stanford email"
+          type="text"
+          placeholder="Passcode"
+          value={code}
+          autoComplete="off"
+          autoCapitalize="characters"
+          onChange={(e) => setCode(e.target.value)}
+          aria-label="Passcode"
+          className="code"
         />
-        <button className="btn" type="submit" disabled={busy || !email.trim()}>
+        <button className="btn" type="submit" disabled={busy || !code.trim()}>
           {busy ? "Checking" : "Open"}
         </button>
       </form>

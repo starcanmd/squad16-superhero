@@ -13,7 +13,7 @@ const EXTRAS: Record<string, { link?: { label: string; href: string }; insights?
 
 export default function ChecklistView({
   data,
-  email,
+  code,
   onData,
   onOpenMe,
   onLogin,
@@ -21,16 +21,16 @@ export default function ChecklistView({
   error,
 }: {
   data: Payload | null;
-  email: string;
+  code: string;
   onData: (next: Payload) => void;
   onOpenMe: () => void;
-  onLogin: (email: string) => void;
+  onLogin: (code: string) => void;
   busy: boolean;
   error: string | null;
 }) {
   const [localDone, setLocalDone] = useLocal<Record<string, boolean>>("prep-done", {});
   const [pending, setPending] = useState<string | null>(null);
-  const [draft, setDraft] = useState("");
+  const [draftCode, setDraftCode] = useState("");
 
   async function togglePersonal(id: string, value: boolean) {
     if (!data) return;
@@ -41,7 +41,7 @@ export default function ChecklistView({
       const res = await fetch("/api/checklist", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, taskId: id, done: value }),
+        body: JSON.stringify({ code, taskId: id, done: value }),
       });
       if (res.ok) {
         const j = await res.json();
@@ -68,25 +68,27 @@ export default function ChecklistView({
         <p>
           {personal
             ? "Built for your role. Ticks save to the squad site, so Serim can see who is ready without asking."
-            : "This is the list everyone shares. Enter your Stanford email and it becomes your own list, with the items for your role added and your ticks saved."}
+            : "This is the list everyone shares. Enter the passcode Serim sent you and it becomes your own list, with the items for your role added and your ticks saved."}
         </p>
         {!personal && (
           <form
             className="inline-gate"
             onSubmit={(e) => {
               e.preventDefault();
-              if (draft.trim()) onLogin(draft.trim());
+              if (draftCode.trim()) onLogin(draftCode.trim());
             }}
           >
             <input
-              type="email"
-              placeholder="sunetid@stanford.edu"
-              value={draft}
-              autoComplete="email"
-              aria-label="Stanford email"
-              onChange={(e) => setDraft(e.target.value)}
+              type="text"
+              placeholder="Passcode"
+              value={draftCode}
+              autoComplete="off"
+              autoCapitalize="characters"
+              aria-label="Passcode"
+              className="code"
+              onChange={(e) => setDraftCode(e.target.value)}
             />
-            <button className="btn" type="submit" disabled={busy || !draft.trim()}>
+            <button className="btn" type="submit" disabled={busy || !draftCode.trim()}>
               {busy ? "Checking" : "Show my list"}
             </button>
             {error && <span className="err">{error}</span>}

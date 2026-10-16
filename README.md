@@ -22,6 +22,10 @@ Submissions and checklist ticks are stored server side so the squad sees one con
 
 Until this is done the site still works, but the Results tab shows a warning and submissions are not kept between visits.
 
+## Passcodes
+
+Each person has a private passcode in `PEOPLE` in `lib/content.ts`. The passcode alone identifies them, so hand it over directly (a DM, not a group chat). To rotate one, change the `code` value and push. The list is in PASSCODES.md next to the project on Serim's Mac, never in the repo.
+
 ## Where things live
 
 - `lib/public.ts` Agenda, prep tasks, roster. Visible to anyone.

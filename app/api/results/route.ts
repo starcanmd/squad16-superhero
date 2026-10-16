@@ -1,20 +1,20 @@
 import { NextResponse } from "next/server";
-import { findPerson, PEOPLE, checklistFor } from "@/lib/content";
+import { authPerson, PEOPLE, checklistFor } from "@/lib/content";
 import { getMany, storeConfigured } from "@/lib/store";
 import type { Submission } from "@/lib/public";
 
 export const runtime = "nodejs";
 
 export async function POST(req: Request) {
-  let email = "";
+  let code = "";
   try {
     const b = await req.json();
-    email = String(b?.email ?? "");
+    code = String(b?.code ?? "");
   } catch {
     return NextResponse.json({ error: "Bad request" }, { status: 400 });
   }
-  const person = findPerson(email);
-  if (!person) return NextResponse.json({ error: "Forbidden" }, { status: 403 });
+  const person = authPerson(code);
+  if (!person) return NextResponse.json({ error: "Passcode not recognized." }, { status: 403 });
 
   const keys = PEOPLE.map((p) => p.key);
   const [subs, checks] = await Promise.all([

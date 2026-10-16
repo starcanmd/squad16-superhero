@@ -12,29 +12,29 @@ type Tab = "overview" | "checklist" | "me" | "results" | "lead";
 
 export default function Page() {
   const [tab, setTab] = useState<Tab>("overview");
-  const [email, setEmail] = useState<string>("");
+  const [code, setCode] = useState<string>("");
   const [data, setData] = useState<Payload | null>(null);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const load = useCallback(async (e: string, silent = false) => {
+  const load = useCallback(async (c: string, silent = false) => {
     setBusy(true);
     setError(null);
     try {
       const res = await fetch("/api/pack", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: e }),
+        body: JSON.stringify({ code: c }),
       });
       const json = await res.json();
       if (!res.ok) {
         if (!silent) setError(json.error ?? "Something went wrong.");
-        try { window.localStorage.removeItem("squad-email"); } catch {}
+        try { window.localStorage.removeItem("squad-code"); } catch {}
         return;
       }
       setData(json);
-      setEmail(e.trim().toLowerCase());
-      try { window.localStorage.setItem("squad-email", e); } catch {}
+      setCode(c.trim().toUpperCase());
+      try { window.localStorage.setItem("squad-code", c); } catch {}
     } catch {
       if (!silent) setError("Could not reach the server. Try again.");
     } finally {
@@ -44,19 +44,19 @@ export default function Page() {
 
   useEffect(() => {
     try {
-      const saved = window.localStorage.getItem("squad-email");
-      if (saved) load(saved, true);
+      const savedCode = window.localStorage.getItem("squad-code");
+      if (savedCode) load(savedCode, true);
     } catch {}
   }, [load]);
 
   function signOut() {
     setData(null);
-    setEmail("");
-    try { window.localStorage.removeItem("squad-email"); } catch {}
+    setCode("");
+    try { window.localStorage.removeItem("squad-code"); } catch {}
   }
 
   const gate = (title: string, blurb: string) => (
-    <Gate title={title} blurb={blurb} onSubmit={(e) => load(e)} busy={busy} error={error} />
+    <Gate title={title} blurb={blurb} onSubmit={(c) => load(c)} busy={busy} error={error} />
   );
 
   return (
@@ -102,10 +102,10 @@ export default function Page() {
         {tab === "checklist" && (
           <ChecklistView
             data={data}
-            email={email}
+            code={code}
             onData={setData}
             onOpenMe={() => setTab("me")}
-            onLogin={(e) => load(e)}
+            onLogin={(c) => load(c)}
             busy={busy}
             error={error}
           />
@@ -113,28 +113,28 @@ export default function Page() {
 
         {tab === "me" &&
           (data ? (
-            <MyView data={data} email={email} onData={setData} />
+            <MyView data={data} code={code} onData={setData} />
           ) : (
-            gate("Your role and prep", "Enter your Stanford email to open your role, your checklist, the Team Assessment, and your side's case pack.")
+            gate("Your role and prep", "Enter the passcode Serim sent you to open your role, the Team Assessment, and your side's case pack.")
           ))}
 
         {tab === "results" &&
           (data ? (
-            <ResultsView email={email} />
+            <ResultsView code={code} />
           ) : (
-            gate("Team Assessment results", "Enter your Stanford email to see the squad's consolidated assessment.")
+            gate("Team Assessment results", "Enter your passcode to see the squad's consolidated assessment.")
           ))}
 
         {tab === "lead" &&
           (data?.person.isLead ? (
-            <LeaderView data={data} email={email} />
+            <LeaderView data={data} code={code} />
           ) : data ? (
             <div className="gate wrap">
               <h2 className="serif">Meeting Lead only</h2>
               <p>This tab is for the Meeting Lead. Your prep is under Individual view.</p>
             </div>
           ) : (
-            gate("Leader view", "Enter the Meeting Lead's Stanford email.")
+            gate("Leader view", "Enter the Meeting Lead's passcode.")
           ))}
       </main>
 

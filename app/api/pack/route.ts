@@ -1,22 +1,22 @@
 import { NextResponse } from "next/server";
-import { checklistFor, findPerson, packFor, PEOPLE } from "@/lib/content";
+import { checklistFor, authPerson, packFor, PEOPLE } from "@/lib/content";
 import { getJSON, storeConfigured } from "@/lib/store";
 import type { Submission } from "@/lib/public";
 
 export const runtime = "nodejs";
 
 export async function POST(req: Request) {
-  let email = "";
+  let code = "";
   try {
     const body = await req.json();
-    email = String(body?.email ?? "");
+    code = String(body?.code ?? "");
   } catch {
     return NextResponse.json({ error: "Bad request" }, { status: 400 });
   }
 
-  const person = findPerson(email);
+  const person = authPerson(code);
   if (!person) {
-    return NextResponse.json({ error: "That email is not on the Nightwalkers list." }, { status: 403 });
+    return NextResponse.json({ error: "That passcode is not on the Nightwalkers list." }, { status: 403 });
   }
 
   const { email: _e, ...safePerson } = person;

@@ -12,6 +12,7 @@ export type Person = {
   name: string;
   firstName: string;
   email: string;
+  code: string; // private access code, handed to each person directly
   side: Side;
   isLead?: boolean;
   character: string; // the character they play
@@ -27,6 +28,7 @@ export type Person = {
 export const PEOPLE: Person[] = [
   {
     key: "serim",
+    code: "NW-UC3DXT",
     name: "Serim Tarcan",
     firstName: "Serim",
     email: "starcan@stanford.edu",
@@ -87,6 +89,7 @@ export const PEOPLE: Person[] = [
   },
   {
     key: "ellis",
+    code: "NW-7ESHBM",
     name: "Ellis Wilder",
     firstName: "Ellis",
     email: "ewild@stanford.edu",
@@ -136,6 +139,7 @@ export const PEOPLE: Person[] = [
   },
   {
     key: "vanessa",
+    code: "NW-NZDE7V",
     name: "Vanessa Sims",
     firstName: "Vanessa",
     email: "vsims1@stanford.edu",
@@ -180,6 +184,7 @@ export const PEOPLE: Person[] = [
   },
   {
     key: "yash",
+    code: "NW-V763X5",
     name: "Yash Saraf",
     firstName: "Yash",
     email: "yashsrf@stanford.edu",
@@ -250,6 +255,7 @@ export const PEOPLE: Person[] = [
   },
   {
     key: "cam",
+    code: "NW-7VSXGF",
     name: "Cam Zahner",
     firstName: "Cam",
     email: "czahner@stanford.edu",
@@ -301,6 +307,7 @@ export const PEOPLE: Person[] = [
   },
   {
     key: "minyoung",
+    code: "NW-BJ8LQX",
     name: "Minyoung Hwang",
     firstName: "Minyoung",
     email: "myshwang@stanford.edu",
@@ -350,6 +357,7 @@ export const PEOPLE: Person[] = [
   },
   {
     key: "yuhan",
+    code: "NW-43TZFG",
     name: "Yuhan Wang",
     firstName: "Yuhan",
     email: "bigdeal@stanford.edu",
@@ -605,6 +613,13 @@ export function checklistFor(person: Person): CheckItem[] {
 export function findPerson(email: string): Person | undefined {
   const e = email.trim().toLowerCase();
   return PEOPLE.find((p) => p.email.toLowerCase() === e);
+}
+
+// The passcode alone identifies the person.
+export function authPerson(code: string): Person | undefined {
+  const c = String(code ?? "").trim().toUpperCase().replace(/\s+/g, "");
+  if (!c) return undefined;
+  return PEOPLE.find((p) => p.code.toUpperCase() === c);
 }
 
 export function packFor(person: Person): Section[] {

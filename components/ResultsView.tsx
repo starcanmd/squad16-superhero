@@ -3,7 +3,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { ASSESSMENT, ITEM_TEXT, type Rating } from "@/lib/public";
 import type { Results } from "@/lib/types";
 
-export default function ResultsView({ email }: { email: string }) {
+export default function ResultsView({ code }: { code: string }) {
   const [data, setData] = useState<Results | null>(null);
   const [err, setErr] = useState<string | null>(null);
 
@@ -12,7 +12,7 @@ export default function ResultsView({ email }: { email: string }) {
       const res = await fetch("/api/results", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ code }),
       });
       if (!res.ok) throw new Error();
       setData(await res.json());
@@ -20,7 +20,7 @@ export default function ResultsView({ email }: { email: string }) {
     } catch {
       setErr("Could not load results.");
     }
-  }, [email]);
+  }, [code]);
 
   useEffect(() => {
     load();

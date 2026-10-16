@@ -14,7 +14,7 @@ const WATCH: Record<string, { what: string; unit: string }> = {
   yuhan: { what: "Pace sped up or body showed irritation", unit: "moments" },
 };
 
-export default function LeaderView({ data, email }: { data: Payload; email: string }) {
+export default function LeaderView({ data, code }: { data: Payload; code: string }) {
   const squad = data.squad ?? [];
 
   // Live prep and assessment status from the shared store
@@ -24,11 +24,11 @@ export default function LeaderView({ data, email }: { data: Payload; email: stri
       const res = await fetch("/api/results", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ code }),
       });
       if (res.ok) setResults(await res.json());
     } catch {}
-  }, [email]);
+  }, [code]);
   useEffect(() => {
     loadResults();
     const t = window.setInterval(loadResults, 30000);

@@ -9,11 +9,11 @@ const RATINGS: { v: Rating; label: string }[] = [
 ];
 
 export default function AssessmentForm({
-  email,
+  code,
   existing,
   onSaved,
 }: {
-  email: string;
+  code: string;
   existing: Submission | null;
   onSaved: (s: Submission, checks: Record<string, boolean>) => void;
 }) {
@@ -46,7 +46,7 @@ export default function AssessmentForm({
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          email,
+          code,
           submission: { ratings, topStrengths: topS, topImprove: topI, examples, other },
         }),
       });
