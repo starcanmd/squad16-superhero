@@ -24,7 +24,7 @@ export default function Overview() {
           </p>
           <p>
             To get the most benefit out of our time together, I&apos;d suggest that you skim the agenda below, follow
-            the checklist, and review your case pack in the Individual view tab. Come ready to play and have fun! 🦸⭐
+            the checklist in the second tab above, and review your case pack in the individual view tab. Come ready to play and have fun! 🦸⭐
           </p>
           <div className="chips">
             <span className="chip yellow">{LAB.squad}</span>
