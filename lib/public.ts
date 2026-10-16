@@ -34,7 +34,7 @@ export const AGENDA: AgendaItem[] = [
     minutes: 5,
     detail: [
       "Review objectives and agenda (1 minute)",
-      "Co-founders Ren and Hayden huddle to agree on their opening, what they will protect, and what they will concede. VCs Casey and Quinn huddle to agree on who raises which concern and which funding option they lead with (4 minutes)",
+      "Co-founders and VCs confer in pairs to align on their strategy (4 minutes)",
     ],
     leadNotes: [
       "Place the squad tent on the table",
