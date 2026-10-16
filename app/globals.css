@@ -365,3 +365,4 @@ textarea.notes {
 .gate input.code, .inline-gate input.code { text-transform: uppercase; letter-spacing: 0.08em; font-variant-numeric: tabular-nums; }
 
 .hero p.ps { font-size: 15px; color: var(--ink-3); font-style: italic; }
+.agenda-row ul ul, .card ul ul { margin-top: 4px; padding-left: 18px; }

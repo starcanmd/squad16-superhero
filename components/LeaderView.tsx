@@ -172,9 +172,19 @@ export default function LeaderView({ data, code }: { data: Payload; code: string
             <div className="card yellow">
               <h3>{step.label}</h3>
               <ul>
-                {step.detail.map((d) => (
-                  <li key={d}>{d}</li>
-                ))}
+                {step.detail.map((d) =>
+            typeof d === "string" ? (
+              <li key={d}>{d}</li>
+            ) : (
+              <li key={d.text}>
+                {d.text}
+                <ul>
+                  {d.sub.map((x) => (
+                    <li key={x}>{x}</li>
+                  ))}
+                </ul>
+              </li>
+            ))}
               </ul>
               {step.leadNotes && (
                 <>

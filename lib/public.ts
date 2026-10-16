@@ -15,12 +15,14 @@ export const LAB = {
   ],
 };
 
+export type Detail = string | { text: string; sub: string[] };
+
 export type AgendaItem = {
   id: string;
   part: 1 | 2;
   label: string;
   minutes: number;
-  detail: string[];
+  detail: Detail[];
   leadNotes?: string[];
 };
 
@@ -56,10 +58,14 @@ export const AGENDA: AgendaItem[] = [
     label: "Midpoint check-in",
     minutes: 8,
     detail: [
-      "Strategize in pairs with the person playing the same role",
-      "Which strategies and behaviors were most effective?",
-      "Which were least effective?",
-      "What 1 or 2 actions will you try in Round 2?",
+      {
+        text: "Strategize in pairs with the person playing the same role in the next round, using the following questions",
+        sub: [
+          "Which strategies and behaviors were most effective?",
+          "Which were least effective?",
+          "What 1 or 2 actions will you try in Round 2?",
+        ],
+      },
     ],
     leadNotes: [
       "Round 2 continues the same conversation. The partner tags in, it is not a fresh start",

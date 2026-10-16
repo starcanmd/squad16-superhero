@@ -111,9 +111,19 @@ function AgendaRow({ a }: { a: (typeof AGENDA)[number] }) {
       <div>
         <h3>{a.label}</h3>
         <ul>
-          {a.detail.map((d) => (
-            <li key={d}>{d}</li>
-          ))}
+          {a.detail.map((d) =>
+            typeof d === "string" ? (
+              <li key={d}>{d}</li>
+            ) : (
+              <li key={d.text}>
+                {d.text}
+                <ul>
+                  {d.sub.map((x) => (
+                    <li key={x}>{x}</li>
+                  ))}
+                </ul>
+              </li>
+            ))}
         </ul>
       </div>
     </div>
