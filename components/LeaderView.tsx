@@ -1,18 +1,10 @@
 "use client";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import type { Payload, Results } from "@/lib/types";
-import { AGENDA, ASSESSMENT, ITEM_TEXT } from "@/lib/public";
+import { AGENDA } from "@/lib/public";
 import { useLocal } from "@/lib/useLocal";
 import { armGong, playGong } from "@/lib/gong";
 
-const WATCH: Record<string, { what: string; unit: string }> = {
-  serim: { what: "Stated a disagreement and held it", unit: "disagreements" },
-  ellis: { what: "Qualified a statement (I think, I would say)", unit: "qualifiers" },
-  yash: { what: "Asked follow up questions before stating a view", unit: "questions" },
-  cam: { what: "Spoke when Ren did not need to", unit: "moments" },
-  minyoung: { what: "Reasserted a view through a full exchange", unit: "exchanges" },
-  yuhan: { what: "Pace sped up or body showed irritation", unit: "moments" },
-};
 
 export default function LeaderView({ data, code }: { data: Payload; code: string }) {
   const squad = data.squad ?? [];
@@ -89,19 +81,9 @@ export default function LeaderView({ data, code }: { data: Payload; code: string
   const ss = String(abs % 60).padStart(2, "0");
   const pct = Math.max(0, Math.min(100, (1 - remaining / (step.minutes * 60)) * 100));
 
-  // Goal tallies
-  const [tally, setTally] = useLocal<Record<string, number>>("ml-tally", {});
-  // Team assessment votes
-  const [votes, setVotes] = useLocal<Record<string, { s: number; i: number }>>("ml-votes", {});
   // Notes
   const [notes, setNotes] = useLocal<string>("ml-notes", "");
 
-  const topVotes = useMemo(() => {
-    const all = Object.entries(votes);
-    const s = [...all].sort((a, b) => b[1].s - a[1].s).filter((x) => x[1].s > 0).slice(0, 2);
-    const i = [...all].sort((a, b) => b[1].i - a[1].i).filter((x) => x[1].i > 0).slice(0, 2);
-    return { s, i };
-  }, [votes]);
 
   return (
     <>
@@ -223,32 +205,6 @@ export default function LeaderView({ data, code }: { data: Payload; code: string
 
       <section className="section wrap">
         <div className="section-head">
-          <h2 className="serif">Goal tally during the role play</h2>
-          <span className="meta">One count per person, taken from what they asked the squad to watch</span>
-        </div>
-        <div className="tally">
-          {squad.filter((m) => WATCH[m.key]).map((m) => {
-            const w = WATCH[m.key];
-            const c = tally[m.key] ?? 0;
-            return (
-              <div key={m.key} className="tally-item">
-                <div className="name">{m.firstName}</div>
-                <div className="sub">{w?.what}</div>
-                <div className="row">
-                  <span className="count">{c}</span>
-                  <span style={{ display: "flex", gap: 6 }}>
-                    <button onClick={() => setTally({ ...tally, [m.key]: Math.max(0, c - 1) })}>–</button>
-                    <button onClick={() => setTally({ ...tally, [m.key]: c + 1 })}>+</button>
-                  </span>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </section>
-
-      <section className="section wrap">
-        <div className="section-head">
           <h2 className="serif">Prep tracker</h2>
           <span className="meta">Live from each person's checklist. Refreshes every 30 seconds</span>
         </div>
@@ -295,48 +251,6 @@ export default function LeaderView({ data, code }: { data: Payload; code: string
             })}
           </tbody>
         </table>
-      </section>
-
-      <section className="section wrap">
-        <div className="section-head">
-          <h2 className="serif">Priority vote in the room</h2>
-          <span className="meta">
-            Leading strength: {topVotes.s.map(([k]) => ITEM_TEXT[k]).join(" / ") || "none yet"} · Leading
-            improvement: {topVotes.i.map(([k]) => ITEM_TEXT[k]).join(" / ") || "none yet"}
-          </span>
-        </div>
-        <p className="lede">Use the Team assessment results tab for what people submitted. Tally the live vote here during Priority issues.</p>
-        <div className="grid grid-3">
-          {ASSESSMENT.map((cat) => (
-            <div key={cat.key} className="card">
-              <h3>{cat.label}</h3>
-              {cat.items.map((item) => {
-                const k = item.id;
-                const v = votes[k] ?? { s: 0, i: 0 };
-                return (
-                  <div key={k} className="vote">
-                    <span>{item.text}</span>
-                    <span className="ctr">
-                      <button title="strength" onClick={() => setVotes({ ...votes, [k]: { ...v, s: v.s + 1 } })}>
-                        S
-                      </button>
-                      <b className="s">{v.s}</b>
-                      <button title="improve" onClick={() => setVotes({ ...votes, [k]: { ...v, i: v.i + 1 } })}>
-                        I
-                      </button>
-                      <b className="i">{v.i}</b>
-                    </span>
-                  </div>
-                );
-              })}
-            </div>
-          ))}
-        </div>
-        <p style={{ marginTop: 10 }}>
-          <button className="btn sm ghost" onClick={() => setVotes({})}>
-            Clear votes
-          </button>
-        </p>
       </section>
 
       <section className="section wrap">
