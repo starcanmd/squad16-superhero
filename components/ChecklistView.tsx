@@ -67,7 +67,7 @@ export default function ChecklistView({
         </h1>
         <p>
           {personal
-            ? "Built for your role. Ticks save to the squad site, so Serim can see who is ready without asking."
+            ? "This checklist is built for your role. Your ticks save as you go, so you can track your own progress. None of it takes long, and a little prep from each of us makes Wednesday a lot more fun."
             : "This is the list everyone shares. Enter the passcode Serim sent you and it becomes your own list, with the items for your role added and your ticks saved."}
         </p>
         {!personal && (
