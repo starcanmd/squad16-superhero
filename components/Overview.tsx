@@ -19,10 +19,12 @@ export default function Overview() {
             Nightwalkers, you are summoned for our next Lead Lab on {LAB.date}. We will spend 105 minutes together,
             split into two parts. In the first part, we are going to come to an agreement over seed funding. Some of us
             will play the founders who need the money, some of us will play the VCs who have doubts, and the rest will
-            watch closely and give feedback. Then we swap in for a second round and pick up where the first one left
-            off. In the second part, we turn the lens on ourselves and talk about how this squad is working and what we
-            want to change. Skim the agenda below, work through the Checklist tab, and open Individual view for your role, your
-            case pack, and the assessment form. Come ready to play yourself.
+            watch closely and give feedback. In the second part, we turn the lens on ourselves and talk about how this
+            squad is working and what we want to change.
+          </p>
+          <p>
+            To get the most benefit out of our time together, I&apos;d suggest that you skim the agenda below, follow
+            the checklist, and review your case pack in the Individual view tab. Come ready to play and have fun! 🦸⭐
           </p>
           <div className="chips">
             <span className="chip yellow">{LAB.squad}</span>
