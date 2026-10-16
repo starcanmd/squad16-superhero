@@ -19,9 +19,11 @@ export default function Overview({ onOpenMyView }: { onOpenMyView: () => void })
             Superhero View Case <em>and</em> Team Assessment
           </h1>
           <p>
-            Two parts on {LAB.date}. A 45-minute founder and VC role play in two rounds, then a 60-minute
-            squad Team Assessment. This page has the agenda and what to do before we meet. Your personal checklist and
-            the assessment form are in Individual view.
+            Nightwalkers, you are summoned for our next Lead Lab on {LAB.date}. We will spend 105 minutes together.
+            The first 45 are a founder and VC showdown over seed money, played in two rounds so everyone gets a turn in
+            the hot seat. The next 60 are ours, a frank look at how this squad is working and what we want to change.
+            Everything you need is here. Skim the agenda, do the few things on the checklist, and open Individual view
+            to find your role, your case pack, and the assessment form. Come ready to play yourself.
           </p>
           <div className="chips">
             <span className="chip yellow">{LAB.squad}</span>
