@@ -232,12 +232,12 @@ export const PREP_TASKS: PrepTask[] = [
       {
         title: "Inquire before you advocate",
         text:
-          "The model lists inquiring about solutions, versus advocating fiercely, as a core decision making behavior. In the meeting, the side that asks the first real question usually sets the frame. VCs, ask Hayden what they took from the last meeting before delivering feedback. Founders, ask what Arrow needs to see before defending anything.",
+          "The model lists inquiring about solutions, versus advocating fiercely, as a core decision making behavior. In the meeting, the side that asks the first real question usually sets the frame. Before you make your case, ask the other side what they need to walk away with today.",
       },
       {
         title: "Name the kind of conflict you are in",
         text:
-          "Task conflict is healthy and about the work. Interpersonal conflict is about the person. The VCs' concerns about Hayden sit right on that line, and the room will go badly if either side treats a behavior observation as a character attack. Keep it to what was observed and what the impact was.",
+          "Task conflict is healthy and about the work. Interpersonal conflict is about the person. A funding conversation can slide from one to the other fast, and the room goes badly when either side hears an observation as a character attack. Keep it to what was observed and what the impact was.",
       },
       {
         title: "Be the participant observer",
@@ -247,7 +247,7 @@ export const PREP_TASKS: PrepTask[] = [
       {
         title: "Repair is a behavior, not an outcome",
         text:
-          "Relational skills in the model include being receptive and non defensive to feedback and repairing relationships after conflict. For Hayden, that is the whole test. Whoever plays Hayden gets more from one visible moment of taking responsibility than from any rebuttal.",
+          "Relational skills in the model include being receptive and non defensive to feedback and repairing relationships after conflict. Whichever side you are on, one visible moment of taking responsibility for something tends to move the room more than any rebuttal.",
       },
     ],
   },

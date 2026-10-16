@@ -289,7 +289,7 @@ export const PEOPLE: Person[] = [
           "Ren is the quieter founder. Play that. Let Hayden take the first response and speak when the technical case or the partnership needs you",
           "Before you answer a VC, pause and name what you heard. Then respond",
           "Decide in the midpoint check in which objective matters most for Ren in this meeting. Protect the partnership, protect the product, or get the money. Then play to that one",
-          "If the VCs try to split you from Hayden, this is your gray area moment. Choose deliberately rather than by reflex",
+          "If the VCs put you and Hayden in different positions at any point, that is your gray area moment. Choose deliberately rather than by reflex",
         ],
       },
       {
@@ -339,7 +339,7 @@ export const PEOPLE: Person[] = [
           "Hayden has the most at stake in the room. When a VC says something you disagree with, say so and come back to it a second time after they respond",
           "Pick one position to defend through a full exchange. You, them, you again. Do not let it drop after one try",
           "Hayden is under financial pressure. Play the pressure without the nervous jokes. One breath before each reply",
-          "If the VCs criticize Hayden's behavior, do not fold immediately and do not get defensive. Ask what they saw, then respond with your view",
+          "If the VCs push back on anything about you or the plan, do not fold immediately and do not get defensive. Ask what they saw, then respond with your view",
         ],
       },
       {
@@ -392,9 +392,9 @@ export const PEOPLE: Person[] = [
       {
         when: "As Hayden in Round 2",
         items: [
-          "Hayden is being told, in some form, that the VCs have concerns. The role is a direct test of your first goal. Slow your pace by a third and let silences sit",
+          "The VCs have outstanding questions and Hayden has the most riding on the answers. The role is a direct test of your first goal. Slow your pace by a third and let silences sit",
           "Before disagreeing with a VC, restate their concern in one sentence so they hear it landed. Then give your view",
-          "Try one moment of real vulnerability as Hayden. Name the financial pressure, or name that the feedback is hard to hear, and ask what they need to see",
+          "Try one moment of real vulnerability as Hayden. Name the financial pressure, or name that a hard question is hard, and ask what they need to see",
           "Watch your body. If you feel irritation, uncross, slow down, and ask a question instead of answering",
         ],
       },
