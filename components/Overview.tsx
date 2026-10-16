@@ -21,7 +21,7 @@ export default function Overview({ onOpenMyView }: { onOpenMyView: () => void })
           <p>
             Two parts on {LAB.date}. A 45-minute founder and VC role play in two rounds, then a 60-minute
             squad Team Assessment. This page has the agenda and what to do before we meet. Your personal checklist and
-            the assessment form are in My View.
+            the assessment form are in Individual view.
           </p>
           <div className="chips">
             <span className="chip yellow">{LAB.squad}</span>
@@ -40,7 +40,7 @@ export default function Overview({ onOpenMyView }: { onOpenMyView: () => void })
         <div className="section-head">
           <h2 className="serif">Before Wednesday</h2>
           <span className="meta">
-            Everyone. Your role-specific checklist is in My View
+            Everyone. Your role-specific checklist is in Individual view
           </span>
         </div>
         <div className="grid">
@@ -66,7 +66,7 @@ export default function Overview({ onOpenMyView }: { onOpenMyView: () => void })
                 {t.id === "read-case" && (
                   <p style={{ marginTop: 8 }}>
                     <button className="btn sm yellow" type="button" onClick={onOpenMyView}>
-                      Open My View
+                      Open Individual view
                     </button>
                   </p>
                 )}

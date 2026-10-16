@@ -23,7 +23,7 @@ export default function MyView({
   return (
     <>
       <section className="hero wrap" style={{ paddingBottom: 12 }}>
-        <div className="eyebrow">My View · {person.name}</div>
+        <div className="eyebrow">Individual view · {person.name}</div>
         <div className="role-hero">
           <div className="card">
             <div className="label">You play</div>

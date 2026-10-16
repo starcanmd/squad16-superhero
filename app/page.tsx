@@ -69,17 +69,17 @@ export default function Page() {
           </div>
           <nav className="tabs" aria-label="Views">
             <button className={`tab ${tab === "overview" ? "active" : ""}`} onClick={() => setTab("overview")}>
-              Lab
+              Lab agenda
             </button>
             <button className={`tab ${tab === "me" ? "active" : ""}`} onClick={() => setTab("me")}>
-              My view
+              Individual view
             </button>
             <button className={`tab ${tab === "results" ? "active" : ""}`} onClick={() => setTab("results")}>
-              Results
+              Team assessment results
             </button>
             {(!data || data.person.isLead) && (
               <button className={`tab ${tab === "lead" ? "active" : ""}`} onClick={() => setTab("lead")}>
-                Leader
+                Lab lead view
               </button>
             )}
           </nav>
@@ -117,7 +117,7 @@ export default function Page() {
           ) : data ? (
             <div className="gate wrap">
               <h2 className="serif">Meeting Lead only</h2>
-              <p>This tab is for the Meeting Lead. Your prep is under My view.</p>
+              <p>This tab is for the Meeting Lead. Your prep is under Individual view.</p>
             </div>
           ) : (
             gate("Leader view", "Enter the Meeting Lead's Stanford email.")

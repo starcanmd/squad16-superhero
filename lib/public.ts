@@ -167,14 +167,14 @@ export const PREP_TASKS: PrepTask[] = [
     id: "read-case",
     title: "Read your version of the case",
     detail:
-      "Open My View, enter your Stanford email, and read the case pack for your side. VCs have the VC version, co-founders have the co-founder version. Read the whole thing once, then reread the section on your character.",
+      "Open Individual view, enter your Stanford email, and read the case pack for your side. VCs have the VC version, co-founders have the co-founder version. Read the whole thing once, then reread the section on your character.",
     who: "everyone",
   },
   {
     id: "goal-pick",
     title: "Pick one leadership behavior to try in the role play",
     detail:
-      "My View lists behaviors tied to your own leadership goals. Choose one for your playing round and one for your observing round, and tell your partner so they can hold you to it.",
+      "Individual view lists behaviors tied to your own leadership goals. Choose one for your playing round and one for your observing round, and tell your partner so they can hold you to it.",
     who: "everyone",
   },
   {
@@ -198,7 +198,7 @@ export const PREP_TASKS: PrepTask[] = [
     id: "assessment",
     title: "Submit the Team Assessment here, no paper needed",
     detail:
-      "The form is in My View. Mark each item as a strength, an area to improve, or not sure. Then choose your top 2 strengths and top 2 areas to improve and write one example for each. The squad sees the consolidated results in the Results tab on Wednesday. You will have 2.5 minutes to share, so rehearse it once.",
+      "The form is in Individual view. Mark each item as a strength, an area to improve, or not sure. Then choose your top 2 strengths and top 2 areas to improve and write one example for each. The squad sees the consolidated results in the Team assessment results tab on Wednesday. You will have 2.5 minutes to share, so rehearse it once.",
     who: "everyone",
   },
   {

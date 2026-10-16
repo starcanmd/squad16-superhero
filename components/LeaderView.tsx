@@ -252,7 +252,7 @@ export default function LeaderView({ data, email }: { data: Payload; email: stri
             improvement: {topVotes.i.map(([k]) => ITEM_TEXT[k]).join(" / ") || "none yet"}
           </span>
         </div>
-        <p className="lede">Use the Results tab for what people submitted. Tally the live vote here during Priority issues.</p>
+        <p className="lede">Use the Team assessment results tab for what people submitted. Tally the live vote here during Priority issues.</p>
         <div className="grid grid-3">
           {ASSESSMENT.map((cat) => (
             <div key={cat.key} className="card">
