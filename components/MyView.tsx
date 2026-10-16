@@ -1,7 +1,6 @@
 "use client";
 import type { Payload } from "@/lib/types";
 import { AGENDA, type Submission } from "@/lib/public";
-import Checklist from "./Checklist";
 import AssessmentForm from "./AssessmentForm";
 
 export default function MyView({
@@ -59,13 +58,6 @@ export default function MyView({
           </div>
         </div>
       </section>
-
-      <Checklist
-        email={email}
-        items={data.checklist}
-        checks={data.checks}
-        onChange={(checks) => onData({ ...data, checks })}
-      />
 
       <section className="section wrap">
         <div className="section-head">

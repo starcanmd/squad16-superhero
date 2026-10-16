@@ -1,13 +1,14 @@
 "use client";
 import { useCallback, useEffect, useState } from "react";
 import Overview from "@/components/Overview";
+import ChecklistView from "@/components/ChecklistView";
 import Gate from "@/components/Gate";
 import MyView from "@/components/MyView";
 import LeaderView from "@/components/LeaderView";
 import ResultsView from "@/components/ResultsView";
 import type { Payload } from "@/lib/types";
 
-type Tab = "overview" | "me" | "results" | "lead";
+type Tab = "overview" | "checklist" | "me" | "results" | "lead";
 
 export default function Page() {
   const [tab, setTab] = useState<Tab>("overview");
@@ -69,6 +70,9 @@ export default function Page() {
             <button className={`tab ${tab === "overview" ? "active" : ""}`} onClick={() => setTab("overview")}>
               Lab agenda
             </button>
+            <button className={`tab ${tab === "checklist" ? "active" : ""}`} onClick={() => setTab("checklist")}>
+              Checklist
+            </button>
             <button className={`tab ${tab === "me" ? "active" : ""}`} onClick={() => setTab("me")}>
               Individual view
             </button>
@@ -93,7 +97,11 @@ export default function Page() {
       </header>
 
       <main>
-        {tab === "overview" && <Overview onOpenMyView={() => setTab("me")} />}
+        {tab === "overview" && <Overview />}
+
+        {tab === "checklist" && (
+          <ChecklistView data={data} email={email} onData={setData} onOpenMe={() => setTab("me")} />
+        )}
 
         {tab === "me" &&
           (data ? (

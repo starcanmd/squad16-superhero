@@ -1,14 +1,11 @@
 "use client";
-import { AGENDA, LAB, PREP_TASKS, ROSTER } from "@/lib/public";
-import { useLocal } from "@/lib/useLocal";
+import { AGENDA, LAB, ROSTER } from "@/lib/public";
 
-export default function Overview({ onOpenMyView }: { onOpenMyView: () => void }) {
-  const [done, setDone] = useLocal<Record<string, boolean>>("prep-done", {});
+export default function Overview() {
   const part1 = AGENDA.filter((a) => a.part === 1);
   const part2 = AGENDA.filter((a) => a.part === 2);
   const total1 = part1.reduce((s, a) => s + a.minutes, 0);
   const total2 = part2.reduce((s, a) => s + a.minutes, 0);
-  const completed = PREP_TASKS.filter((t) => done[t.id]).length;
 
   return (
     <>
@@ -24,7 +21,7 @@ export default function Overview({ onOpenMyView }: { onOpenMyView: () => void })
             will play the founders who need the money, some of us will play the VCs who have doubts, and the rest will
             watch closely and give feedback. Then we swap in for a second round and pick up where the first one left
             off. In the second part, we turn the lens on ourselves and talk about how this squad is working and what we
-            want to change. Skim the agenda below, tick off the checklist, and open Individual view for your role, your
+            want to change. Skim the agenda below, work through the Checklist tab, and open Individual view for your role, your
             case pack, and the assessment form. Come ready to play yourself.
           </p>
           <div className="chips">
@@ -39,58 +36,6 @@ export default function Overview({ onOpenMyView }: { onOpenMyView: () => void })
           <figcaption>Nightwalkers, est. 2026</figcaption>
         </figure>
       </section>
-
-      <section className="section wrap">
-        <div className="section-head">
-          <h2 className="serif">Before Wednesday</h2>
-          <span className="meta">
-            Everyone. Your role-specific checklist is in Individual view
-          </span>
-        </div>
-        <div className="grid">
-          {PREP_TASKS.map((t) => (
-            <label key={t.id} className={`card task ${done[t.id] ? "done" : ""}`}>
-              <input
-                type="checkbox"
-                checked={!!done[t.id]}
-                onChange={(e) => setDone({ ...done, [t.id]: e.target.checked })}
-              />
-              <div>
-                <h3>
-                  {t.title}
-                </h3>
-                <p>{t.detail}</p>
-                {t.link && (
-                  <p style={{ marginTop: 8 }}>
-                    <a href={t.link.href} target="_blank" rel="noreferrer">
-                      {t.link.label}
-                    </a>
-                  </p>
-                )}
-                {t.insights && (
-                  <div className="insights">
-                    <div className="label">Four ideas from the TPR Model for Wednesday</div>
-                    {t.insights.map((i) => (
-                      <div key={i.title} className="insight">
-                        <b>{i.title}</b>
-                        <p>{i.text}</p>
-                      </div>
-                    ))}
-                  </div>
-                )}
-                {t.id === "read-case" && (
-                  <p style={{ marginTop: 8 }}>
-                    <button className="btn sm yellow" type="button" onClick={onOpenMyView}>
-                      Open Individual view
-                    </button>
-                  </p>
-                )}
-              </div>
-            </label>
-          ))}
-        </div>
-      </section>
-
 
       <section className="section wrap">
         <div className="section-head">

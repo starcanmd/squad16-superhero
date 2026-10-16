@@ -545,14 +545,14 @@ export const COFOUNDER_PACK: Section[] = [
 export type CheckItem = { id: string; title: string; detail?: string };
 
 const COMMON_FIRST: CheckItem[] = [
-  { id: "read-pack", title: "Read your case pack once, start to finish", detail: "It is in the Case pack section below. Twenty minutes." },
+  { id: "read-pack", title: "Read your case pack once, start to finish", detail: "It is in Individual view under Case pack. Twenty minutes." },
   { id: "read-role", title: "Reread your character's section twice", detail: "Know their background, what they want, and what they are worried about well enough to improvise." },
 ];
 
 const COMMON_LAST: CheckItem[] = [
-  { id: "pick-behavior", title: "Pick one behavior from Try this in the Lab and tell your partner", detail: "One for the round you play, one for the round you observe." },
+  { id: "pick-behavior", title: "Pick one behavior from Try this in the Lab, in Individual view, and tell your partner", detail: "One for the round you play, one for the round you observe." },
   { id: "video", title: "Watch the short video on playing yourself in a role play", detail: "Linked from the Week 5 Required Prep page on Canvas." },
-  { id: "assessment", title: "Submit the Team Assessment on this site", detail: "The form is in the Team Assessment section below. Takes about ten minutes. No paper needed on Wednesday." },
+  { id: "assessment", title: "Submit the Team Assessment on this site", detail: "The form is in Individual view. Takes about ten minutes. No paper needed on Wednesday." },
   { id: "rehearse", title: "Rehearse your 2.5 minute share out once", detail: "Top 2 strengths, top 2 areas to improve, one example each." },
   { id: "tpr", title: "Skim the TPR Model from Week 3", detail: "Task, Process, Relationship. Useful vocabulary for the discussion." },
 ];
