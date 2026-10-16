@@ -3,6 +3,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { Payload, Results } from "@/lib/types";
 import { AGENDA, ASSESSMENT, ITEM_TEXT } from "@/lib/public";
 import { useLocal } from "@/lib/useLocal";
+import { armGong, playGong } from "@/lib/gong";
 
 const WATCH: Record<string, { what: string; unit: string }> = {
   serim: { what: "Stated a disagreement and held it", unit: "disagreements" },
@@ -41,9 +42,20 @@ export default function LeaderView({ data, email }: { data: Payload; email: stri
   const tick = useRef<number | null>(null);
   const step = AGENDA[Math.min(idx, AGENDA.length - 1)];
 
+  const [sound, setSound] = useLocal<boolean>("ml-sound", true);
+  const soundRef = useRef(sound);
+  useEffect(() => {
+    soundRef.current = sound;
+  }, [sound]);
+
   useEffect(() => {
     if (!running) return;
-    tick.current = window.setInterval(() => setRemaining((r) => r - 1), 1000);
+    tick.current = window.setInterval(() => {
+      setRemaining((r) => {
+        if (r === 1 && soundRef.current) playGong();
+        return r - 1;
+      });
+    }, 1000);
     return () => {
       if (tick.current) window.clearInterval(tick.current);
     };
@@ -93,7 +105,13 @@ export default function LeaderView({ data, email }: { data: Payload; email: stri
             </div>
             <div className="name">{step.label}</div>
             <div className="controls">
-              <button className="btn sm" onClick={() => setRunning(!running)}>
+              <button
+                className="btn sm"
+                onClick={() => {
+                  armGong();
+                  setRunning(!running);
+                }}
+              >
                 {running ? "Pause" : remaining === step.minutes * 60 ? "Start" : "Resume"}
               </button>
               <button className="btn sm ghost" onClick={next} disabled={idx >= AGENDA.length - 1}>
@@ -104,6 +122,25 @@ export default function LeaderView({ data, email }: { data: Payload; email: stri
               </button>
               <button className="btn sm ghost" onClick={resetAll}>
                 Reset all
+              </button>
+              <button
+                className="btn sm ghost"
+                onClick={() => {
+                  armGong();
+                  setSound(!sound);
+                }}
+                title={sound ? "Gong rings when a step ends" : "Gong is muted"}
+              >
+                {sound ? "Gong on" : "Gong off"}
+              </button>
+              <button
+                className="btn sm ghost"
+                onClick={() => {
+                  armGong();
+                  playGong();
+                }}
+              >
+                Test gong
               </button>
             </div>
             <div className="progress">
