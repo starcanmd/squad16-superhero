@@ -19,11 +19,13 @@ export default function Overview({ onOpenMyView }: { onOpenMyView: () => void })
             Superhero View Case <em>and</em> Team Assessment
           </h1>
           <p>
-            Nightwalkers, you are summoned for our next Lead Lab on {LAB.date}. We will spend 105 minutes together.
-            The first 45 are a founder and VC showdown over seed money, played in two rounds so everyone gets a turn in
-            the hot seat. The next 60 are ours, a frank look at how this squad is working and what we want to change.
-            Everything you need is here. Skim the agenda, do the few things on the checklist, and open Individual view
-            to find your role, your case pack, and the assessment form. Come ready to play yourself.
+            Nightwalkers, you are summoned for our next Lead Lab on {LAB.date}. We will spend 105 minutes together,
+            split into two parts. In the first part, we are going to come to an agreement over seed funding. Some of us
+            will play the founders who need the money, some of us will play the VCs who have doubts, and the rest will
+            watch closely and give feedback. Then we swap in for a second round and pick up where the first one left
+            off. In the second part, we turn the lens on ourselves and talk about how this squad is working and what we
+            want to change. Skim the agenda below, tick off the checklist, and open Individual view for your role, your
+            case pack, and the assessment form. Come ready to play yourself.
           </p>
           <div className="chips">
             <span className="chip yellow">{LAB.squad}</span>
