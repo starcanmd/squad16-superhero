@@ -63,6 +63,17 @@ export default function Overview({ onOpenMyView }: { onOpenMyView: () => void })
                     </a>
                   </p>
                 )}
+                {t.insights && (
+                  <div className="insights">
+                    <div className="label">Four ideas from the TPR Model for Wednesday</div>
+                    {t.insights.map((i) => (
+                      <div key={i.title} className="insight">
+                        <b>{i.title}</b>
+                        <p>{i.text}</p>
+                      </div>
+                    ))}
+                  </div>
+                )}
                 {t.id === "read-case" && (
                   <p style={{ marginTop: 8 }}>
                     <button className="btn sm yellow" type="button" onClick={onOpenMyView}>

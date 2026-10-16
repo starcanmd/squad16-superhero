@@ -160,6 +160,7 @@ export type PrepTask = {
   detail: string;
   who: "everyone" | "roleplayers" | "ml";
   link?: { label: string; href: string };
+  insights?: { title: string; text: string }[];
 };
 
 export const PREP_TASKS: PrepTask[] = [
@@ -211,6 +212,28 @@ export const PREP_TASKS: PrepTask[] = [
       label: "TPR Model",
       href: "https://drive.google.com/file/d/14sO7n629YcTHDeUoo-BC4lmMudcolzbv/view",
     },
+    insights: [
+      {
+        title: "Inquire before you advocate",
+        text:
+          "The model lists inquiring about solutions, versus advocating fiercely, as a core decision making behavior. In the meeting, the side that asks the first real question usually sets the frame. VCs, ask Hayden what they took from the last meeting before delivering feedback. Founders, ask what Arrow needs to see before defending anything.",
+      },
+      {
+        title: "Name the kind of conflict you are in",
+        text:
+          "Task conflict is healthy and about the work. Interpersonal conflict is about the person. The VCs' concerns about Hayden sit right on that line, and the room will go badly if either side treats a behavior observation as a character attack. Keep it to what was observed and what the impact was.",
+      },
+      {
+        title: "Be the participant observer",
+        text:
+          "The most effective group member contributes to the task while staying conscious of how the group is working. Both feedback partners and both players can do this. Notice who talks after whom, who interrupts, and who the VCs look at when they ask a hard question. Those cues decide who wins the room.",
+      },
+      {
+        title: "Repair is a behavior, not an outcome",
+        text:
+          "Relational skills in the model include being receptive and non defensive to feedback and repairing relationships after conflict. For Hayden, that is the whole test. Whoever plays Hayden gets more from one visible moment of taking responsibility than from any rebuttal.",
+      },
+    ],
   },
 ];
 

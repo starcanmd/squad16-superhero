@@ -299,3 +299,11 @@ textarea.notes {
 }
 
 .footer { padding: 40px 0 60px; color: var(--ink-3); font-size: 13px; }
+
+/* TPR insights */
+.insights { margin-top: 14px; border-top: 1px solid var(--stroke); padding-top: 12px; }
+.insight { display: grid; grid-template-columns: 180px 1fr; gap: 14px; padding: 8px 0; border-top: 1px solid rgba(0,0,0,0.05); }
+.insight:first-of-type { border-top: none; }
+.insight b { font-weight: 500; font-size: 14px; color: var(--green); }
+.insight p { font-size: 14px; margin: 0; }
+@media (max-width: 640px) { .insight { grid-template-columns: 1fr; gap: 4px; } }
