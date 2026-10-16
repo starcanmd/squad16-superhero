@@ -27,6 +27,10 @@ export default function Overview() {
             the checklist in the second tab above, and review your case pack in the individual view tab.
           </p>
           <p>Come ready to play and have fun! 🦸⭐</p>
+          <p className="ps">
+            P.S. Bring one prop that fits your role. VCs, something that says I have seen a hundred pitches. Founders,
+            something that says I have not slept since the seed round. It makes stepping into character a lot easier.
+          </p>
           <div className="chips">
             <span className="chip yellow">{LAB.squad}</span>
             <span className="chip">Meeting Lead · {LAB.meetingLead}</span>

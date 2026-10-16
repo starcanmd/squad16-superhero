@@ -363,3 +363,5 @@ textarea.notes {
 @media (max-width: 640px) { .inline-gate .btn { width: 100%; } }
 
 .gate input.code, .inline-gate input.code { text-transform: uppercase; letter-spacing: 0.08em; font-variant-numeric: tabular-nums; }
+
+.hero p.ps { font-size: 15px; color: var(--ink-3); font-style: italic; }
