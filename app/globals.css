@@ -355,3 +355,9 @@ textarea.notes {
   .gate form { flex-direction: column; }
   .gate .btn { width: 100%; }
 }
+
+.inline-gate { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-top: 16px; max-width: 520px; }
+.inline-gate input { flex: 1; min-width: 220px; padding: 11px 14px; border: 1px solid var(--stroke-dark); border-radius: 10px; background: var(--paper); }
+.inline-gate input:focus { outline: 2px solid var(--yellow); border-color: transparent; }
+.inline-gate .err { margin-top: 0; flex-basis: 100%; }
+@media (max-width: 640px) { .inline-gate .btn { width: 100%; } }

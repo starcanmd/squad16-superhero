@@ -16,14 +16,21 @@ export default function ChecklistView({
   email,
   onData,
   onOpenMe,
+  onLogin,
+  busy,
+  error,
 }: {
   data: Payload | null;
   email: string;
   onData: (next: Payload) => void;
   onOpenMe: () => void;
+  onLogin: (email: string) => void;
+  busy: boolean;
+  error: string | null;
 }) {
   const [localDone, setLocalDone] = useLocal<Record<string, boolean>>("prep-done", {});
   const [pending, setPending] = useState<string | null>(null);
+  const [draft, setDraft] = useState("");
 
   async function togglePersonal(id: string, value: boolean) {
     if (!data) return;
@@ -61,14 +68,29 @@ export default function ChecklistView({
         <p>
           {personal
             ? "Built for your role. Ticks save to the squad site, so Serim can see who is ready without asking."
-            : "The list everyone shares. Enter your Stanford email in Individual view and this becomes your own list, with the items for your role added and your ticks saved."}
+            : "This is the list everyone shares. Enter your Stanford email and it becomes your own list, with the items for your role added and your ticks saved."}
         </p>
         {!personal && (
-          <p style={{ marginTop: 12 }}>
-            <button className="btn sm yellow" type="button" onClick={onOpenMe}>
-              Open Individual view
+          <form
+            className="inline-gate"
+            onSubmit={(e) => {
+              e.preventDefault();
+              if (draft.trim()) onLogin(draft.trim());
+            }}
+          >
+            <input
+              type="email"
+              placeholder="sunetid@stanford.edu"
+              value={draft}
+              autoComplete="email"
+              aria-label="Stanford email"
+              onChange={(e) => setDraft(e.target.value)}
+            />
+            <button className="btn" type="submit" disabled={busy || !draft.trim()}>
+              {busy ? "Checking" : "Show my list"}
             </button>
-          </p>
+            {error && <span className="err">{error}</span>}
+          </form>
         )}
       </section>
 

@@ -100,7 +100,15 @@ export default function Page() {
         {tab === "overview" && <Overview />}
 
         {tab === "checklist" && (
-          <ChecklistView data={data} email={email} onData={setData} onOpenMe={() => setTab("me")} />
+          <ChecklistView
+            data={data}
+            email={email}
+            onData={setData}
+            onOpenMe={() => setTab("me")}
+            onLogin={(e) => load(e)}
+            busy={busy}
+            error={error}
+          />
         )}
 
         {tab === "me" &&
