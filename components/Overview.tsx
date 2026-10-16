@@ -31,12 +31,6 @@ export default function Overview() {
             P.S. Feel free to bring one prop for your character if you like. A vest is a complete VC costume, and a
             hoodie will do for a founder.
           </p>
-          <div className="chips">
-            <span className="chip yellow">{LAB.squad}</span>
-            <span className="chip">Meeting Lead · {LAB.meetingLead}</span>
-            <span className="chip">Fellow · {LAB.fellow}</span>
-            <span className="chip">{total1 + total2} minutes</span>
-          </div>
         </div>
         <figure className="hero-photo">
           <img src="/squad.jpg" alt="Nightwalkers raising glasses on a rooftop at sunset" />
