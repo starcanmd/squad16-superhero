@@ -159,7 +159,7 @@ export const AGENDA: AgendaItem[] = [
     part: 2,
     label: "Fellow's wrap up",
     minutes: 5,
-    detail: ["Vanessa closes the Lab"],
+    detail: ["Vanessa closes the lab"],
   },
 ];
 
