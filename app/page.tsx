@@ -63,7 +63,6 @@ export default function Page() {
       <header className="topbar">
         <div className="wrap topbar-inner">
           <div className="brand">
-            <span className="brand-dot" />
             <span>Nightwalkers</span>
           </div>
           <nav className="tabs" aria-label="Views">
