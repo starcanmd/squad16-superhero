@@ -28,7 +28,7 @@ export default function Overview() {
           </p>
           <p>Come ready to play and have fun! 🦸⭐</p>
           <p className="ps">
-            P.S. Feel free to bring one prop for your character if you like. Zero effort required. A Patagonia vest
+            P.S. Feel free to bring one prop for your character if you like. Zero effort required. A vest
             is a complete VC costume, and a hoodie or an energy drink will do for a founder.
           </p>
           <div className="chips">
