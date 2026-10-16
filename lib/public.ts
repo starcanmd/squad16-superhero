@@ -145,12 +145,13 @@ export const AGENDA: AgendaItem[] = [
   {
     id: "mlfb",
     part: 2,
-    label: "Feedback to Meeting Lead",
+    label: "Feedback to Meeting Lead (ML)",
     minutes: 5,
     detail: [
-      "Using the Action and Impact model",
-      "What did the ML do well in running the Lab this week?",
-      "What can the ML improve on?",
+      {
+        text: "Provide feedback to ML, using the Action and Impact model",
+        sub: ["What did the ML do well in running the Lab this week?", "What can the ML improve on?"],
+      },
     ],
   },
   {
