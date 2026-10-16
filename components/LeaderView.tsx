@@ -256,7 +256,7 @@ export default function LeaderView({ data, code }: { data: Payload; code: string
       <section className="section wrap">
         <div className="section-head">
           <h2 className="serif">Each person's rep this week</h2>
-          <span className="meta">What they are trying, so you can set them up for it</span>
+          <span className="meta">What each squad member is trying, so you can set them up for success</span>
         </div>
         <div className="grid grid-2">
           {squad.map((m) => (
@@ -265,7 +265,10 @@ export default function LeaderView({ data, code }: { data: Payload; code: string
                 {m.character} · {m.playingRound === "both" ? "Both rounds" : `Round ${m.playingRound}`}
               </div>
               <h3>{m.name}</h3>
-              <ul>
+              <div className="label" style={{ marginTop: 8 }}>
+                Leadership goals
+              </div>
+              <ul style={{ marginTop: 0 }}>
                 {m.goals.length > 0 ? (
                   m.goals.map((g) => <li key={g.title}>{g.title}</li>)
                 ) : (
@@ -273,7 +276,7 @@ export default function LeaderView({ data, code }: { data: Payload; code: string
                 )}
               </ul>
               <div className="label" style={{ marginTop: 12 }}>
-                Set up
+                Suggested behaviors
               </div>
               <ul style={{ marginTop: 0 }}>
                 {m.tryThis[0]?.items.slice(0, 2).map((i) => (
