@@ -53,8 +53,10 @@ export default function ChecklistView({
 
   const personal = !!data;
   const items = personal
-    ? data!.checklist.map((c) => ({ id: c.id, title: c.title, detail: c.detail ?? "", ...(EXTRAS[c.id] ?? {}) }))
-    : PREP_TASKS.map((t) => ({ id: t.id, title: t.title, detail: t.detail, link: t.link, insights: t.insights, openMe: t.id === "read-case" }));
+    ? data!.checklist.map((c) => ({ id: c.id, title: c.title, detail: c.detail ?? "", source: c.source, ...(EXTRAS[c.id] ?? {}) }))
+    : [...PREP_TASKS.filter((t) => t.source === "canvas"), ...PREP_TASKS.filter((t) => t.source === "optional")].map((t) => ({
+        id: t.id, title: t.title, detail: t.detail, source: t.source, link: t.link, insights: t.insights, openMe: t.id === "read-case",
+      }));
   const checks = personal ? data!.checks : localDone;
   const done = items.filter((i) => checks[i.id]).length;
 
@@ -118,7 +120,10 @@ export default function ChecklistView({
                 }
               />
               <div>
-                <h3>{t.title}</h3>
+                <h3>
+                  {t.title}
+                  <span className={`src ${t.source}`}>{t.source === "canvas" ? "Recommended by teaching team" : "Optional"}</span>
+                </h3>
                 {t.detail && <p>{t.detail}</p>}
                 {t.link && (
                   <p style={{ marginTop: 8 }}>

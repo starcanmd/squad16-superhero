@@ -168,6 +168,7 @@ export type PrepTask = {
   title: string;
   detail: string;
   who: "everyone" | "roleplayers" | "ml";
+  source: "canvas" | "optional";
   link?: { label: string; href: string };
   insights?: { title: string; text: string }[];
 };
@@ -175,6 +176,7 @@ export type PrepTask = {
 export const PREP_TASKS: PrepTask[] = [
   {
     id: "read-case",
+    source: "canvas",
     title: "Read your version of the case",
     detail:
       "Open Individual view, enter your passcode, and read the case pack for your side. VCs have the VC version, co-founders have the co-founder version. Read the whole thing once, then reread the section on your character.",
@@ -182,6 +184,7 @@ export const PREP_TASKS: PrepTask[] = [
   },
   {
     id: "goal-pick",
+    source: "optional",
     title: "Pick one leadership behavior to try in the role play",
     detail:
       "Individual view lists behaviors tied to your own leadership goals. Choose one for your playing round and one for your observing round, and tell your partner so they can hold you to it.",
@@ -189,6 +192,7 @@ export const PREP_TASKS: PrepTask[] = [
   },
   {
     id: "partner",
+    source: "canvas",
     title: "Meet your role play partner before Wednesday",
     detail:
       "Twenty minutes is enough. Agree on how you will open, which concern you will raise first, and what you want the other side to walk away believing. Round 2 continues Round 1, so your partner needs to know your plan.",
@@ -196,6 +200,7 @@ export const PREP_TASKS: PrepTask[] = [
   },
   {
     id: "video",
+    source: "canvas",
     title: "Watch the short video on playing yourself in a role play",
     detail: "Linked from the Week 5 Required Prep page on Canvas. Play the character as yourself, with your own instincts, not as an impression.",
     who: "everyone",
@@ -206,6 +211,7 @@ export const PREP_TASKS: PrepTask[] = [
   },
   {
     id: "assessment",
+    source: "canvas",
     title: "Submit the Team Assessment here, no paper needed",
     detail:
       "The form is in Individual view. Mark each item as a strength, an area to improve, or not sure. Then choose your top 2 strengths and top 2 areas to improve and write one example for each. The squad sees the consolidated results in the Team assessment results tab on Wednesday. You will have 2.5 minutes to share, so rehearse it once.",
@@ -213,6 +219,7 @@ export const PREP_TASKS: PrepTask[] = [
   },
   {
     id: "tpr",
+    source: "canvas",
     title: "Skim the TPR Model from Week 3",
     detail:
       "Task, Process, Relationship. The behavior lists in it are useful language for the Team Assessment share out.",

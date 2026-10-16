@@ -4,7 +4,7 @@ export type Section = { heading: string; paragraphs?: string[]; bullets?: string
 
 export type Goal = { title: string; behaviors: string[]; accountability: string[] };
 
-export type CheckItem = { id: string; title: string; detail?: string };
+export type CheckItem = { id: string; title: string; detail?: string; source: "canvas" | "optional" };
 
 export type SafePerson = {
   key: string;
