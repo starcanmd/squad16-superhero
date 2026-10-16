@@ -67,17 +67,17 @@ export default function Page() {
           </div>
           <nav className="tabs" aria-label="Views">
             <button className={`tab ${tab === "overview" ? "active" : ""}`} onClick={() => setTab("overview")}>
-              <span className="t-full">Lab agenda</span><span className="t-short">Agenda</span>
+              Lab agenda
             </button>
             <button className={`tab ${tab === "me" ? "active" : ""}`} onClick={() => setTab("me")}>
-              <span className="t-full">Individual view</span><span className="t-short">Individual</span>
+              Individual view
             </button>
             <button className={`tab ${tab === "results" ? "active" : ""}`} onClick={() => setTab("results")}>
-              <span className="t-full">Team assessment results</span><span className="t-short">Results</span>
+              Team assessment results
             </button>
             {(!data || data.person.isLead) && (
               <button className={`tab ${tab === "lead" ? "active" : ""}`} onClick={() => setTab("lead")}>
-                <span className="t-full">Lab lead view</span><span className="t-short">Lead</span>
+                Lab lead view
               </button>
             )}
           </nav>

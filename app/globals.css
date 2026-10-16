@@ -71,7 +71,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 500; }
 .who button { background: none; border: none; color: var(--ink-2); text-decoration: underline; padding: 0; font-size: 13px; }
 
 /* Hero */
-.hero { padding: 56px 0 28px; }
+.hero { padding-top: 56px; padding-bottom: 28px; }
 .eyebrow { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green); margin-bottom: 14px; font-weight: 600; }
 .eyebrow::before { content: ""; display: inline-block; width: 18px; height: 3px; background: var(--yellow-deep); margin-right: 10px; vertical-align: middle; }
 .hero h1 { font-size: 52px; line-height: 1.02; max-width: 760px; }
@@ -111,7 +111,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 500; }
 .meter.sm { display: inline-block; width: 110px; height: 6px; vertical-align: middle; }
 
 /* Sections */
-.section { padding: 28px 0; }
+.section { padding-top: 28px; padding-bottom: 28px; }
 .section-head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 18px; gap: 16px; }
 .section-head h2 { font-size: 30px; }
 .section-head .meta { color: var(--ink-3); font-size: 14px; }
@@ -298,7 +298,7 @@ textarea.notes {
   width: 100%; min-height: 120px; border: 1px solid var(--stroke); border-radius: 10px; padding: 12px; font: inherit; font-size: 14px; resize: vertical; background: var(--paper);
 }
 
-.footer { padding: 40px 0 60px; color: var(--ink-3); font-size: 13px; }
+.footer { padding-top: 40px; padding-bottom: 60px; color: var(--ink-3); font-size: 13px; }
 
 /* TPR insights */
 .insights { margin-top: 14px; border-top: 1px solid var(--stroke); padding-top: 12px; }
@@ -311,24 +311,24 @@ textarea.notes {
 /* ---------- Mobile pass ---------- */
 @media (max-width: 820px) {
   .topbar-inner {
-    height: auto; padding: 10px 0 8px; display: grid; grid-template-columns: 1fr auto; row-gap: 8px; align-items: center;
+    height: auto; padding-top: 10px; padding-bottom: 8px; display: grid; grid-template-columns: 1fr auto; row-gap: 8px; align-items: center;
   }
   .brand { font-size: 15px; }
   .who { justify-self: end; }
   .tabs {
     grid-column: 1 / -1; display: flex; gap: 6px; overflow-x: auto; white-space: nowrap; scrollbar-width: none;
-    margin: 0 -20px; padding: 0 20px 2px;
+    margin: 0 -20px; padding: 0 20px 2px; -webkit-overflow-scrolling: touch;
   }
   .tabs::-webkit-scrollbar { display: none; }
   .tab { flex: 0 0 auto; padding: 7px 13px; font-size: 13.5px; }
 
-  .hero { padding: 28px 0 16px; }
+  .hero { padding-top: 28px; padding-bottom: 16px; }
   .hero h1, .hero-split h1 { font-size: 34px; }
   .hero p { font-size: 16px; margin-top: 12px; }
   .chips { gap: 6px; margin-top: 16px; }
   .chip { font-size: 12px; padding: 5px 10px; }
   .eyebrow { font-size: 11px; }
-  .section { padding: 20px 0; }
+  .section { padding-top: 20px; padding-bottom: 20px; }
   .section-head { flex-direction: column; align-items: flex-start; gap: 4px; margin-bottom: 12px; }
   .section-head h2 { font-size: 26px; }
   .card { padding: 16px; }
@@ -355,6 +355,3 @@ textarea.notes {
   .gate form { flex-direction: column; }
   .gate .btn { width: 100%; }
 }
-
-.t-short { display: none; }
-@media (max-width: 820px) { .t-full { display: none; } .t-short { display: inline; } .tabs { margin: 0; padding: 0; } }
