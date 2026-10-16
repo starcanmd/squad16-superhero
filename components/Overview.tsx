@@ -28,8 +28,8 @@ export default function Overview() {
           </p>
           <p>Come ready to play and have fun! 🦸⭐</p>
           <p className="ps">
-            P.S. Bring one prop that fits your role. VCs, something that says I have seen a hundred pitches. Founders,
-            something that says I have not slept since the seed round. It makes stepping into character a lot easier.
+            P.S. Bring one prop for your character. A Patagonia vest is a complete VC costume. A hoodie and an energy
+            drink will do for a founder.
           </p>
           <div className="chips">
             <span className="chip yellow">{LAB.squad}</span>
