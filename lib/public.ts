@@ -53,7 +53,7 @@ export const AGENDA: AgendaItem[] = [
   {
     id: "mid",
     part: 1,
-    label: "Midpoint check in",
+    label: "Midpoint check-in",
     minutes: 8,
     detail: [
       "Strategize in pairs with the person playing the same role",
