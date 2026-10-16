@@ -76,11 +76,34 @@ export default function Overview({ onOpenMyView }: { onOpenMyView: () => void })
         </div>
       </section>
 
+
       <section className="section wrap">
         <div className="section-head">
-          <h2 className="serif">Who plays whom</h2>
-          <span className="meta">Round 2 continues Round 1. Partners tag in.</span>
+          <h2 className="serif">Objectives for today's lab</h2>
         </div>
+        <div className="grid grid-2">
+          {LAB.objectives.map((o) => (
+            <div key={o} className="card warm">
+              <p>{o}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="section wrap">
+        <div className="section-head">
+          <h2 className="serif">Agenda</h2>
+          <span className="meta">
+            Part 1, {total1} min · Part 2, {total2} min
+          </span>
+        </div>
+        <div className="part-tag">Part 1 · Superhero View case</div>
+        <div className="agenda">
+          {part1.map((a) => (
+            <AgendaRow key={a.id} a={a} />
+          ))}
+        </div>
+        <div className="part-tag">Who plays whom · Round 2 continues Round 1, partners tag in</div>
         <table className="roster">
           <thead>
             <tr>
@@ -106,38 +129,10 @@ export default function Overview({ onOpenMyView }: { onOpenMyView: () => void })
             ))}
           </tbody>
         </table>
-      </section>
-
-      <section className="section wrap">
-        <div className="section-head">
-          <h2 className="serif">Agenda</h2>
-          <span className="meta">
-            Part 1, {total1} min · Part 2, {total2} min
-          </span>
-        </div>
-        <div className="part-tag">Part 1 · Superhero View case</div>
-        <div className="agenda">
-          {part1.map((a) => (
-            <AgendaRow key={a.id} a={a} />
-          ))}
-        </div>
         <div className="part-tag">Part 2 · Team Assessment</div>
         <div className="agenda">
           {part2.map((a) => (
             <AgendaRow key={a.id} a={a} />
-          ))}
-        </div>
-      </section>
-
-      <section className="section wrap">
-        <div className="section-head">
-          <h2 className="serif">What the Lab is for</h2>
-        </div>
-        <div className="grid grid-2">
-          {LAB.objectives.map((o) => (
-            <div key={o} className="card warm">
-              <p>{o}</p>
-            </div>
           ))}
         </div>
       </section>
