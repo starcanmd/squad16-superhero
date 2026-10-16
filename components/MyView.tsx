@@ -114,7 +114,7 @@ export default function MyView({
       <section className="section wrap">
         <div className="section-head">
           <h2 className="serif">Your leadership goals</h2>
-          <span className="meta">From the Squad 16 shared goals doc</span>
+          <span className="meta">From the Nightwalkers shared goals doc</span>
         </div>
         <div className="card">
           {person.goals.map((g) => (

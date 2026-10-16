@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Squad 16 · Superhero View Lab",
+  title: "Nightwalkers · Superhero View Lab",
   description: "Prep and run-of-show for the Week 5 Leadership Lab",
 };
 

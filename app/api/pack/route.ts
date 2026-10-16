@@ -16,7 +16,7 @@ export async function POST(req: Request) {
 
   const person = findPerson(email);
   if (!person) {
-    return NextResponse.json({ error: "That email is not on the Squad 16 list." }, { status: 403 });
+    return NextResponse.json({ error: "That email is not on the Nightwalkers list." }, { status: 403 });
   }
 
   const { email: _e, ...safePerson } = person;

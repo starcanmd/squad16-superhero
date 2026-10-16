@@ -64,8 +64,7 @@ export default function Page() {
         <div className="wrap topbar-inner">
           <div className="brand">
             <span className="brand-dot" />
-            <span>Squad 16</span>
-            <small>Superhero View Lab</small>
+            <span>Nightwalkers</span>
           </div>
           <nav className="tabs" aria-label="Views">
             <button className={`tab ${tab === "overview" ? "active" : ""}`} onClick={() => setTab("overview")}>
@@ -125,7 +124,7 @@ export default function Page() {
       </main>
 
       <footer className="footer wrap">
-        OB 209 Leadership Labs · Squad 16 · Week 5. Case material is the property of Stanford GSB and is shared here for
+        OB 209 Leadership Labs · Nightwalkers · Week 5. Case material is the property of Stanford GSB and is shared here for
         squad preparation only.
       </footer>
     </>

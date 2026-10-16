@@ -3,7 +3,7 @@
 export const LAB = {
   title: "Superhero View Case and Team Assessment",
   course: "OB 209 Leadership Labs, Fall 2026, Week 5",
-  squad: "Squad 16",
+  squad: "Nightwalkers",
   date: "Wednesday, October 21, 2026",
   meetingLead: "Serim Tarcan",
   fellow: "Vanessa Sims",

@@ -31,8 +31,8 @@ export default function Overview({ onOpenMyView }: { onOpenMyView: () => void })
           </div>
         </div>
         <figure className="hero-photo">
-          <img src="/squad.jpg" alt="Squad 16 raising glasses on a rooftop at sunset" />
-          <figcaption>Squad 16, est. 2026</figcaption>
+          <img src="/squad.jpg" alt="Nightwalkers raising glasses on a rooftop at sunset" />
+          <figcaption>Nightwalkers, est. 2026</figcaption>
         </figure>
       </section>
 
