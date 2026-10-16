@@ -46,8 +46,7 @@ export const AGENDA: AgendaItem[] = [
     label: "Role play, Round 1",
     minutes: 12,
     detail: [
-      "Ren (Yash) and Hayden (Minyoung) meet Casey (Serim) and Quinn (Vanessa)",
-      "Feedback partners observe their counterpart and take notes",
+      "Ren (Yash) and Hayden (Minyoung) meet Casey (Serim) and Quinn (Vanessa). Cam, Yuhan, and Ellis observe their counterparts and take notes",
     ],
     leadNotes: ["Press RECORD on the camera before starting", "Reposition the camera if needed"],
   },
@@ -73,7 +72,7 @@ export const AGENDA: AgendaItem[] = [
     label: "Role play, Round 2",
     minutes: 12,
     detail: [
-      "Partners tag in. Ren (Cam), Hayden (Yuhan), Casey (Ellis), Quinn (Vanessa)",
+      "Ren (Cam) and Hayden (Yuhan) meet Casey (Ellis) and Quinn (Vanessa). Yash, Minyoung, and Serim observe their counterparts and take notes",
       "Pick up where Round 1 left off",
     ],
     leadNotes: ["Press RECORD again", "Round 1 players now observe their partner"],
