@@ -270,7 +270,7 @@ export const ASSESSMENT: AssessmentCategory[] = [
   {
     key: "task",
     label: "Task",
-    question: "How is the squad progressing toward accomplishing its tasks?",
+    question: "How is the squad progressing towards successful accomplishment of its tasks?",
     items: [
       { id: "t1", text: "I am satisfied with the level of commitment and engagement of all squad members" },
       { id: "t2", text: "We hold each other to high standards of performance, and articulate these expectations" },
