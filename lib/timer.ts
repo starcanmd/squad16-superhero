@@ -6,6 +6,7 @@ export type TimerState = {
   endsAt: number | null; // set while running
   remaining: number; // seconds, meaningful while paused
   auto: boolean;
+  sound: boolean; // the lead's gong setting, followed by every viewer
   updatedAt: number;
 };
 

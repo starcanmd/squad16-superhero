@@ -7,6 +7,7 @@ import MyView from "@/components/MyView";
 import LeaderView from "@/components/LeaderView";
 import ResultsView from "@/components/ResultsView";
 import TimerView from "@/components/TimerView";
+import { armGong } from "@/lib/gong";
 import type { Payload } from "@/lib/types";
 
 type Tab = "overview" | "checklist" | "me" | "results" | "timer" | "lead";
@@ -80,7 +81,7 @@ export default function Page() {
             <button className={`tab ${tab === "results" ? "active" : ""}`} onClick={() => setTab("results")}>
               Team assessment results
             </button>
-            <button className={`tab ${tab === "timer" ? "active" : ""}`} onClick={() => setTab("timer")}>
+            <button className={`tab ${tab === "timer" ? "active" : ""}`} onClick={() => { armGong(); setTab("timer"); }}>
               Timer
             </button>
             {(!data || data.person.isLead) && (

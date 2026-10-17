@@ -35,6 +35,7 @@ export async function POST(req: Request) {
     endsAt: s.running ? now + (Number(s.remaining) || 0) * 1000 : null,
     remaining: Number(s.remaining) || 0,
     auto: s.auto !== false,
+    sound: s.sound !== false,
     updatedAt: now,
   };
   await setJSON(KEY, state);

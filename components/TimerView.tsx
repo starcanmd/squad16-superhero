@@ -11,11 +11,12 @@ export default function TimerView() {
   const [offset, setOffset] = useState(0); // server clock minus this device's clock
   const [configured, setConfigured] = useState(true);
   const [now, setNow] = useState(() => Date.now());
-  const [sound, setSound] = useState(false);
-  const soundRef = useRef(sound);
+  // The gong follows the lead's setting. Audio is armed by the tap that opened this tab.
+  const soundRef = useRef(true);
+
   useEffect(() => {
-    soundRef.current = sound;
-  }, [sound]);
+    armGong();
+  }, []);
 
   // Poll the shared state every few seconds.
   useEffect(() => {
@@ -27,6 +28,7 @@ export default function TimerView() {
         const j = await res.json();
         if (!alive) return;
         setState(j.state ?? null);
+        soundRef.current = j.state?.sound !== false;
         setOffset(j.now - Date.now());
         setConfigured(j.storeConfigured !== false);
       } catch {}
@@ -91,18 +93,6 @@ export default function TimerView() {
               {started && !running ? " · Paused" : ""}
             </div>
             <div className="name">{step.label}</div>
-            <div className="controls">
-              <button
-                className={`btn sm ${sound ? "ghost" : ""}`}
-                onClick={() => {
-                  armGong();
-                  if (!sound) playGong(0.5);
-                  setSound(!sound);
-                }}
-              >
-                {sound ? "Gong on" : "Turn gong on"}
-              </button>
-            </div>
             <div className="progress">
               <div style={{ width: `${pct}%` }} />
             </div>
@@ -112,9 +102,6 @@ export default function TimerView() {
             {mm}:{ss}
           </div>
         </div>
-        <p style={{ marginTop: 12 }}>
-          This follows Serim&apos;s timer. Turn the gong on once so your phone can play it when a step ends.
-        </p>
         {!configured && <p className="warn">Shared storage is not configured, so this timer cannot sync. See README.</p>}
       </section>
 

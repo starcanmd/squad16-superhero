@@ -72,9 +72,9 @@ export default function LeaderView({ data, code }: { data: Payload; code: string
     fetch("/api/timer", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ code, state: { idx, running, remaining: remainingRef.current, auto } }),
+      body: JSON.stringify({ code, state: { idx, running, remaining: remainingRef.current, auto, sound } }),
     }).catch(() => {});
-  }, [idx, running, auto, epoch, code]);
+  }, [idx, running, auto, sound, epoch, code]);
 
   function goTo(i: number) {
     const n = Math.max(0, Math.min(AGENDA.length - 1, i));
