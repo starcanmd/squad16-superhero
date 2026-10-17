@@ -185,9 +185,9 @@ export const PREP_TASKS: PrepTask[] = [
   {
     id: "goal-pick",
     source: "optional",
-    title: "Pick one leadership behavior to try in the role play",
+    title: "Pick one behavior from the consider trying these behaviors today section in the individual view tab",
     detail:
-      "individual view tab lists behaviors tied to your own leadership goals. Choose one for your playing round and one for your observing round, and tell your partner so they can hold you to it.",
+      "For the round you play, share your target behavior with your feedback partner so that they could be your accountability partner too.",
     who: "everyone",
   },
   {

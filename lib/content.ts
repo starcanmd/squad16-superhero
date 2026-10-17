@@ -591,37 +591,25 @@ const ROLE_ITEMS: Record<string, CheckItem[]> = {
     { id: "ml-guidelines", title: "Reread the Meeting Lead Week 5 Guidelines", detail: "Transitions, timekeepers, de-role, and the two-part structure.", source: "canvas" },
     { id: "prep-session", title: "Attend the optional meeting lead prep session with the Labs instructor", source: "canvas" },
     { id: "vc-meeting", title: "Schedule the 30 minute VC prep with Vanessa and Ellis", detail: "Agree on the opening, who raises which concern about Hayden, and which funding option you lead with.", source: "canvas" },
-    { id: "nudge", title: "Send the squad the link to this site and a short nudge to meet their partner", source: "optional" },
   ],
   ellis: [
     { id: "vc-meeting", title: "Join the 30 minute VC prep with Serim and Vanessa", detail: "Serim will schedule it. Come with your opening line for round 2.", source: "canvas" },
-    { id: "structure", title: "Write the three sentence structure you will open round 2 with", detail: "Focus on where we are, what we need to settle, how we decide.", source: "optional" },
   ],
   vanessa: [
     { id: "vc-meeting", title: "Hold the 30 minute prep with Serim and Ellis before the lab", source: "canvas" },
     { id: "cofounder-doc", title: "Read the Co-Founders version of the case as well", detail: "Fellows read both. Linked from the Fellows only Required Prep page on Canvas.", source: "canvas" },
-    { id: "hayden-feedback", title: "Decide how you will deliver the three observations about Hayden", detail: "Technical meeting, the push on funding, the cafe. Observations, not verdicts.", source: "optional" },
-    { id: "wrap", title: "Plan the 5 minute wrap up", source: "optional" },
   ],
   yash: [
     { id: "partner", title: "Meet Cam for 20 minutes before Wednesday", detail: "Agree on how Ren opens, what Ren protects, and what Ren will not concede.", source: "canvas" },
-    { id: "alternatives", title: "Write two alternatives for how the meeting could end, not one plan", detail: "Your first goal, done before the lab so it is natural in the 4 minute prep.", source: "optional" },
-    { id: "posture", title: "Choose a physical cue to check posture during the role play", detail: "Hands below the chin, shoulders open.", source: "optional" },
   ],
   cam: [
     { id: "partner", title: "Meet Yash for 20 minutes before Wednesday", detail: "Agree on how Ren opens, what Ren protects, and what Ren will not concede.", source: "canvas" },
-    { id: "objective", title: "Decide which objective Ren plays for in round 2", detail: "Protect the partnership, protect the product, or get the money. Choose deliberately.", source: "optional" },
-    { id: "listening", title: "Pick one listening move to use before every answer in round 2", detail: "Name what you heard, then respond.", source: "optional" },
   ],
   minyoung: [
     { id: "partner", title: "Meet Yuhan for 20 minutes before Wednesday", detail: "Agree on how Hayden opens and the one position Hayden will defend through a full exchange.", source: "canvas" },
-    { id: "position", title: "Write the one position you will hold through pushback", detail: "You, them, you again. Decide it now so you do not drop it in the moment.", source: "optional" },
-    { id: "breath", title: "Decide your reset", detail: "One breath before each reply. No jokes about the pressure.", source: "optional" },
   ],
   yuhan: [
     { id: "partner", title: "Meet Minyoung for 20 minutes before Wednesday", detail: "Agree on how Hayden opens and what is likely still open when you tag in.", source: "canvas" },
-    { id: "restate", title: "Draft a one sentence restatement for each VC concern", detail: "So you can reflect it back before disagreeing.", source: "optional" },
-    { id: "vulnerable", title: "Choose the one vulnerable moment you will try as Hayden", detail: "Name the pressure, or name that the feedback is hard to hear.", source: "optional" },
   ],
 };
 
