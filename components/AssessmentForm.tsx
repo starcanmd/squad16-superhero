@@ -118,8 +118,8 @@ export default function AssessmentForm({
           most in need of improvement.
         </p>
         <p>
-          Be prepared to share your 2 top and 2 bottom areas and a brief explanation of why you chose them. (You will
-          have only 2 ½ minutes to share this, so think ahead about what you want to say.)
+          Be prepared to share your 2 top and 2 bottom areas and a brief explanation of why you chose them. You will
+          have only 2 ½ minutes to share this, so think ahead about what you want to say.
         </p>
       </div>
 
