@@ -575,7 +575,7 @@ const COMMON_FIRST: CheckItem[] = [
 
 const COMMON_LAST: CheckItem[] = [
   { id: "pick-behavior", title: "Pick one behavior from Consider trying these behaviors today, in the individual view tab, and tell your partner", detail: "One for the round you play, one for the round you observe.", source: "optional" },
-  { id: "video", title: "Watch the short video on playing yourself in a role play", detail: "Linked from the Week 5 Required Prep page on Canvas.", source: "canvas" },
+  { id: "video", title: "Watch the short video on playing yourself in a role play", detail: "Click on the link below to open it on Canvas.", source: "canvas" },
   { id: "assessment", title: "Submit the team assessment on this site", detail: "The form could be filled out in the individual view tab. You don't need to bring anything to the lab.", source: "canvas" },
   { id: "rehearse", title: "Rehearse your 2.5 minute share out once", detail: "Your 2 top and 2 bottom areas and a brief explanation of why you chose them.", source: "canvas" },
   { id: "tpr", title: "Skim the TPR Model from week 3", detail: "Task, Process, Relationship. Useful vocabulary for the discussion.", source: "canvas" },

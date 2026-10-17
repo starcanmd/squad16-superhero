@@ -202,7 +202,7 @@ export const PREP_TASKS: PrepTask[] = [
     id: "video",
     source: "canvas",
     title: "Watch the short video on playing yourself in a role play",
-    detail: "Linked from the Week 5 Required Prep page on Canvas. Play the character as yourself, with your own instincts, not as an impression.",
+    detail: "Click on the link below to open it on Canvas. Play the character as yourself, with your own instincts, not as an impression.",
     who: "everyone",
     link: {
       label: "Week 5 Required Prep on Canvas",
