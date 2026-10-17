@@ -52,6 +52,17 @@ export default function MyView({
       </section>
 
       <section className="section wrap">
+        <div className="section-head">
+          <h2 className="serif">
+            Case pack
+            <span className="confidential">{sideLabel} only</span>
+          </h2>
+          <span className="meta">Read all of it once, then your character twice</span>
+        </div>
+        <CasePack pack={pack} />
+      </section>
+
+      <section className="section wrap">
         <div className="section-head stacked">
           <h2 className="serif">Consider trying these behaviors today</h2>
           <p className="subtitle">These are AI-generated suggestions based on your leadership goals. You can revisit your goals below if you like.</p>
@@ -136,16 +147,6 @@ export default function MyView({
         onSaved={(submission: Submission, checks) => onData({ ...data, submission, checks })}
       />
 
-      <section className="section wrap">
-        <div className="section-head">
-          <h2 className="serif">
-            Case pack
-            <span className="confidential">{sideLabel} only</span>
-          </h2>
-          <span className="meta">Read all of it once, then your character twice</span>
-        </div>
-        <CasePack pack={pack} />
-      </section>
     </>
   );
 }
