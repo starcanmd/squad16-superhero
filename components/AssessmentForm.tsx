@@ -66,7 +66,7 @@ export default function AssessmentForm({
     return (
       <section className="section wrap" id="assessment">
         <div className="section-head">
-          <h2 className="serif">Team Assessment</h2>
+          <h2 className="serif">Team assessment</h2>
           <span className="meta">Submitted {new Date(existing.submittedAt).toLocaleString()}</span>
         </div>
         <div className="grid grid-2">
@@ -101,7 +101,7 @@ export default function AssessmentForm({
   return (
     <section className="section wrap" id="assessment">
       <div className="section-head">
-        <h2 className="serif">Team Assessment</h2>
+        <h2 className="serif">Team assessment</h2>
         <span className="meta">
           {rated} of {total} rated
         </span>

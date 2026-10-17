@@ -97,7 +97,7 @@ export default function ResultsView({ code }: { code: string }) {
 
       <section className="section wrap">
         <div className="section-head stacked">
-          <h2 className="serif">Items from the Team Assessment</h2>
+          <h2 className="serif">Items from the team assessment</h2>
           <p className="subtitle">
             Each bar shows how the squad rated that item. Green is the share who called it a strength, rose the share who
             said it needs improvement, grey the share who were not sure. The numbers on the right are the counts in the

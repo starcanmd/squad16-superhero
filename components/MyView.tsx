@@ -96,7 +96,7 @@ export default function MyView({
       {person.fellowPrep && (
         <section className="section wrap">
           <div className="section-head">
-            <h2 className="serif">Fellow prep for Week 5</h2>
+            <h2 className="serif">Fellow prep for week 5</h2>
             <span className="meta">From the Fellows only Required Prep page</span>
           </div>
           <div className="card warm">
