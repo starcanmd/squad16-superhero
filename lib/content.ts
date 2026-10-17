@@ -628,7 +628,7 @@ const ROLE_ITEMS: Record<string, CheckItem[]> = {
 export function checklistFor(person: Person): CheckItem[] {
   const first = COMMON_FIRST.map((i) =>
     i.id === "read-pack" && person.side === "cofounder"
-      ? { ...i, detail: "Open the Co-Founders version from the Week 5 Required Prep page on Canvas. The link is in the individual view tab." }
+      ? { ...i, detail: "Open the Co-Founders version from your row in the role table on the Week 5 Required Prep page on Canvas. The link is in the individual view tab." }
       : i,
   );
   const all = [...first, ...(ROLE_ITEMS[person.key] ?? []), ...COMMON_LAST];
@@ -648,7 +648,7 @@ export function authPerson(code: string): Person | undefined {
   return PEOPLE.find((p) => p.code.toUpperCase() === c);
 }
 
-export const CANVAS_PREP_URL = "https://canvas.stanford.edu/courses/233561/pages/agenda-for-lab-superhero-view-case-and-team-assessment";
+export const CANVAS_PREP_URL = "https://canvas.stanford.edu/courses/233561/pages/week-5-required-prep-superhero-view-case-and-team-assessment";
 
 export function packFor(person: Person): Section[] {
   // VCs get the VC version of the case verbatim. Co-founders are sent to Canvas for theirs, so nothing

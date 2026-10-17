@@ -68,8 +68,9 @@ export default function MyView({
         ) : (
           <div className="card">
             <p>
-              The Co-Founders version of the case lives on Canvas. Read it there before Wednesday, and keep it to your
-              side. Nothing from either side&apos;s document is shown on this site to the other side.
+              The Co-Founders version of the case lives on Canvas, linked from your row in the role table on the Week 5
+              Required Prep page. Read it there before Wednesday and keep it to your side. Nothing from either
+              side&apos;s document is shown on this site to the other side.
             </p>
             {data.packUrl && (
               <p style={{ marginTop: 10 }}>

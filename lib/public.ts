@@ -206,7 +206,7 @@ export const PREP_TASKS: PrepTask[] = [
     who: "everyone",
     link: {
       label: "Week 5 Required Prep on Canvas",
-      href: "https://canvas.stanford.edu/courses/233561/pages/agenda-for-lab-superhero-view-case-and-team-assessment",
+      href: "https://canvas.stanford.edu/courses/233561/pages/week-5-required-prep-superhero-view-case-and-team-assessment",
     },
   },
   {
