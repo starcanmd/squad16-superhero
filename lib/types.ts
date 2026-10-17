@@ -44,6 +44,7 @@ export type SquadMember = Pick<
 export type Payload = {
   person: SafePerson;
   pack: Section[];
+  packUrl?: string | null;
   checklist: CheckItem[];
   checks: Record<string, boolean>;
   submission: Submission | null;

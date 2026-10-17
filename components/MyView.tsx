@@ -63,7 +63,23 @@ export default function MyView({
             <span className="confidential">{sideLabel} only</span>
           </h2>
         </div>
-        <CasePack pack={pack} />
+        {pack.length > 0 ? (
+          <CasePack pack={pack} />
+        ) : (
+          <div className="card">
+            <p>
+              The Co-Founders version of the case lives on Canvas. Read it there before Wednesday, and keep it to your
+              side. Nothing from either side&apos;s document is shown on this site to the other side.
+            </p>
+            {data.packUrl && (
+              <p style={{ marginTop: 10 }}>
+                <a href={data.packUrl} target="_blank" rel="noreferrer">
+                  Open the Week 5 Required Prep page on Canvas
+                </a>
+              </p>
+            )}
+          </div>
+        )}
       </section>
 
       <section className="section wrap">

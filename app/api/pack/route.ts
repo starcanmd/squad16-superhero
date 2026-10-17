@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { checklistFor, authPerson, packFor, PEOPLE } from "@/lib/content";
+import { CANVAS_PREP_URL, checklistFor, authPerson, packFor, PEOPLE } from "@/lib/content";
 import { getJSON, storeConfigured } from "@/lib/store";
 import type { Submission } from "@/lib/public";
 
@@ -38,6 +38,7 @@ export async function POST(req: Request) {
     person: safePerson,
     partners,
     pack: packFor(person),
+    packUrl: person.side === "cofounder" ? CANVAS_PREP_URL : null,
     checklist: checklistFor(person),
     checks: checks ?? {},
     submission: submission ?? null,
