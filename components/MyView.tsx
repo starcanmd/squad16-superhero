@@ -93,10 +93,12 @@ export default function MyView({
 
       {person.goals.length > 0 && (
       <section className="section wrap">
-        <div className="section-head">
-          <h2 className="serif">Your leadership goals</h2>
-        </div>
-        <div className="card">
+        <details className="card fold">
+          <summary>
+            <h2 className="serif">Your leadership goals</h2>
+            <span className="meta">Open to remind yourself what you are working on</span>
+          </summary>
+          <div className="fold-body">
           {person.goals.map((g) => (
             <div key={g.title} className="goal">
               <h4>{g.title}</h4>
@@ -120,7 +122,8 @@ export default function MyView({
               </div>
             </div>
           ))}
-        </div>
+          </div>
+        </details>
       </section>
       )}
 
