@@ -77,9 +77,9 @@ export default function ResultsView({ code }: { code: string }) {
 
       <section className="section wrap">
         <div className="section-head stacked">
-          <h2 className="serif">What people nominated</h2>
+          <h2 className="serif">What squad members nominated</h2>
           <p className="subtitle">
-            This shows top 2 picks per person. Use these to vote on the one strength and one area of improvement to
+            This shows top 2 picks per member. Use these to vote on the one strength and one area of improvement to
             discuss today.
           </p>
         </div>
