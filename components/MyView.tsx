@@ -19,6 +19,12 @@ export default function MyView({
   const observingRound = person.playingRound === 1 ? 2 : 1;
   const prepMin = AGENDA.find((a) => a.id === "prep")?.minutes ?? 5;
   const partnerFirst = both ? "Serim and Ellis" : person.partner.split(" ")[0];
+  // VCs prep as a trio (both Caseys plus Quinn). Co-founders prep with their role play partner.
+  const VC_FIRST = ["Serim", "Ellis", "Vanessa"];
+  const meetWith =
+    person.side === "vc"
+      ? VC_FIRST.filter((n) => n !== person.firstName).join(" and ")
+      : partnerFirst;
 
   return (
     <>
@@ -42,10 +48,9 @@ export default function MyView({
               <li>12 min Round 2, partner tags in and continues the conversation</li>
               <li>8 min feedback in pairs, after de-roling</li>
             </ul>
-            <p style={{ marginTop: 12, fontSize: 14 }}>
-              {both
-                ? "Meet Serim and Ellis for 30 minutes before Wednesday. Agree on the opening, who raises which concern, and which funding option you lead with."
-                : `Meet ${partnerFirst} before Wednesday. Agree on your opening, the first concern you raise, and what you want the other side to walk away believing.`}
+            <p style={{ marginTop: 12 }}>
+              <span className="label" style={{ display: "inline", marginRight: 6 }}>Before Wednesday:</span>
+              {`Meet ${meetWith} to agree on your opening, the first concern you raise, and what you want the other side to walk away believing.`}
             </p>
           </div>
         </div>
