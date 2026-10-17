@@ -7,7 +7,7 @@ import { VC_CASE } from "./vcCase";
 export type Side = "vc" | "cofounder";
 
 export type Bullet = string | { text: string; sub: string[] };
-export type Table = { head: string[]; rows: string[][]; note?: string };
+export type Table = { head: string[]; rows: string[][]; note?: string; widths?: string[] };
 export type Sub = { title: string; paragraphs?: string[]; bullets?: Bullet[]; after?: string[]; table?: Table; bulletsAfter?: Bullet[] };
 export type Section = {
   heading: string;

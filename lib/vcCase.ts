@@ -144,6 +144,7 @@ export const VC_CASE: Section[] = [
     ],
     table: {
       head: ["", "YR 1", "YR 2", "YR 3", "YR 4", "YR 5"],
+      widths: ["34%", "13%", "13%", "13%", "13%", "14%"],
       rows: [["VR unit shipments* (in millions)", "17.2", "34.8", "68.5", "129.4", "241.2"]],
       note: "* Unit shipments refer to VR hardware sales, but the growth rate reflects growth in the entire VR gaming market.",
     },
@@ -160,6 +161,7 @@ export const VC_CASE: Section[] = [
     confidential: true,
     table: {
       head: ["Area", "Strength", "Risk"],
+      widths: ["18%", "44%", "38%"],
       rows: [
         [
           "Concept",
@@ -186,6 +188,7 @@ export const VC_CASE: Section[] = [
     paragraphs: ["The two VCs have identified the following options for moving forward:"],
     table: {
       head: ["Option", "Description", "Rationale", "Observations to Share at Meeting"],
+      widths: ["16%", "28%", "28%", "28%"],
       rows: [
         [
           "1. Fund Technical Team Only",

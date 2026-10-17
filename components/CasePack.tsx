@@ -34,7 +34,17 @@ function Bullets({ items }: { items: Bullet[] }) {
 
 function Cell({ text }: { text: string }) {
   const lines = text.split("\n");
-  if (lines.length === 1) return <>{text}</>;
+  const bulleted = lines.every((l) => l.startsWith("• "));
+  if (lines.length === 1 && !bulleted) return <>{text}</>;
+  if (bulleted) {
+    return (
+      <ul className="cell-list">
+        {lines.map((l, i) => (
+          <li key={i}>{l.slice(2)}</li>
+        ))}
+      </ul>
+    );
+  }
   return (
     <>
       {lines.map((l, i) => (
@@ -50,6 +60,13 @@ function TableView({ t }: { t: Table }) {
   return (
     <div className="case-table-wrap">
       <table className="case-table">
+        {t.widths && (
+          <colgroup>
+            {t.widths.map((w, i) => (
+              <col key={i} style={{ width: w }} />
+            ))}
+          </colgroup>
+        )}
         <thead>
           <tr>
             {t.head.map((h, i) => (
