@@ -107,12 +107,16 @@ export default function MyView({
 
       {(person.goals.length > 0 || (data.partners?.length ?? 0) > 0) && (
       <section className="section wrap">
-        <details className="card fold">
+        <details className="fold">
           <summary>
-            <h2 className="serif">Leadership goals</h2>
-            <span className="meta">Yours and your partner&apos;s, so you can hold each other to them</span>
+            <div className="section-head stacked">
+              <h2 className="serif">
+                Leadership goals <span className="fold-toggle" aria-hidden="true" />
+              </h2>
+              <p className="subtitle">Yours and your partner&apos;s, so you can hold each other to them. Click to open.</p>
+            </div>
           </summary>
-          <div className="fold-body">
+          <div className="card fold-body">
             {person.goals.length > 0 && <GoalBlock name="Your goals" goals={person.goals} />}
             {data.partners?.map((pt) => (
               <GoalBlock key={pt.key} name={`${pt.firstName}'s goals`} goals={pt.goals} />
