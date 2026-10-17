@@ -1,5 +1,5 @@
 "use client";
-import type { Payload } from "@/lib/types";
+import type { Goal, Payload } from "@/lib/types";
 import { AGENDA, type Submission } from "@/lib/public";
 import AssessmentForm from "./AssessmentForm";
 import CasePack from "./CasePack";
@@ -65,7 +65,7 @@ export default function MyView({
       <section className="section wrap">
         <div className="section-head stacked">
           <h2 className="serif">Consider trying these behaviors today</h2>
-          <p className="subtitle">These are AI-generated suggestions based on your leadership goals. You can revisit your goals below if you like.</p>
+          <p className="subtitle">These are AI-generated suggestions based on leadership goals. You can revisit your goals below if you like.</p>
         </div>
         <div className="grid grid-2">
           {person.tryThis.map((t) => (
@@ -105,37 +105,18 @@ export default function MyView({
         </section>
       )}
 
-      {person.goals.length > 0 && (
+      {(person.goals.length > 0 || (data.partners?.length ?? 0) > 0) && (
       <section className="section wrap">
         <details className="card fold">
           <summary>
-            <h2 className="serif">Your leadership goals</h2>
-            <span className="meta">Open to remind yourself what you are working on</span>
+            <h2 className="serif">Leadership goals</h2>
+            <span className="meta">Yours and your partner&apos;s, so you can hold each other to them</span>
           </summary>
           <div className="fold-body">
-          {person.goals.map((g) => (
-            <div key={g.title} className="goal">
-              <h4>{g.title}</h4>
-              <div className="two-col">
-                <div>
-                  <div className="label">Behaviors</div>
-                  <ul style={{ margin: 0 }}>
-                    {g.behaviors.map((b) => (
-                      <li key={b}>{b}</li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <div className="label">How others hold you accountable</div>
-                  <ul style={{ margin: 0 }}>
-                    {g.accountability.map((b) => (
-                      <li key={b}>{b}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          ))}
+            {person.goals.length > 0 && <GoalBlock name="Your goals" goals={person.goals} />}
+            {data.partners?.map((pt) => (
+              <GoalBlock key={pt.key} name={`${pt.firstName}'s goals`} goals={pt.goals} />
+            ))}
           </div>
         </details>
       </section>
@@ -148,5 +129,37 @@ export default function MyView({
       />
 
     </>
+  );
+}
+
+
+function GoalBlock({ name, goals }: { name: string; goals: Goal[] }) {
+  return (
+    <div className="goal-block">
+      <div className="label goal-owner">{name}</div>
+      {goals.map((g) => (
+        <div key={g.title} className="goal">
+          <h4>{g.title}</h4>
+          <div className="two-col">
+            <div>
+              <div className="label">Behaviors</div>
+              <ul style={{ margin: 0 }}>
+                {g.behaviors.map((b) => (
+                  <li key={b}>{b}</li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <div className="label">How others hold them accountable</div>
+              <ul style={{ margin: 0 }}>
+                {g.accountability.map((b) => (
+                  <li key={b}>{b}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
   );
 }

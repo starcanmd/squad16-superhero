@@ -26,8 +26,17 @@ export async function POST(req: Request) {
     getJSON<Submission>(`assess:${person.key}`),
   ]);
 
+  // Role play partner(s): the people named in person.partner. Goals come from the shared squad doc.
+  const partners = PEOPLE.filter((p) => p.key !== person.key && person.partner.includes(p.name) && p.goals.length > 0).map((p) => ({
+    key: p.key,
+    name: p.name,
+    firstName: p.firstName,
+    goals: p.goals,
+  }));
+
   const payload: Record<string, unknown> = {
     person: safePerson,
+    partners,
     pack: packFor(person),
     checklist: checklistFor(person),
     checks: checks ?? {},

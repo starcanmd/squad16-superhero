@@ -48,6 +48,7 @@ export type Payload = {
   checks: Record<string, boolean>;
   submission: Submission | null;
   storeConfigured: boolean;
+  partners?: { key: string; name: string; firstName: string; goals: Goal[] }[];
   squad?: SquadMember[];
 };
 
