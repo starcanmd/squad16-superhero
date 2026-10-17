@@ -30,6 +30,10 @@ export default function Overview() {
           <p className="ps">
             P.S. Feel free to bring one prop for your character if you&apos;d like.
           </p>
+          <p className="ps">
+            P.P.S. Don&apos;t worry about the team assessment results and timer tabs above for now. We will use them during
+            the lab.
+          </p>
         </div>
         <figure className="hero-photo">
           <img src="/squad.jpg" alt="Nightwalkers raising glasses on a rooftop at sunset" />
