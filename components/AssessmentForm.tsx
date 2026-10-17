@@ -109,10 +109,9 @@ export default function AssessmentForm({
       <div className="lede">
         <p>
           Use the Assessment to identify the dynamics in your squad that in your opinion contribute to high team
-          performance and those that in your opinion impede it. Your squad will discuss its performance in detail during
-          the lab.
+          performance and those that in your opinion impede it. Be honest in your assessment: member honesty is a key
+          input to group emotional intelligence.
         </p>
-        <p>Be honest in your assessment: member honesty is a key input to group emotional intelligence.</p>
         <p>
           After completing the assessment, select the 2 areas you see as the squad&apos;s top strengths and the 2 areas
           most in need of improvement.
