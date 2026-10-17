@@ -376,6 +376,7 @@ export const PEOPLE: Person[] = [
   },
   {
     key: "yuhan",
+    photo: "/people/yuhan.jpg",
     code: "NW-43TZFG",
     name: "Yuhan Wang",
     firstName: "Yuhan",
