@@ -5,6 +5,8 @@ export const LAB = {
   course: "OB 209 Leadership Laboratory, Fall 2026, week 5",
   squad: "Nightwalkers",
   date: "Wednesday, October 21, 2026",
+  room: "G105",
+  arrive: "7:50 AM",
   meetingLead: "Serim Tarcan",
   fellow: "Vanessa Sims",
   objectives: [
