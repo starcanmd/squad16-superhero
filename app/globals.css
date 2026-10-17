@@ -440,3 +440,20 @@ h1, h2, h3, h4, .card h3, .agenda-row h3, .task h3, .goal h4, .tally-item .name,
 .pack .confidential { font-family: var(--sans); }
 .src { letter-spacing: 0.06em; font-size: 11px; }
 .src.optional { color: var(--ink-3); }
+
+/* ---------- Body text system ----------
+   One font, one color, one size for all running text. Headers, subheaders and subtitles are set above. */
+:root { --body-size: 16px; --body-color: var(--ink-2); }
+.hero p, .card p, .card li, .agenda-row li, .task p, .pack .body, .pack .body p, .pack .body li,
+.rate-text, .bar-text, .check, .pick p, .nom b, .fold-body li, .goal li, .cell-list li, .cell-line,
+.case-table td, .insight p, .two-col li, .role-body p, .gate p, .warn, .notes, .timer-bar li, .step,
+.hero p.ps {
+  font-family: var(--sans); font-size: var(--body-size); color: var(--body-color); line-height: 1.55; font-style: normal;
+}
+.hero p { max-width: 640px; }
+.card.ink p, .card.ink li, .timer-bar li { color: var(--cream); }
+.pick b, .nom b { font-weight: 500; color: var(--ink); }
+.case-table td:first-child { color: var(--ink); }
+.warn { color: var(--rose); }
+.step { font-size: 15px; }
+table.roster td { font-size: 15px; color: var(--body-color); }
