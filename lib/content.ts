@@ -54,7 +54,7 @@ export const PEOPLE: Person[] = [
     playingRound: 1,
     partner: "Ellis Wilder",
     roleSummary:
-      "You open the meeting as Casey in round 1 and run the lab as meeting lead. Ellis tags in as Casey for round 2, so plan the arc together. Vanessa plays Quinn in both rounds.",
+      "You open the meeting as Casey in round 1 and run the lab as meeting lead. Ellis tags in as Casey for round 2, so plan the arc together. Vanessa plays Quinn in both rounds. The co-founders in round 1 are Ren (Yash) and Hayden (Minyoung).",
     goals: [
       {
         title: "Take up space and voice disagreement when assertive personalities are in the room",
@@ -115,7 +115,7 @@ export const PEOPLE: Person[] = [
     playingRound: 2,
     partner: "Serim Tarcan",
     roleSummary:
-      "You observe Serim as Casey in round 1, then tag in as Casey for round 2. Round 2 continues the same conversation, so you inherit whatever position Serim has staked out. Vanessa is your fellow VC as Quinn.",
+      "You observe Serim as Casey in round 1, then tag in as Casey for round 2. Round 2 continues the same conversation, so you inherit whatever position Serim has staked out. Vanessa is your fellow VC as Quinn. The co-founders in round 2 are Ren (Cam) and Hayden (Yuhan).",
     goals: [
       {
         title: "Be assertive and authoritative",
@@ -166,7 +166,7 @@ export const PEOPLE: Person[] = [
     playingRound: "both",
     partner: "Serim Tarcan and Ellis Wilder",
     roleSummary:
-      "You play Quinn in both rounds, so you are the thread of continuity in the meeting. Serim plays Casey in round 1 and Ellis tags in as Casey for round 2. The co-founders are Yash and Minyoung in round 1, Cam and Yuhan in round 2. You also close the lab with the fellow's wrap up.",
+      "You play Quinn in both rounds, so you are the thread of continuity in the meeting. Serim plays Casey in round 1 and Ellis tags in as Casey for round 2. The co-founders are Ren (Yash) and Hayden (Minyoung) in round 1, Ren (Cam) and Hayden (Yuhan) in round 2. You also close the lab with the fellow's wrap up.",
     goals: [],
     tryThis: [
       {
