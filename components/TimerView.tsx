@@ -102,6 +102,10 @@ export default function TimerView() {
             {mm}:{ss}
           </div>
         </div>
+        <p className="subtitle" style={{ marginTop: 12 }}>
+          This timer mirrors the lab lead&apos;s timer and rings a gong at the end of each step. Keep it open when the two groups split
+          into separate rooms so everyone stays on the same clock.
+        </p>
         {!configured && <p className="warn">Shared storage is not configured, so this timer cannot sync. See README.</p>}
       </section>
 
