@@ -570,11 +570,10 @@ export type CheckItem = { id: string; title: string; detail?: string; source: "c
 
 const COMMON_FIRST: CheckItem[] = [
   { id: "read-pack", title: "Read your case pack once, start to finish", detail: "It is under the case pack section in the individual view tab.", source: "canvas" },
-  { id: "read-role", title: "Reread your character's section twice", detail: "Know their background, what they want, and what they are worried about well enough to improvise.", source: "optional" },
 ];
 
 const COMMON_LAST: CheckItem[] = [
-  { id: "pick-behavior", title: "Pick one behavior from Consider trying these behaviors today, in the individual view tab, and tell your partner", detail: "One for the round you play, one for the round you observe.", source: "optional" },
+  { id: "pick-behavior", title: "Pick one behavior from the consider trying these behaviors today section, in the individual view tab", detail: "For the round you play, share your target behavior with your feedback partner so that they could be your accountability partner too.", source: "optional" },
   { id: "video", title: "Watch the short video on playing yourself in a role play", detail: "Click on the link below to open it on Canvas.", source: "canvas" },
   { id: "assessment", title: "Submit the team assessment on this site", detail: "The form could be filled out in the individual view tab. You don't need to bring anything to the lab.", source: "canvas" },
   { id: "rehearse", title: "Prepare your top 2 areas of strength and 2 areas of improvement", detail: "You will have only 2.5 minutes to share these and a brief explanation of why you chose them. Think ahead about what you want to say.", source: "canvas" },
@@ -586,13 +585,11 @@ const ROLE_ITEMS: Record<string, CheckItem[]> = {
     { id: "ml-guidelines", title: "Reread the Meeting Lead Week 5 Guidelines", detail: "Transitions, timekeepers, de-role, and the two-part structure.", source: "canvas" },
     { id: "prep-session", title: "Attend the optional meeting lead prep session with the Labs instructor", source: "canvas" },
     { id: "vc-meeting", title: "Schedule the 30 minute VC prep with Vanessa and Ellis", detail: "Agree on the opening, who raises which concern about Hayden, and which funding option you lead with.", source: "canvas" },
-    { id: "exhibits", title: "Read Exhibit 2 and Exhibit 3 until you can say the options without looking", source: "optional" },
     { id: "nudge", title: "Send the squad the link to this site and a short nudge to meet their partner", source: "optional" },
   ],
   ellis: [
     { id: "vc-meeting", title: "Join the 30 minute VC prep with Serim and Vanessa", detail: "Serim will schedule it. Come with your opening line for round 2.", source: "canvas" },
-    { id: "exhibits", title: "Read Exhibit 2 and Exhibit 3 until you can say the options without looking", source: "optional" },
-    { id: "structure", title: "Write the three sentence structure you will open round 2 with", detail: "Where we are, what we need to settle, how we decide. Your second goal in one move.", source: "optional" },
+    { id: "structure", title: "Write the three sentence structure you will open round 2 with", detail: "Focus on where we are, what we need to settle, how we decide.", source: "optional" },
   ],
   vanessa: [
     { id: "vc-meeting", title: "Hold the 30 minute prep with Serim and Ellis before the lab", source: "canvas" },
