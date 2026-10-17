@@ -57,7 +57,6 @@ export default function MyView({
             Case pack
             <span className="confidential">{sideLabel} only</span>
           </h2>
-          <span className="meta">Read all of it once, then your character twice</span>
         </div>
         <CasePack pack={pack} />
       </section>
