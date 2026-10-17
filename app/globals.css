@@ -464,3 +464,6 @@ table.roster td { font-size: 15px; color: var(--body-color); }
 .cat-q { font-weight: 500; }
 .rate-row:first-of-type, .bar-row:first-of-type { border-top: none; }
 .cat-head + .rate-row, .cat-head + .bar-row { border-top: none; }
+
+.hero-photo-row { max-width: 820px; margin-top: 18px; }
+.hero-photo-row p { max-width: none; }
