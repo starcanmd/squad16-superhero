@@ -95,7 +95,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 500; }
   .hero-split h1 { font-size: 36px; }
   .hero-photo img { aspect-ratio: auto; }
 }
-.lede { color: var(--ink-2); font-size: 15px; margin: 0 0 16px; }
+.lede { color: var(--ink-3); font-size: 15px; margin: 0 0 16px; }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
 .chip {
   font-size: 13px; padding: 6px 12px; border-radius: 999px;
