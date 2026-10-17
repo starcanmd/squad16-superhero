@@ -82,11 +82,11 @@ export default function ResultsView({ code }: { code: string }) {
         </div>
         <div className="grid grid-2">
           <div className="card green">
-            <div className="label">Nominated strengths</div>
+            <div className="label">Nominated areas of strength</div>
             {noms.s.length === 0 ? <p>None yet.</p> : noms.s.map(([id, who]) => <Nom key={id} id={id} who={who} />)}
           </div>
           <div className="card rose">
-            <div className="label">Nominated areas to improve</div>
+            <div className="label">Nominated areas of improvement</div>
             {noms.i.length === 0 ? <p>None yet.</p> : noms.i.map(([id, who]) => <Nom key={id} id={id} who={who} />)}
           </div>
         </div>
