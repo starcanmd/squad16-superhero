@@ -2,7 +2,7 @@
 
 export const LAB = {
   title: "Superhero View case and team assessment",
-  course: "OB 209 Leadership Laboratory, Fall 2026, Week 5",
+  course: "OB 209 Leadership Laboratory, Fall 2026, week 5",
   squad: "Nightwalkers",
   date: "Wednesday, October 21, 2026",
   meetingLead: "Serim Tarcan",
@@ -38,7 +38,7 @@ export const AGENDA: AgendaItem[] = [
     ],
     leadNotes: [
       "Place the squad tent on the table",
-      "Assign a timekeeper for Round 1",
+      "Assign a timekeeper for round 1",
       "Move people into their pairs fast. The 4 minutes go quickly",
     ],
   },
@@ -63,13 +63,13 @@ export const AGENDA: AgendaItem[] = [
         sub: [
           "Which strategies and behaviors were most effective?",
           "Which were least effective?",
-          "What 1 or 2 actions will you try in Round 2?",
+          "What 1 or 2 actions will you try in round 2?",
         ],
       },
     ],
     leadNotes: [
       "Round 2 continues the same conversation. The partner tags in, it is not a fresh start",
-      "Assign a timekeeper for Round 2",
+      "Assign a timekeeper for round 2",
     ],
   },
   {
@@ -79,7 +79,7 @@ export const AGENDA: AgendaItem[] = [
     minutes: 12,
     detail: [
       "Ren (Cam) and Hayden (Yuhan) meet Casey (Ellis) and Quinn (Vanessa). Yash, Minyoung, and Serim observe their counterparts and take notes",
-      "Pick up where Round 1 left off",
+      "Pick up where round 1 left off",
     ],
     leadNotes: ["Press RECORD again", "Round 1 players now observe their partner"],
   },
@@ -115,7 +115,7 @@ export const AGENDA: AgendaItem[] = [
     label: "Strengths and areas for improvement",
     minutes: 18,
     detail: [
-      "Each person, including the Fellow, shares their top 2 team strengths and top 2 areas for improvement with a brief explanation of why they chose them",
+      "Each person, including the fellow, shares their top 2 team strengths and top 2 areas for improvement with a brief explanation of why they chose them",
       "Each person will be given 2.5 minutes to share",
     ],
     leadNotes: ["Seven people at 2.5 minutes is 17.5 minutes. Keep a visible timer", "Go in a set order so nobody stalls"],
@@ -150,7 +150,7 @@ export const AGENDA: AgendaItem[] = [
     detail: [
       {
         text: "Provide feedback to ML, using the Action and Impact model",
-        sub: ["What did the ML do well in running the Lab this week?", "What can the ML improve on?"],
+        sub: ["What did the ML do well in running the lab this week?", "What can the ML improve on?"],
       },
     ],
   },
@@ -179,7 +179,7 @@ export const PREP_TASKS: PrepTask[] = [
     source: "canvas",
     title: "Read your version of the case",
     detail:
-      "Open Individual view, enter your passcode, and read the case pack for your side. VCs have the VC version, co-founders have the co-founder version. Read the whole thing once, then reread the section on your character.",
+      "Open individual view, enter your passcode, and read the case pack for your side. VCs have the VC version, co-founders have the co-founder version. Read the whole thing once, then reread the section on your character.",
     who: "everyone",
   },
   {
@@ -187,7 +187,7 @@ export const PREP_TASKS: PrepTask[] = [
     source: "optional",
     title: "Pick one leadership behavior to try in the role play",
     detail:
-      "Individual view lists behaviors tied to your own leadership goals. Choose one for your playing round and one for your observing round, and tell your partner so they can hold you to it.",
+      "individual view tab lists behaviors tied to your own leadership goals. Choose one for your playing round and one for your observing round, and tell your partner so they can hold you to it.",
     who: "everyone",
   },
   {
@@ -195,7 +195,7 @@ export const PREP_TASKS: PrepTask[] = [
     source: "canvas",
     title: "Meet your role play partner before Wednesday",
     detail:
-      "Twenty minutes is enough. Agree on how you will open, which concern you will raise first, and what you want the other side to walk away believing. Round 2 continues Round 1, so your partner needs to know your plan.",
+      "Twenty minutes is enough. Agree on how you will open, which concern you will raise first, and what you want the other side to walk away believing. Round 2 continues round 1, so your partner needs to know your plan.",
     who: "everyone",
   },
   {
@@ -212,17 +212,17 @@ export const PREP_TASKS: PrepTask[] = [
   {
     id: "assessment",
     source: "canvas",
-    title: "Submit the Team Assessment here, no paper needed",
+    title: "Submit the team assessment here, no paper needed",
     detail:
-      "The form is in Individual view. Mark each item as a strength, an area of improvement, or not sure. Then select the 2 areas you see as the squad's top strengths and the 2 most in need of improvement, with a brief explanation of why. The squad sees the consolidated results in the Team assessment results tab on Wednesday. You will have 2.5 minutes to share, so think ahead about what you want to say.",
+      "The form is in the individual view tab. Mark each item as a strength, an area of improvement, or not sure. Then select the 2 areas you see as the squad's top strengths and the 2 most in need of improvement, with a brief explanation of why. The squad sees the consolidated results in the team assessment results tab on Wednesday. You will have 2.5 minutes to share, so think ahead about what you want to say.",
     who: "everyone",
   },
   {
     id: "tpr",
     source: "canvas",
-    title: "Skim the TPR Model from Week 3",
+    title: "Skim the TPR Model from week 3",
     detail:
-      "Task, Process, Relationship. The behavior lists in it are useful language for the Team Assessment share out.",
+      "Task, Process, Relationship. The behavior lists in it are useful language for the team assessment share out.",
     who: "everyone",
     link: {
       label: "TPR Model",

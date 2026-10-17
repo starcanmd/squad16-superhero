@@ -43,9 +43,9 @@ export default function MyView({
             <div className="label">Role-play rundown</div>
             <ul style={{ margin: 0, paddingLeft: 18, fontSize: 15, color: "var(--ink-2)" }}>
               <li>{prepMin} min prep with your side</li>
-              <li>12 min Round 1</li>
+              <li>12 min round 1</li>
               <li>8 min midpoint, in pairs with your partner</li>
-              <li>12 min Round 2, partner tags in and continues the conversation</li>
+              <li>12 min round 2, partner tags in and continues the conversation</li>
               <li>8 min feedback in pairs, after de-roling</li>
             </ul>
             <p style={{ marginTop: 12 }}>

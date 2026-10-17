@@ -149,7 +149,7 @@ export default function ChecklistView({
                 {t.openMe && (
                   <p style={{ marginTop: 8 }}>
                     <button className="btn sm yellow" type="button" onClick={onOpenMe}>
-                      Open Individual view
+                      Open individual view
                     </button>
                   </p>
                 )}

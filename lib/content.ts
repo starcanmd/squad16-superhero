@@ -53,7 +53,7 @@ export const PEOPLE: Person[] = [
     playingRound: 1,
     partner: "Ellis Wilder",
     roleSummary:
-      "You open the meeting as Casey in Round 1 and run the Lab as Meeting Lead. Ellis tags in as Casey for Round 2, so plan the arc together. Vanessa plays Quinn in both rounds.",
+      "You open the meeting as Casey in round 1 and run the lab as meeting lead. Ellis tags in as Casey for round 2, so plan the arc together. Vanessa plays Quinn in both rounds.",
     goals: [
       {
         title: "Take up space and voice disagreement when assertive personalities are in the room",
@@ -91,14 +91,14 @@ export const PEOPLE: Person[] = [
       {
         when: "As meeting lead",
         items: [
-          "Offer one half formed idea in the Team Assessment discussion and label it as such",
+          "Offer one half formed idea in the team assessment discussion and label it as such",
           "Ask the squad at the end how that idea landed",
           "Run transitions with short, declarative instructions. No apologizing for moving people along",
         ],
       },
     ],
     askYourPartner: [
-      "Ellis, count how many times I state a disagreement in Round 1 and tell me the number",
+      "Ellis, count how many times I state a disagreement in round 1 and tell me the number",
       "Flag the moment if I concede to Hayden before pushing back once",
     ],
   },
@@ -114,7 +114,7 @@ export const PEOPLE: Person[] = [
     playingRound: 2,
     partner: "Serim Tarcan",
     roleSummary:
-      "You observe Serim as Casey in Round 1, then tag in as Casey for Round 2. Round 2 continues the same conversation, so you inherit whatever position Serim has staked out. Vanessa is your fellow VC as Quinn.",
+      "You observe Serim as Casey in round 1, then tag in as Casey for round 2. Round 2 continues the same conversation, so you inherit whatever position Serim has staked out. Vanessa is your fellow VC as Quinn.",
     goals: [
       {
         title: "Be assertive and authoritative",
@@ -144,12 +144,12 @@ export const PEOPLE: Person[] = [
         when: "Observing round 1",
         items: [
           "Note each time Serim states a disagreement and whether she held it through pushback",
-          "Track which VC concerns got raised and which are still open, so you know what Round 2 has to close",
+          "Track which VC concerns got raised and which are still open, so you know what round 2 has to close",
         ],
       },
     ],
     askYourPartner: [
-      "Serim, tell me every time I qualified a statement in Round 2",
+      "Serim, tell me every time I qualified a statement in round 2",
       "Push me to be the one who names the decision, not Quinn",
     ],
   },
@@ -164,7 +164,7 @@ export const PEOPLE: Person[] = [
     playingRound: "both",
     partner: "Serim Tarcan and Ellis Wilder",
     roleSummary:
-      "You play Quinn in both rounds, so you are the thread of continuity in the meeting. Serim plays Casey in Round 1 and Ellis tags in as Casey for Round 2. The co-founders are Yash and Minyoung in Round 1, Cam and Yuhan in Round 2. You also close the Lab with the Fellow's wrap up.",
+      "You play Quinn in both rounds, so you are the thread of continuity in the meeting. Serim plays Casey in round 1 and Ellis tags in as Casey for round 2. The co-founders are Yash and Minyoung in round 1, Cam and Yuhan in round 2. You also close the lab with the fellow's wrap up.",
     goals: [],
     tryThis: [
       {
@@ -179,7 +179,7 @@ export const PEOPLE: Person[] = [
       {
         when: "As Quinn in round 2",
         items: [
-          "Carry forward exactly where Round 1 ended. Restate the open concern in one sentence so Ellis and the new co-founders are anchored",
+          "Carry forward exactly where round 1 ended. Restate the open concern in one sentence so Ellis and the new co-founders are anchored",
           "Push the decision toward a close. Name the option on the table and the conditions, and hold for a response",
           "If Option 1 is live, use your line about Skyler's absence. If Option 2, use your line about not reading the situation",
           "Give Ellis room to own the decision as Casey. Quinn supports and sharpens, Casey states the terms",
@@ -191,11 +191,11 @@ export const PEOPLE: Person[] = [
       "Agree on a signal for when Quinn should take the lead on the Hayden feedback",
     ],
     fellowPrep: [
-      "Meet for 30 minutes with both students playing Casey Parker, Serim and Ellis, before the Lab. Serim schedules it",
+      "Meet for 30 minutes with both students playing Casey Parker, Serim and Ellis, before the lab. Serim schedules it",
       "Read both case documents, the VC version and the Co-Founders version",
       "Review the Agenda for Lab page on Canvas",
-      "Participate in the Team Assessment as a squad member. Complete the Team Assessment and bring your top 2 strengths and top 2 areas to improve",
-      "Close the Lab with a 5-minute wrap up",
+      "Participate in the team assessment as a squad member. Complete the team assessment and bring your top 2 strengths and top 2 areas to improve",
+      "Close the lab with a 5-minute wrap up",
     ],
   },
   {
@@ -209,7 +209,7 @@ export const PEOPLE: Person[] = [
     playingRound: 1,
     partner: "Cam Zahner",
     roleSummary:
-      "You play Ren in Round 1 with Minyoung as Hayden. Cam observes you and tags in as Ren for Round 2. The VCs are Casey (Serim) and Quinn (Vanessa).",
+      "You play Ren in round 1 with Minyoung as Hayden. Cam observes you and tags in as Ren for round 2. The VCs are Casey (Serim) and Quinn (Vanessa).",
     goals: [
       {
         title: "Balance my action bias",
@@ -280,7 +280,7 @@ export const PEOPLE: Person[] = [
     playingRound: 2,
     partner: "Yash Saraf",
     roleSummary:
-      "You observe Yash as Ren in Round 1, then tag in as Ren for Round 2 with Yuhan as Hayden. Round 2 picks up the same conversation, so track where Round 1 ends. The VCs in Round 2 are Casey (Ellis) and Quinn (Vanessa).",
+      "You observe Yash as Ren in round 1, then tag in as Ren for round 2 with Yuhan as Hayden. Round 2 picks up the same conversation, so track where round 1 ends. The VCs in round 2 are Casey (Ellis) and Quinn (Vanessa).",
     goals: [
       {
         title: "Build relationships across all personality types",
@@ -312,7 +312,7 @@ export const PEOPLE: Person[] = [
         when: "Observing round 1",
         items: [
           "Write down the two moments where Ren had the most leverage and whether Yash used them",
-          "Notice how the VCs treat Ren versus Hayden. That shapes your Round 2",
+          "Notice how the VCs treat Ren versus Hayden. That shapes your round 2",
         ],
       },
     ],
@@ -332,7 +332,7 @@ export const PEOPLE: Person[] = [
     playingRound: 1,
     partner: "Yuhan Wang",
     roleSummary:
-      "You play Hayden in Round 1 with Yash as Ren. Yuhan observes you and tags in as Hayden for Round 2. The VCs are Casey (Serim) and Quinn (Vanessa). Hayden is the CEO and the one who has to land the funding.",
+      "You play Hayden in round 1 with Yash as Ren. Yuhan observes you and tags in as Hayden for round 2. The VCs are Casey (Serim) and Quinn (Vanessa). Hayden is the CEO and the one who has to land the funding.",
     goals: [
       {
         title: "Assert my opinion when in direct disagreement",
@@ -382,7 +382,7 @@ export const PEOPLE: Person[] = [
     playingRound: 2,
     partner: "Minyoung Hwang",
     roleSummary:
-      "You observe Minyoung as Hayden in Round 1, then tag in as Hayden for Round 2 with Cam as Ren. Round 2 continues the same conversation. The VCs in Round 2 are Casey (Ellis) and Quinn (Vanessa).",
+      "You observe Minyoung as Hayden in round 1, then tag in as Hayden for round 2 with Cam as Ren. Round 2 continues the same conversation. The VCs in round 2 are Casey (Ellis) and Quinn (Vanessa).",
     goals: [
       {
         title: "Resolve conflict and inspire consensus without butting heads",
@@ -418,7 +418,7 @@ export const PEOPLE: Person[] = [
         when: "Observing round 1",
         items: [
           "Note the exact moments the VCs seemed to warm up or cool down toward Hayden, and what Minyoung did right before",
-          "Track what is still unresolved at the end of Round 1. That is your opening",
+          "Track what is still unresolved at the end of round 1. That is your opening",
         ],
       },
     ],
@@ -569,14 +569,14 @@ export const COFOUNDER_PACK: Section[] = [
 export type CheckItem = { id: string; title: string; detail?: string; source: "canvas" | "optional" };
 
 const COMMON_FIRST: CheckItem[] = [
-  { id: "read-pack", title: "Read your case pack once, start to finish", detail: "It is in Individual view under Case pack. Twenty minutes.", source: "canvas" },
+  { id: "read-pack", title: "Read your case pack once, start to finish", detail: "It is in the individual view tab under case pack. Twenty minutes.", source: "canvas" },
   { id: "read-role", title: "Reread your character's section twice", detail: "Know their background, what they want, and what they are worried about well enough to improvise.", source: "optional" },
 ];
 
 const COMMON_LAST: CheckItem[] = [
-  { id: "pick-behavior", title: "Pick one behavior from Consider trying these behaviors today, in Individual view, and tell your partner", detail: "One for the round you play, one for the round you observe.", source: "optional" },
+  { id: "pick-behavior", title: "Pick one behavior from Consider trying these behaviors today, in the individual view tab, and tell your partner", detail: "One for the round you play, one for the round you observe.", source: "optional" },
   { id: "video", title: "Watch the short video on playing yourself in a role play", detail: "Linked from the Week 5 Required Prep page on Canvas.", source: "canvas" },
-  { id: "assessment", title: "Submit the Team Assessment on this site", detail: "The form is in Individual view. Takes about ten minutes. No paper needed on Wednesday.", source: "canvas" },
+  { id: "assessment", title: "Submit the team assessment on this site", detail: "The form is in the individual view tab. Takes about ten minutes. No paper needed on Wednesday.", source: "canvas" },
   { id: "rehearse", title: "Rehearse your 2.5 minute share out once", detail: "Your 2 top and 2 bottom areas and a brief explanation of why you chose them.", source: "canvas" },
   { id: "tpr", title: "Skim the TPR Model from week 3", detail: "Task, Process, Relationship. Useful vocabulary for the discussion.", source: "canvas" },
 ];
@@ -584,31 +584,31 @@ const COMMON_LAST: CheckItem[] = [
 const ROLE_ITEMS: Record<string, CheckItem[]> = {
   serim: [
     { id: "ml-guidelines", title: "Reread the Meeting Lead Week 5 Guidelines", detail: "Transitions, timekeepers, de-role, and the two-part structure.", source: "canvas" },
-    { id: "prep-session", title: "Attend the optional Meeting Lead prep session with the Labs instructor", source: "canvas" },
+    { id: "prep-session", title: "Attend the optional meeting lead prep session with the Labs instructor", source: "canvas" },
     { id: "vc-meeting", title: "Schedule the 30 minute VC prep with Vanessa and Ellis", detail: "Agree on the opening, who raises which concern about Hayden, and which funding option you lead with.", source: "canvas" },
     { id: "exhibits", title: "Read Exhibit 2 and Exhibit 3 until you can say the options without looking", source: "optional" },
     { id: "nudge", title: "Send the squad the link to this site and a short nudge to meet their partner", source: "optional" },
   ],
   ellis: [
-    { id: "vc-meeting", title: "Join the 30 minute VC prep with Serim and Vanessa", detail: "Serim will schedule it. Come with your opening line for Round 2.", source: "canvas" },
+    { id: "vc-meeting", title: "Join the 30 minute VC prep with Serim and Vanessa", detail: "Serim will schedule it. Come with your opening line for round 2.", source: "canvas" },
     { id: "exhibits", title: "Read Exhibit 2 and Exhibit 3 until you can say the options without looking", source: "optional" },
-    { id: "structure", title: "Write the three sentence structure you will open Round 2 with", detail: "Where we are, what we need to settle, how we decide. Your second goal in one move.", source: "optional" },
+    { id: "structure", title: "Write the three sentence structure you will open round 2 with", detail: "Where we are, what we need to settle, how we decide. Your second goal in one move.", source: "optional" },
   ],
   vanessa: [
-    { id: "vc-meeting", title: "Hold the 30 minute prep with Serim and Ellis before the Lab", source: "canvas" },
+    { id: "vc-meeting", title: "Hold the 30 minute prep with Serim and Ellis before the lab", source: "canvas" },
     { id: "cofounder-doc", title: "Read the Co-Founders version of the case as well", detail: "Fellows read both. Linked from the Fellows only Required Prep page on Canvas.", source: "canvas" },
     { id: "hayden-feedback", title: "Decide how you will deliver the three observations about Hayden", detail: "Technical meeting, the push on funding, the cafe. Observations, not verdicts.", source: "optional" },
     { id: "wrap", title: "Plan the 5 minute wrap up", source: "optional" },
   ],
   yash: [
     { id: "partner", title: "Meet Cam for 20 minutes before Wednesday", detail: "Agree on how Ren opens, what Ren protects, and what Ren will not concede.", source: "canvas" },
-    { id: "alternatives", title: "Write two alternatives for how the meeting could end, not one plan", detail: "Your first goal, done before the Lab so it is natural in the 4 minute prep.", source: "optional" },
+    { id: "alternatives", title: "Write two alternatives for how the meeting could end, not one plan", detail: "Your first goal, done before the lab so it is natural in the 4 minute prep.", source: "optional" },
     { id: "posture", title: "Choose a physical cue to check posture during the role play", detail: "Hands below the chin, shoulders open.", source: "optional" },
   ],
   cam: [
     { id: "partner", title: "Meet Yash for 20 minutes before Wednesday", detail: "Agree on how Ren opens, what Ren protects, and what Ren will not concede.", source: "canvas" },
-    { id: "objective", title: "Decide which objective Ren plays for in Round 2", detail: "Protect the partnership, protect the product, or get the money. Choose deliberately.", source: "optional" },
-    { id: "listening", title: "Pick one listening move to use before every answer in Round 2", detail: "Name what you heard, then respond.", source: "optional" },
+    { id: "objective", title: "Decide which objective Ren plays for in round 2", detail: "Protect the partnership, protect the product, or get the money. Choose deliberately.", source: "optional" },
+    { id: "listening", title: "Pick one listening move to use before every answer in round 2", detail: "Name what you heard, then respond.", source: "optional" },
   ],
   minyoung: [
     { id: "partner", title: "Meet Yuhan for 20 minutes before Wednesday", detail: "Agree on how Hayden opens and the one position Hayden will defend through a full exchange.", source: "canvas" },

@@ -115,14 +115,14 @@ export default function Page() {
           (data ? (
             <MyView data={data} code={code} onData={setData} />
           ) : (
-            gate("Your role and prep", "Enter the passcode Serim sent you to open your role, the Team Assessment, and your side's case pack.")
+            gate("Your role and prep", "Enter the passcode Serim sent you to open your role, the team assessment, and your side's case pack.")
           ))}
 
         {tab === "results" &&
           (data ? (
             <ResultsView code={code} />
           ) : (
-            gate("Team Assessment results", "Enter your passcode to see the squad's consolidated assessment.")
+            gate("Team assessment results", "Enter your passcode to see the squad's consolidated assessment.")
           ))}
 
         {tab === "lead" &&
@@ -131,15 +131,15 @@ export default function Page() {
           ) : data ? (
             <div className="gate wrap">
               <h2 className="serif">Meeting Lead only</h2>
-              <p>This tab is for the Meeting Lead. Your prep is under Individual view.</p>
+              <p>This tab is for the meeting lead. Your prep is under the individual view tab.</p>
             </div>
           ) : (
-            gate("Leader view", "Enter the Meeting Lead's passcode.")
+            gate("Leader view", "Enter the meeting lead's passcode.")
           ))}
       </main>
 
       <footer className="footer wrap">
-        OB 209 Leadership Labs · Nightwalkers · Week 5. Case material is the property of Stanford GSB and is shared here for
+        OB 209 Leadership Laboratory · Nightwalkers · Week 5. Case material is the property of Stanford GSB and is shared here for
         squad preparation only.
       </footer>
     </>

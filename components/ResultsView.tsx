@@ -56,7 +56,7 @@ export default function ResultsView({ code }: { code: string }) {
   return (
     <>
       <section className="hero wrap" style={{ paddingBottom: 12 }}>
-        <div className="eyebrow">Team Assessment results</div>
+        <div className="eyebrow">Team assessment results</div>
         <h1 className="serif" style={{ fontSize: 40 }}>
           {n} of {data.people.length} submitted
         </h1>

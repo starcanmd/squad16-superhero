@@ -90,7 +90,7 @@ export default function Overview() {
             ))}
           </tbody>
         </table>
-        <div className="part-tag">Part 2 · Team Assessment</div>
+        <div className="part-tag">Part 2 · team assessment</div>
         <div className="agenda">
           {part2.map((a) => (
             <AgendaRow key={a.id} a={a} />

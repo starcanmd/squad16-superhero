@@ -282,7 +282,7 @@ export default function LeaderView({ data, code }: { data: Payload; code: string
                 {m.goals.length > 0 ? (
                   m.goals.map((g) => <li key={g.title}>{g.title}</li>)
                 ) : (
-                  <li>Fellow. Continuity across both rounds, leads the feedback on Hayden, closes the Lab</li>
+                  <li>Fellow. Continuity across both rounds, leads the feedback on Hayden, closes the lab</li>
                 )}
               </ul>
               <div className="label" style={{ marginTop: 12 }}>
