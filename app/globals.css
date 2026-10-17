@@ -371,3 +371,19 @@ textarea.notes {
 .src.canvas { background: var(--green-light); color: var(--green); }
 .src.optional { background: var(--cream); color: var(--ink-3); border: 1px solid var(--stroke); }
 @media (max-width: 640px) { .src { display: block; margin: 6px 0 0; width: fit-content; } }
+
+/* Case pack */
+.pack details.sub { border-top: none; margin: 8px 0 4px; padding-left: 14px; border-left: 3px solid var(--yellow); }
+.pack details.sub summary { padding: 8px 0; font-size: 15px; font-weight: 500; }
+.pack details.sub summary::after { font-size: 16px; }
+.pack details.small .body { font-size: 12.5px; color: var(--ink-3); }
+.pack .body ul ul { margin-top: 4px; padding-left: 18px; }
+.pack .body li.no-marker { list-style: none; margin-left: -18px; }
+.case-table-wrap { overflow-x: auto; margin: 10px 0 14px; }
+.case-table { width: 100%; border-collapse: collapse; font-size: 13.5px; background: var(--paper); }
+.case-table th, .case-table td { border: 1px solid var(--stroke); padding: 10px 12px; vertical-align: top; text-align: left; }
+.case-table th { background: var(--warm); font-weight: 600; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-2); }
+.case-table td:first-child { font-weight: 500; color: var(--ink); white-space: nowrap; }
+.cell-line { margin: 2px 0; }
+.table-note { font-size: 12.5px; color: var(--ink-3); margin: 6px 0 0; }
+@media (max-width: 640px) { .case-table td:first-child { white-space: normal; } }

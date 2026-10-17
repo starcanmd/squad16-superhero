@@ -1,11 +1,25 @@
 import "server-only";
+import { VC_CASE } from "./vcCase";
 
 // Everything in this file is served only through /api/pack after an email check.
 // VC-side people never receive the co-founder pack and vice versa.
 
 export type Side = "vc" | "cofounder";
 
-export type Section = { heading: string; paragraphs?: string[]; bullets?: string[] };
+export type Bullet = string | { text: string; sub: string[] };
+export type Table = { head: string[]; rows: string[][]; note?: string };
+export type Sub = { title: string; paragraphs?: string[]; bullets?: Bullet[]; after?: string[]; table?: Table; bulletsAfter?: Bullet[] };
+export type Section = {
+  heading: string;
+  confidential?: boolean;
+  small?: boolean;
+  paragraphs?: string[];
+  bullets?: Bullet[];
+  table?: Table;
+  bulletsAfter?: Bullet[];
+  after?: string[];
+  subsections?: Sub[];
+};
 
 export type Person = {
   key: string;
@@ -625,5 +639,6 @@ export function authPerson(code: string): Person | undefined {
 }
 
 export function packFor(person: Person): Section[] {
-  return [...SHARED_CASE, ...(person.side === "vc" ? VC_PACK : COFOUNDER_PACK)];
+  // VCs get the VC version of the case verbatim. Co-founders get the shared material until their document is added.
+  return person.side === "vc" ? VC_CASE : [...SHARED_CASE, ...COFOUNDER_PACK];
 }

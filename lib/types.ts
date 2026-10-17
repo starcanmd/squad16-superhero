@@ -1,6 +1,19 @@
 import type { Submission } from "@/lib/public";
 
-export type Section = { heading: string; paragraphs?: string[]; bullets?: string[] };
+export type Bullet = string | { text: string; sub: string[] };
+export type Table = { head: string[]; rows: string[][]; note?: string };
+export type Sub = { title: string; paragraphs?: string[]; bullets?: Bullet[]; after?: string[]; table?: Table; bulletsAfter?: Bullet[] };
+export type Section = {
+  heading: string;
+  confidential?: boolean;
+  small?: boolean;
+  paragraphs?: string[];
+  bullets?: Bullet[];
+  table?: Table;
+  bulletsAfter?: Bullet[];
+  after?: string[];
+  subsections?: Sub[];
+};
 
 export type Goal = { title: string; behaviors: string[]; accountability: string[] };
 

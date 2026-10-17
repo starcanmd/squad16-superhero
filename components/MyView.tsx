@@ -2,6 +2,7 @@
 import type { Payload } from "@/lib/types";
 import { AGENDA, type Submission } from "@/lib/public";
 import AssessmentForm from "./AssessmentForm";
+import CasePack from "./CasePack";
 
 export default function MyView({
   data,
@@ -28,18 +29,6 @@ export default function MyView({
             <div className="label">You play</div>
             <div className="big">{person.character}</div>
             <p>{person.roleSummary}</p>
-            <div className="chips">
-              <span className={`chip ${person.side === "vc" ? "" : "yellow"}`}>{sideLabel}</span>
-              {both ? (
-                <span className="chip">Playing both rounds</span>
-              ) : (
-                <>
-                  <span className="chip">Playing Round {person.playingRound}</span>
-                  <span className="chip">Observing Round {observingRound}</span>
-                </>
-              )}
-              <span className="chip">{both ? "Casey players" : "Partner"} · {person.partner}</span>
-            </div>
           </div>
           <div className="card warm">
             <div className="label">How the 45 minutes run</div>
@@ -150,25 +139,7 @@ export default function MyView({
           </h2>
           <span className="meta">Read all of it once, then your character twice</span>
         </div>
-        <div className="card pack">
-          {pack.map((s, i) => (
-            <details key={s.heading} open={i === 0}>
-              <summary>{s.heading}</summary>
-              <div className="body">
-                {s.paragraphs?.map((p) => (
-                  <p key={p.slice(0, 40)}>{p}</p>
-                ))}
-                {s.bullets && (
-                  <ul>
-                    {s.bullets.map((b) => (
-                      <li key={b}>{b}</li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            </details>
-          ))}
-        </div>
+        <CasePack pack={pack} />
       </section>
     </>
   );
