@@ -279,7 +279,7 @@ export const ASSESSMENT: AssessmentCategory[] = [
       { id: "t5", text: "Different points of view are valued and utilized" },
       { id: "t6", text: "When problems are addressed, alternatives are developed and evaluated" },
       { id: "t7", text: "We make good use of our squad" },
-      { id: "t8", text: "Our interactions provide useful data for each member's reflection on Why Would Anyone Follow You" },
+      { id: "t8", text: "Our interactions with each other provide useful data/insights for individual members to inform their reflection regarding “Why would anyone follow you?”" },
     ],
   },
   {
