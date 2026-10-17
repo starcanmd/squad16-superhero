@@ -106,7 +106,7 @@ export default function ChecklistView({
           <h2 className="serif">
             {done} of {items.length} done
           </h2>
-          <span className="meta">{personal ? "Saved to the site" : "Saved on this device only"}</span>
+          {personal && <span className="meta">Saved to the site</span>}
         </div>
         <div className="meter">
           <div style={{ width: `${(done / items.length) * 100}%` }} />
