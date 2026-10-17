@@ -62,10 +62,25 @@ export default function LeaderView({ data, code }: { data: Payload; code: string
     // On the last step the clock keeps counting up so you can see the overrun.
   }, [remaining, running, auto, idx, setIdx, setRemaining]);
 
+  // Publish the timer so the Timer tab on everyone's phone follows this one.
+  const [epoch, setEpoch] = useState(0);
+  const remainingRef = useRef(remaining);
+  useEffect(() => {
+    remainingRef.current = remaining;
+  }, [remaining]);
+  useEffect(() => {
+    fetch("/api/timer", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ code, state: { idx, running, remaining: remainingRef.current, auto } }),
+    }).catch(() => {});
+  }, [idx, running, auto, epoch, code]);
+
   function goTo(i: number) {
     const n = Math.max(0, Math.min(AGENDA.length - 1, i));
     setIdx(n);
     setRemaining(AGENDA[n].minutes * 60);
+    setEpoch((e) => e + 1);
   }
   function next() {
     goTo(idx + 1);
