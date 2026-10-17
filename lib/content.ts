@@ -573,7 +573,7 @@ const COMMON_FIRST: CheckItem[] = [
 ];
 
 const COMMON_LAST: CheckItem[] = [
-  { id: "pick-behavior", title: "Pick one behavior from the consider trying these behaviors today section, in the individual view tab", detail: "For the round you play, share your target behavior with your feedback partner so that they could be your accountability partner too.", source: "optional" },
+  { id: "pick-behavior", title: "Pick one behavior from the consider trying these behaviors today section in the individual view tab", detail: "For the round you play, share your target behavior with your feedback partner so that they could be your accountability partner too.", source: "optional" },
   { id: "video", title: "Watch the short video on playing yourself in a role play", detail: "Click on the link below to open it on Canvas.", source: "canvas" },
   { id: "assessment", title: "Submit the team assessment on this site", detail: "The form could be filled out in the individual view tab. You don't need to bring anything to the lab.", source: "canvas" },
   { id: "rehearse", title: "Prepare your top 2 areas of strength and 2 areas of improvement", detail: "You will have only 2.5 minutes to share these and a brief explanation of why you chose them. Think ahead about what you want to say.", source: "canvas" },
