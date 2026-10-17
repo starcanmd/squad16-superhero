@@ -569,7 +569,7 @@ export const COFOUNDER_PACK: Section[] = [
 export type CheckItem = { id: string; title: string; detail?: string; source: "canvas" | "optional" };
 
 const COMMON_FIRST: CheckItem[] = [
-  { id: "read-pack", title: "Read your case pack once, start to finish", detail: "It is in the individual view tab under case pack. Twenty minutes.", source: "canvas" },
+  { id: "read-pack", title: "Read your case pack once, start to finish", detail: "It is under the case pack section in the individual view tab.", source: "canvas" },
   { id: "read-role", title: "Reread your character's section twice", detail: "Know their background, what they want, and what they are worried about well enough to improvise.", source: "optional" },
 ];
 
