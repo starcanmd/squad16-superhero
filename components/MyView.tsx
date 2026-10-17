@@ -69,7 +69,7 @@ export default function MyView({
           <div className="card">
             <p>
               The Co-Founders version of the case lives on Canvas. You can click on the link below to go to the week 5
-              prep page and find the document under the preparation for part 1.
+              prep page and find the co-founder info pack under the preparation for part 1 section.
             </p>
             {data.packUrl && (
               <p style={{ marginTop: 10 }}>
