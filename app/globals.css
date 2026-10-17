@@ -448,7 +448,7 @@ h1, h2, h3, h4, .card h3, .agenda-row h3, .task h3, .goal h4, .tally-item .name,
 .rate-text, .bar-text, .check, .pick p, .nom b, .fold-body li, .goal li, .cell-list li, .cell-line,
 .case-table td, .insight p, .two-col li, .role-body p, .gate p, .warn, .notes, .timer-bar li, .step,
 .hero p.ps {
-  font-family: var(--sans); font-size: var(--body-size); color: var(--body-color); line-height: 1.55; font-style: normal;
+  font-family: var(--sans); font-size: var(--body-size); color: var(--body-color); line-height: 1.55; font-style: italic;
 }
 .hero p { max-width: 640px; }
 .card.ink p, .card.ink li, .timer-bar li { color: var(--cream); }
