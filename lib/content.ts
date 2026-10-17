@@ -98,8 +98,8 @@ export const PEOPLE: Person[] = [
       },
     ],
     askYourPartner: [
-      "Ellis, count how many times I state a disagreement in round 1 and tell me the number",
-      "Flag the moment if I concede to Hayden before pushing back once",
+      "Count how many times you state a disagreement in round 1 and tell you the number",
+      "Flag the moment if you concede to Hayden before pushing back once",
     ],
   },
   {
@@ -149,8 +149,8 @@ export const PEOPLE: Person[] = [
       },
     ],
     askYourPartner: [
-      "Serim, tell me every time I qualified a statement in round 2",
-      "Push me to be the one who names the decision, not Quinn",
+      "Watch for every time you qualified a statement in round 2",
+      "Push you to be the one who names the decision, not Quinn",
     ],
   },
   {
@@ -187,7 +187,7 @@ export const PEOPLE: Person[] = [
       },
     ],
     askYourPartner: [
-      "Serim and Ellis, agree with you in the 30-minute prep on who raises which concern and which option you open with",
+      "Agree in the 30-minute prep on who raises which concern and which option you open with",
       "Agree on a signal for when Quinn should take the lead on the Hayden feedback",
     ],
     fellowPrep: [
@@ -265,8 +265,8 @@ export const PEOPLE: Person[] = [
       },
     ],
     askYourPartner: [
-      "Cam, count the follow up questions I ask before I state a position",
-      "Tell me the moment my hands went above my chin or I leaned in, and what triggered it",
+      "Count the follow up questions you ask before you state a position",
+      "Tell you the moment your hands went above your chin or you leaned in, and what triggered it",
     ],
   },
   {
@@ -317,8 +317,8 @@ export const PEOPLE: Person[] = [
       },
     ],
     askYourPartner: [
-      "Yash, tell me if I talked more than Ren needed to, and when",
-      "Tell me which objective it looked like I was playing for, and whether that was the right one",
+      "Tell you if you talked more than Ren needed to, and when",
+      "Tell you which objective it looked like you were playing for, and whether that was the right one",
     ],
   },
   {
@@ -367,8 +367,8 @@ export const PEOPLE: Person[] = [
       },
     ],
     askYourPartner: [
-      "Yuhan, count my full exchanges where I came back a second time, and tell me where I dropped it",
-      "If I joke about the stress, tell me afterwards what I said",
+      "Count your full exchanges where you came back a second time, and tell you where you dropped it",
+      "If you joke about the stress, tell you afterwards what you said",
     ],
   },
   {
@@ -423,8 +423,8 @@ export const PEOPLE: Person[] = [
       },
     ],
     askYourPartner: [
-      "Minyoung, tell me when my pace sped up or my body showed irritation",
-      "Tell me whether the vulnerable moment felt real or performed",
+      "Tell you when your pace sped up or your body showed irritation",
+      "Tell you whether the vulnerable moment felt real or performed",
     ],
   },
 ];
