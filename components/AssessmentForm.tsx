@@ -149,7 +149,7 @@ export default function AssessmentForm({
 
       <div className="grid grid-2" style={{ marginTop: 6 }}>
         <div className="card green">
-          <div className="label">Top 2 strengths ({topS.length}/2)</div>
+          <div className="label">Pick top 2 areas of strength ({topS.length}/2)</div>
           {strengths.length === 0 ? (
             <p>Mark some items as Strength above first.</p>
           ) : (
@@ -172,7 +172,7 @@ export default function AssessmentForm({
           )}
         </div>
         <div className="card rose">
-          <div className="label">Top 2 areas to improve ({topI.length}/2)</div>
+          <div className="label">Pick top 2 areas to improve ({topI.length}/2)</div>
           {improves.length === 0 ? (
             <p>Mark some items as Improve above first.</p>
           ) : (
