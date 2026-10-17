@@ -69,7 +69,7 @@ export default function ChecklistView({
         </h1>
         <div className={personal && data!.person.photo ? "role-body with-photo hero-photo-row" : "role-body"}>
           {personal && data!.person.photo && <img className="headshot" src={data!.person.photo} alt={data!.person.name} />}
-          <p>
+          <p className="full">
             {personal
               ? "This checklist is built for your role. Your ticks save as you go, so you can track your own progress. None of it takes long, and a little prep from each of us makes Wednesday a lot more fun."
               : "This is the list everyone shares. Enter the passcode Serim sent you and it becomes your own list, with the items for your role added and your ticks saved."}

@@ -454,6 +454,7 @@ h1, h2, h3, h4, .card h3, .agenda-row h3, .task h3, .goal h4, .tally-item .name,
 }
 .hero p { max-width: 640px; }
 .hero p.ps { font-style: italic; }
+.hero p.full { max-width: none; }
 .card.ink p, .card.ink li, .timer-bar li { color: var(--cream); }
 .pick b, .nom b { font-weight: 500; color: var(--ink); }
 .case-table td:first-child { color: var(--ink); }
