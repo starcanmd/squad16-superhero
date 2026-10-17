@@ -421,3 +421,22 @@ details.fold .fold-body { margin-top: 16px; }
 
 .lede p { margin: 0 0 10px; }
 .lede p:last-child { margin-bottom: 0; }
+
+/* ---------- Type system ----------
+   Headers: Instrument Serif (the "Assessment" style).
+   Subheaders: small caps sans in green (the "OB 209 Leadership Labs" style). */
+h1, h2, h3, h4, .card h3, .agenda-row h3, .task h3, .goal h4, .tally-item .name, .timer-bar .name, .role-hero .big {
+  font-family: var(--serif); font-weight: 400; letter-spacing: -0.01em;
+}
+.card h3, .agenda-row h3 { font-size: 21px; margin-bottom: 8px; }
+.task h3 { font-size: 21px; }
+.goal h4 { font-size: 20px; margin-bottom: 8px; }
+.pack summary { font-family: var(--serif); font-size: 20px; }
+.pack details.sub summary { font-size: 18px; font-weight: 400; }
+.label, .part-tag, .eyebrow, .goal-owner, .tally-item .sub, .timer-bar .now, table.roster th, .case-table th, .src {
+  font-family: var(--sans); font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+}
+.label, .part-tag, .goal-owner { color: var(--green); }
+.pack .confidential { font-family: var(--sans); }
+.src { letter-spacing: 0.06em; font-size: 11px; }
+.src.optional { color: var(--ink-3); }
