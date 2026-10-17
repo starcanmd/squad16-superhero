@@ -214,7 +214,7 @@ export const PREP_TASKS: PrepTask[] = [
     source: "canvas",
     title: "Submit the Team Assessment here, no paper needed",
     detail:
-      "The form is in Individual view. Mark each item as a strength, an area to improve, or not sure. Then select the 2 areas you see as the squad's top strengths and the 2 most in need of improvement, with a brief explanation of why. The squad sees the consolidated results in the Team assessment results tab on Wednesday. You will have 2.5 minutes to share, so think ahead about what you want to say.",
+      "The form is in Individual view. Mark each item as a strength, an area of improvement, or not sure. Then select the 2 areas you see as the squad's top strengths and the 2 most in need of improvement, with a brief explanation of why. The squad sees the consolidated results in the Team assessment results tab on Wednesday. You will have 2.5 minutes to share, so think ahead about what you want to say.",
     who: "everyone",
   },
   {

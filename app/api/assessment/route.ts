@@ -42,7 +42,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Rate every item before submitting." }, { status: 400 });
   }
   if (submission.topStrengths.length !== 2 || submission.topImprove.length !== 2) {
-    return NextResponse.json({ error: "Pick exactly 2 strengths and 2 areas to improve." }, { status: 400 });
+    return NextResponse.json({ error: "Pick exactly 2 areas of strength and 2 areas of improvement." }, { status: 400 });
   }
 
   await setJSON(`assess:${person.key}`, submission);

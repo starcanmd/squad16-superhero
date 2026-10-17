@@ -4,7 +4,7 @@ import { ASSESSMENT, ITEM_TEXT, type Rating, type Submission } from "@/lib/publi
 
 const RATINGS: { v: Rating; label: string }[] = [
   { v: "S", label: "Strength" },
-  { v: "I", label: "Improve" },
+  { v: "I", label: "Improvement" },
   { v: "N", label: "Not sure" },
 ];
 
@@ -39,7 +39,7 @@ export default function AssessmentForm({
   async function submit() {
     setErr(null);
     if (rated < total) return setErr(`Rate all ${total} items first. ${total - rated} left.`);
-    if (topS.length !== 2 || topI.length !== 2) return setErr("Pick exactly 2 strengths and 2 areas to improve.");
+    if (topS.length !== 2 || topI.length !== 2) return setErr("Pick exactly 2 areas of strength and 2 areas of improvement.");
     setBusy(true);
     try {
       const res = await fetch("/api/assessment", {
@@ -71,7 +71,7 @@ export default function AssessmentForm({
         </div>
         <div className="grid grid-2">
           <div className="card green">
-            <div className="label">Your top 2 strengths</div>
+            <div className="label">Your top 2 areas of strength</div>
             {existing.topStrengths.map((id) => (
               <div key={id} className="pick">
                 <b>{ITEM_TEXT[id]}</b>
@@ -80,7 +80,7 @@ export default function AssessmentForm({
             ))}
           </div>
           <div className="card rose">
-            <div className="label">Your top 2 areas to improve</div>
+            <div className="label">Your top 2 areas of improvement</div>
             {existing.topImprove.map((id) => (
               <div key={id} className="pick">
                 <b>{ITEM_TEXT[id]}</b>
@@ -174,9 +174,9 @@ export default function AssessmentForm({
           )}
         </div>
         <div className="card rose">
-          <div className="label">Pick top 2 areas to improve ({topI.length}/2)</div>
+          <div className="label">Pick top 2 areas of improvement ({topI.length}/2)</div>
           {improves.length === 0 ? (
-            <p>Mark some items as Improve above first.</p>
+            <p>Mark some items as Improvement above first.</p>
           ) : (
             improves.map((id) => (
               <div key={id}>
