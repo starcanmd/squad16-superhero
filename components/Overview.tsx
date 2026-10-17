@@ -61,7 +61,7 @@ export default function Overview() {
             Part 1, {total1} min · Part 2, {total2} min
           </span>
           <p className="subtitle">
-            {LAB.date}, room {LAB.room}. Please arrive by {LAB.arrive} so we can enjoy Minyoung&apos;s barley tea before the
+            We&apos;ll be in Room {LAB.room}. Please arrive by {LAB.arrive} so we can enjoy Minyoung&apos;s barley tea before the
             role play starts.
           </p>
         </div>
