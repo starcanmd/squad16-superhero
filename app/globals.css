@@ -55,6 +55,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 500; }
   height: 60px;
 }
 .brand { display: flex; align-items: center; gap: 10px; font-size: 15px; }
+.brand .walker { width: 28px; height: 28px; display: block; }
 .brand-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--yellow); }
 .brand small { color: var(--ink-3); font-size: 13px; }
 

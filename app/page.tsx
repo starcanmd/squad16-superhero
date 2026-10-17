@@ -67,6 +67,7 @@ export default function Page() {
         <div className="wrap topbar-inner">
           <div className="brand">
             <span>Nightwalkers</span>
+            <img className="walker" src="/walker.gif" alt="" aria-hidden="true" />
           </div>
           <nav className="tabs" aria-label="Views">
             <button className={`tab ${tab === "overview" ? "active" : ""}`} onClick={() => setTab("overview")}>
