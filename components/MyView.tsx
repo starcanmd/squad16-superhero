@@ -34,7 +34,7 @@ export default function MyView({
             </div>
           </div>
           <div className="card warm">
-            <div className="label">How the 45 minutes run</div>
+            <div className="label">Role-play rundown</div>
             <ul style={{ margin: 0, paddingLeft: 18, fontSize: 15, color: "var(--ink-2)" }}>
               <li>{prepMin} min prep with your side</li>
               <li>12 min Round 1</li>
