@@ -43,6 +43,7 @@ export type Person = {
 export const PEOPLE: Person[] = [
   {
     key: "serim",
+    photo: "/people/serim.jpg",
     code: "NW-UC3DXT",
     name: "Serim Tarcan",
     firstName: "Serim",
