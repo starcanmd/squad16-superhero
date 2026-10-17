@@ -106,11 +106,22 @@ export default function AssessmentForm({
           {rated} of {total} rated
         </span>
       </div>
-      <p className="lede">
-        Rate each item for the squad as it is working in Labs and OB206 project meetings. Be honest. Member honesty is a
-        key input to group emotional intelligence. Then pick your top 2 strengths and top 2 areas to improve and add one
-        example each. You will have 2.5 minutes to share these on Wednesday.
-      </p>
+      <div className="lede">
+        <p>
+          Use the Assessment to identify the dynamics in your squad that in your opinion contribute to high team
+          performance and those that in your opinion impede it. Your squad will discuss its performance in detail during
+          the lab.
+        </p>
+        <p>Be honest in your assessment: member honesty is a key input to group emotional intelligence.</p>
+        <p>
+          After completing the assessment, select the 2 areas you see as the squad&apos;s top strengths and the 2 areas
+          most in need of improvement.
+        </p>
+        <p>
+          Be prepared to share your 2 top and 2 bottom areas and a brief explanation of why you chose them. (You will
+          have only 2 ½ minutes to share this, so think ahead about what you want to say.)
+        </p>
+      </div>
 
       {ASSESSMENT.map((cat) => (
         <div key={cat.key} className="card" style={{ marginBottom: 12 }}>
@@ -151,7 +162,7 @@ export default function AssessmentForm({
                 {topS.includes(id) && (
                   <textarea
                     className="notes sm"
-                    placeholder="One brief example"
+                    placeholder="Why you chose this, in a sentence or two"
                     value={examples[id] ?? ""}
                     onChange={(e) => setExamples({ ...examples, [id]: e.target.value })}
                   />
@@ -174,7 +185,7 @@ export default function AssessmentForm({
                 {topI.includes(id) && (
                   <textarea
                     className="notes sm"
-                    placeholder="One brief example"
+                    placeholder="Why you chose this, in a sentence or two"
                     value={examples[id] ?? ""}
                     onChange={(e) => setExamples({ ...examples, [id]: e.target.value })}
                   />

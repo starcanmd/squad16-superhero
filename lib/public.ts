@@ -115,7 +115,7 @@ export const AGENDA: AgendaItem[] = [
     label: "Strengths and areas for improvement",
     minutes: 18,
     detail: [
-      "Each person, including the Fellow, shares their top 2 team strengths and top 2 areas for improvement with rationale and brief examples that highlight each issue",
+      "Each person, including the Fellow, shares their top 2 team strengths and top 2 areas for improvement with a brief explanation of why they chose them",
       "Each person will be given 2.5 minutes to share",
     ],
     leadNotes: ["Seven people at 2.5 minutes is 17.5 minutes. Keep a visible timer", "Go in a set order so nobody stalls"],
@@ -214,7 +214,7 @@ export const PREP_TASKS: PrepTask[] = [
     source: "canvas",
     title: "Submit the Team Assessment here, no paper needed",
     detail:
-      "The form is in Individual view. Mark each item as a strength, an area to improve, or not sure. Then choose your top 2 strengths and top 2 areas to improve and write one example for each. The squad sees the consolidated results in the Team assessment results tab on Wednesday. You will have 2.5 minutes to share, so rehearse it once.",
+      "The form is in Individual view. Mark each item as a strength, an area to improve, or not sure. Then select the 2 areas you see as the squad's top strengths and the 2 most in need of improvement, with a brief explanation of why. The squad sees the consolidated results in the Team assessment results tab on Wednesday. You will have 2.5 minutes to share, so think ahead about what you want to say.",
     who: "everyone",
   },
   {

@@ -124,7 +124,7 @@ export default function ResultsView({ code }: { code: string }) {
       <section className="section wrap">
         <div className="section-head">
           <h2 className="serif">By person</h2>
-          <span className="meta">Examples people wrote, for the share out</span>
+          <span className="meta">Each person&apos;s picks and their explanation, for the share out</span>
         </div>
         <div className="card pack">
           {data.people.map((p) => (
