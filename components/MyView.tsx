@@ -85,7 +85,7 @@ export default function MyView({
       <section className="section wrap">
         <div className="section-head stacked">
           <h2 className="serif">Consider trying these behaviors today</h2>
-          <p className="subtitle">These are AI-generated suggestions based on leadership goals. You can revisit your goals below if you like.</p>
+          <p className="subtitle">These are AI-generated suggestions based on leadership goals. You can revisit your goals below if you&apos;d like.</p>
         </div>
         <div className="grid grid-2">
           {person.tryThis.map((t) => (
