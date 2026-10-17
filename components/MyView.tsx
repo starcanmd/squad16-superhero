@@ -50,8 +50,8 @@ export default function MyView({
 
       <section className="section wrap">
         <div className="section-head">
-          <h2 className="serif">Try this in the Lab</h2>
-          <span className="meta">Built from your own leadership goals</span>
+          <h2 className="serif">Consider trying these behaviors today</h2>
+          <span className="meta">These are AI-generated suggestions based on your leadership goals. You can revisit your goals below if you like.</span>
         </div>
         <div className="grid grid-2">
           {person.tryThis.map((t) => (
