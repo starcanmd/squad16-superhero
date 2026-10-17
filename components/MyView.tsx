@@ -83,7 +83,7 @@ export default function MyView({
             </div>
           ))}
           <div className="card">
-            <h3>{both ? "Settle with Serim and Ellis" : `Ask ${partnerFirst} to`}</h3>
+            <h3>{both ? "Settle with Serim and Ellis:" : `As your feedback partner, ask ${partnerFirst} to:`}</h3>
             <ul>
               {person.askYourPartner.map((i) => (
                 <li key={i}>{i}</li>
