@@ -80,7 +80,7 @@ export const PEOPLE: Person[] = [
     ],
     tryThis: [
       {
-        when: "As Casey in Round 1",
+        when: "As Casey in round 1",
         items: [
           "Speak first. Open with Arrow's assessment before Hayden can set the agenda",
           "When Hayden pushes for a yes on the $4M, say I see this differently and hold the line through at least one round of pushback before offering any option",
@@ -89,7 +89,7 @@ export const PEOPLE: Person[] = [
         ],
       },
       {
-        when: "As Meeting Lead",
+        when: "As meeting lead",
         items: [
           "Offer one half formed idea in the Team Assessment discussion and label it as such",
           "Ask the squad at the end how that idea landed",
@@ -132,7 +132,7 @@ export const PEOPLE: Person[] = [
     ],
     tryThis: [
       {
-        when: "As Casey in Round 2",
+        when: "As Casey in round 2",
         items: [
           "Open your round by stating the structure. Here is where we are, here are the two things we need to settle, here is how we decide",
           "Drop every I think. Say Arrow's view is, or we will not fund, or the condition is",
@@ -141,7 +141,7 @@ export const PEOPLE: Person[] = [
         ],
       },
       {
-        when: "Observing Round 1",
+        when: "Observing round 1",
         items: [
           "Note each time Serim states a disagreement and whether she held it through pushback",
           "Track which VC concerns got raised and which are still open, so you know what Round 2 has to close",
@@ -168,7 +168,7 @@ export const PEOPLE: Person[] = [
     goals: [],
     tryThis: [
       {
-        when: "As Quinn in Round 1",
+        when: "As Quinn in round 1",
         items: [
           "Let Casey open with Arrow's assessment, then bring the feedback on each co-founder. Ren first and warmly, Hayden second and specifically",
           "Name the three observed behaviors as observations, not verdicts. The technical meeting, the push on funding, the cafe",
@@ -177,7 +177,7 @@ export const PEOPLE: Person[] = [
         ],
       },
       {
-        when: "As Quinn in Round 2",
+        when: "As Quinn in round 2",
         items: [
           "Carry forward exactly where Round 1 ended. Restate the open concern in one sentence so Ellis and the new co-founders are anchored",
           "Push the decision toward a close. Name the option on the table and the conditions, and hold for a response",
@@ -248,7 +248,7 @@ export const PEOPLE: Person[] = [
     ],
     tryThis: [
       {
-        when: "As Ren in Round 1",
+        when: "As Ren in round 1",
         items: [
           "When the VCs raise a concern, ask two real questions about it before answering. What did you see, what would change your mind",
           "Use the whole 4 minute prep with Minyoung. Agree on two alternatives for how the meeting could end, not one plan",
@@ -257,7 +257,7 @@ export const PEOPLE: Person[] = [
         ],
       },
       {
-        when: "Observing Round 2",
+        when: "Observing round 2",
         items: [
           "Note whether Cam slowed down to ask before advocating, since that is also your goal",
           "Track Cam's posture under pressure so you both get data on the same tell",
@@ -300,7 +300,7 @@ export const PEOPLE: Person[] = [
     ],
     tryThis: [
       {
-        when: "As Ren in Round 2",
+        when: "As Ren in round 2",
         items: [
           "Ren is the quieter founder. Play that. Let Hayden take the first response and speak when the technical case or the partnership needs you",
           "Before you answer a VC, pause and name what you heard. Then respond",
@@ -309,7 +309,7 @@ export const PEOPLE: Person[] = [
         ],
       },
       {
-        when: "Observing Round 1",
+        when: "Observing round 1",
         items: [
           "Write down the two moments where Ren had the most leverage and whether Yash used them",
           "Notice how the VCs treat Ren versus Hayden. That shapes your Round 2",
@@ -350,7 +350,7 @@ export const PEOPLE: Person[] = [
     ],
     tryThis: [
       {
-        when: "As Hayden in Round 1",
+        when: "As Hayden in round 1",
         items: [
           "Hayden has the most at stake in the room. When a VC says something you disagree with, say so and come back to it a second time after they respond",
           "Pick one position to defend through a full exchange. You, them, you again. Do not let it drop after one try",
@@ -359,7 +359,7 @@ export const PEOPLE: Person[] = [
         ],
       },
       {
-        when: "Observing Round 2",
+        when: "Observing round 2",
         items: [
           "Count how many times Yuhan reasserts a position after pushback",
           "Note whether the VCs' tone shifts when Hayden stays calm versus when Hayden pushes",
@@ -406,7 +406,7 @@ export const PEOPLE: Person[] = [
     ],
     tryThis: [
       {
-        when: "As Hayden in Round 2",
+        when: "As Hayden in round 2",
         items: [
           "The VCs have outstanding questions and Hayden has the most riding on the answers. The role is a direct test of your first goal. Slow your pace by a third and let silences sit",
           "Before disagreeing with a VC, restate their concern in one sentence so they hear it landed. Then give your view",
@@ -415,7 +415,7 @@ export const PEOPLE: Person[] = [
         ],
       },
       {
-        when: "Observing Round 1",
+        when: "Observing round 1",
         items: [
           "Note the exact moments the VCs seemed to warm up or cool down toward Hayden, and what Minyoung did right before",
           "Track what is still unresolved at the end of Round 1. That is your opening",
@@ -578,7 +578,7 @@ const COMMON_LAST: CheckItem[] = [
   { id: "video", title: "Watch the short video on playing yourself in a role play", detail: "Linked from the Week 5 Required Prep page on Canvas.", source: "canvas" },
   { id: "assessment", title: "Submit the Team Assessment on this site", detail: "The form is in Individual view. Takes about ten minutes. No paper needed on Wednesday.", source: "canvas" },
   { id: "rehearse", title: "Rehearse your 2.5 minute share out once", detail: "Your 2 top and 2 bottom areas and a brief explanation of why you chose them.", source: "canvas" },
-  { id: "tpr", title: "Skim the TPR Model from Week 3", detail: "Task, Process, Relationship. Useful vocabulary for the discussion.", source: "canvas" },
+  { id: "tpr", title: "Skim the TPR Model from week 3", detail: "Task, Process, Relationship. Useful vocabulary for the discussion.", source: "canvas" },
 ];
 
 const ROLE_ITEMS: Record<string, CheckItem[]> = {

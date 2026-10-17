@@ -200,7 +200,7 @@ export default function LeaderView({ data, code }: { data: Payload; code: string
               )}
             </div>
             <div className="card" style={{ marginTop: 14 }}>
-              <h3>Playing Casey in Round 1</h3>
+              <h3>Playing Casey in round 1</h3>
               <ul>
                 <li>Open with Arrow's assessment of the plan and the technical execution. Speak first</li>
                 <li>Hand to Vanessa (Quinn) for the feedback on each co-founder and the concerns about Hayden</li>

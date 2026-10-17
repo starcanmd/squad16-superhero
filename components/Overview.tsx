@@ -13,7 +13,7 @@ export default function Overview() {
         <div>
           <div className="eyebrow">{LAB.course}</div>
           <h1 className="serif">
-            Superhero View Case <em>and</em> Team Assessment
+            Superhero View case <em>and</em> team assessment
           </h1>
           <p>
             Nightwalkers, you are summoned for our next Lead Lab on {LAB.date}. We will spend 105 minutes together,

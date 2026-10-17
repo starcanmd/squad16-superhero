@@ -1,7 +1,7 @@
 // Content visible to anyone who opens the site. Nothing role-confidential lives here.
 
 export const LAB = {
-  title: "Superhero View Case and Team Assessment",
+  title: "Superhero View case and team assessment",
   course: "OB 209 Leadership Labs, Fall 2026, Week 5",
   squad: "Nightwalkers",
   date: "Wednesday, October 21, 2026",
@@ -45,7 +45,7 @@ export const AGENDA: AgendaItem[] = [
   {
     id: "r1",
     part: 1,
-    label: "Role play, Round 1",
+    label: "Role play, round 1",
     minutes: 12,
     detail: [
       "Ren (Yash) and Hayden (Minyoung) meet Casey (Serim) and Quinn (Vanessa). Cam, Yuhan, and Ellis observe their counterparts and take notes",
@@ -75,7 +75,7 @@ export const AGENDA: AgendaItem[] = [
   {
     id: "r2",
     part: 1,
-    label: "Role play, Round 2",
+    label: "Role play, round 2",
     minutes: 12,
     detail: [
       "Ren (Cam) and Hayden (Yuhan) meet Casey (Ellis) and Quinn (Vanessa). Yash, Minyoung, and Serim observe their counterparts and take notes",
@@ -145,7 +145,7 @@ export const AGENDA: AgendaItem[] = [
   {
     id: "mlfb",
     part: 2,
-    label: "Feedback to Meeting Lead (ML)",
+    label: "Feedback to meeting lead (ML)",
     minutes: 5,
     detail: [
       {
