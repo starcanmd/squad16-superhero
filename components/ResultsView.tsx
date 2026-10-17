@@ -93,13 +93,20 @@ export default function ResultsView({ code }: { code: string }) {
       </section>
 
       <section className="section wrap">
-        <div className="section-head">
-          <h2 className="serif">Every item</h2>
-          <span className="meta">Green strength, rose improve, grey not sure</span>
+        <div className="section-head stacked">
+          <h2 className="serif">Items from the Team Assessment</h2>
+          <p className="subtitle">
+            Each bar shows how the squad rated that item. Green is the share who called it a strength, rose the share who
+            said it needs improvement, grey the share who were not sure. The numbers on the right are the counts in the
+            same order.
+          </p>
         </div>
         {ASSESSMENT.map((cat) => (
           <div key={cat.key} className="card" style={{ marginBottom: 12 }}>
-            <h3>{cat.label}</h3>
+            <div className="cat-head">
+              <span className="cat-label">{cat.label}</span>
+              <span className="cat-q">{cat.question}</span>
+            </div>
             {cat.items.map((it) => {
               const c = counts[it.id];
               const tot = c.S + c.I + c.N || 1;

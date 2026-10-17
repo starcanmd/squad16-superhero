@@ -457,3 +457,9 @@ h1, h2, h3, h4, .card h3, .agenda-row h3, .task h3, .goal h4, .tally-item .name,
 .warn { color: var(--rose); }
 .step { font-size: 15px; }
 table.roster td { font-size: 15px; color: var(--body-color); }
+
+/* Assessment category header: label and question in the green small caps subheader style */
+.cat-head { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: baseline; margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid var(--stroke); }
+.cat-label, .cat-q { font-family: var(--sans); font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green); }
+.cat-q { font-weight: 500; }
+.rate-row:first-of-type, .bar-row:first-of-type { border-top: none; }

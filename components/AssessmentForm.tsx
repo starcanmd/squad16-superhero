@@ -125,8 +125,10 @@ export default function AssessmentForm({
 
       {ASSESSMENT.map((cat) => (
         <div key={cat.key} className="card" style={{ marginBottom: 12 }}>
-          <h3>{cat.label}</h3>
-          <p style={{ marginBottom: 10 }}>{cat.question}</p>
+          <div className="cat-head">
+            <span className="cat-label">{cat.label}</span>
+            <span className="cat-q">{cat.question}</span>
+          </div>
           {cat.items.map((it) => (
             <div key={it.id} className="rate-row">
               <span className="rate-text">{it.text}</span>
