@@ -28,8 +28,7 @@ export default function Overview() {
           </p>
           <p>Come ready to play and have fun! 🦸⭐</p>
           <p className="ps">
-            P.S. Feel free to bring one prop for your character if you&apos;d like. A vest is a complete VC costume, and a
-            hoodie will do for a founder.
+            P.S. Feel free to bring one prop for your character if you&apos;d like.
           </p>
         </div>
         <figure className="hero-photo">
