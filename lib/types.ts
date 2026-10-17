@@ -25,6 +25,7 @@ export type SafePerson = {
   firstName: string;
   side: "vc" | "cofounder";
   isLead?: boolean;
+  photo?: string;
   character: string;
   playingRound: 1 | 2 | "both";
   partner: string;

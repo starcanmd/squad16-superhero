@@ -28,7 +28,10 @@ export default function MyView({
           <div className="card">
             <div className="label">You play</div>
             <div className="big">{person.character}</div>
-            <p>{person.roleSummary}</p>
+            <div className={person.photo ? "role-body with-photo" : "role-body"}>
+              <p>{person.roleSummary}</p>
+              {person.photo && <img className="headshot" src={person.photo} alt={person.name} />}
+            </div>
           </div>
           <div className="card warm">
             <div className="label">How the 45 minutes run</div>

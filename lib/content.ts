@@ -27,6 +27,7 @@ export type Person = {
   firstName: string;
   email: string;
   code: string; // private access code, handed to each person directly
+  photo?: string; // path under /public, square headshot
   side: Side;
   isLead?: boolean;
   character: string; // the character they play
@@ -103,6 +104,7 @@ export const PEOPLE: Person[] = [
   },
   {
     key: "ellis",
+    photo: "/people/ellis.jpg",
     code: "NW-7ESHBM",
     name: "Ellis Wilder",
     firstName: "Ellis",
