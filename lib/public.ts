@@ -106,7 +106,7 @@ export const AGENDA: AgendaItem[] = [
     part: 2,
     label: "Objectives and agenda",
     minutes: 2,
-    detail: ["Review objectives and agenda for the Team Assessment"],
+    detail: ["Review objectives and agenda for the team assessment"],
     leadNotes: ["Press RECORD, reposition camera, squad tent on the table"],
   },
   {

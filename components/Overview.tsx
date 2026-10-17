@@ -16,7 +16,7 @@ export default function Overview() {
             Superhero View case <em>and</em> team assessment
           </h1>
           <p>
-            Nightwalkers, you are summoned for our next Lead Lab on {LAB.date}. We will spend 105 minutes together,
+            Nightwalkers, you are summoned for our next lead lab on {LAB.date}. We will spend 105 minutes together,
             split into two parts. In the first part, we are going to come to an agreement over seed funding. Some of us
             will play the founders who need the money, some of us will play the VCs who have doubts, and the rest will
             watch closely and give feedback. In the second part, we turn the lens on ourselves and talk about how this
