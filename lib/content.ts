@@ -212,7 +212,7 @@ export const PEOPLE: Person[] = [
     playingRound: 1,
     partner: "Cam Zahner",
     roleSummary:
-      "You play Ren in round 1 with Minyoung as Hayden. Cam observes you and tags in as Ren for round 2. The VCs are Casey (Serim) and Quinn (Vanessa).",
+      "You play Ren in round 1 with Minyoung as Hayden. Cam observes you and tags in as Ren for round 2. The VCs in round 1 are Casey (Serim) and Quinn (Vanessa).",
     goals: [
       {
         title: "Balance my action bias",
@@ -337,7 +337,7 @@ export const PEOPLE: Person[] = [
     playingRound: 1,
     partner: "Yuhan Wang",
     roleSummary:
-      "You play Hayden in round 1 with Yash as Ren. Yuhan observes you and tags in as Hayden for round 2. The VCs are Casey (Serim) and Quinn (Vanessa). Hayden is the CEO and the one who has to land the funding.",
+      "You play Hayden in round 1 with Yash as Ren. Yuhan observes you and tags in as Hayden for round 2. Hayden is the CEO and the one who has to land the funding. The VCs in round 1 are Casey (Serim) and Quinn (Vanessa).",
     goals: [
       {
         title: "Assert my opinion when in direct disagreement",
