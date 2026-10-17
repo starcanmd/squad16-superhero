@@ -156,6 +156,7 @@ export const PEOPLE: Person[] = [
   },
   {
     key: "vanessa",
+    photo: "/people/vanessa.jpg",
     code: "NW-NZDE7V",
     name: "Vanessa Sims",
     firstName: "Vanessa",
