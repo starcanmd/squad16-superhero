@@ -141,7 +141,7 @@ export const PEOPLE: Person[] = [
         ],
       },
       {
-        when: "Observing round 1",
+        when: "As the feedback partner in round 1",
         items: [
           "Note each time Serim states a disagreement and whether she held it through pushback",
           "Track which VC concerns got raised and which are still open, so you know what round 2 has to close",
@@ -257,7 +257,7 @@ export const PEOPLE: Person[] = [
         ],
       },
       {
-        when: "Observing round 2",
+        when: "As the feedback partner in round 2",
         items: [
           "Note whether Cam slowed down to ask before advocating, since that is also your goal",
           "Track Cam's posture under pressure so you both get data on the same tell",
@@ -309,7 +309,7 @@ export const PEOPLE: Person[] = [
         ],
       },
       {
-        when: "Observing round 1",
+        when: "As the feedback partner in round 1",
         items: [
           "Write down the two moments where Ren had the most leverage and whether Yash used them",
           "Notice how the VCs treat Ren versus Hayden. That shapes your round 2",
@@ -359,7 +359,7 @@ export const PEOPLE: Person[] = [
         ],
       },
       {
-        when: "Observing round 2",
+        when: "As the feedback partner in round 2",
         items: [
           "Count how many times Yuhan reasserts a position after pushback",
           "Note whether the VCs' tone shifts when Hayden stays calm versus when Hayden pushes",
@@ -415,7 +415,7 @@ export const PEOPLE: Person[] = [
         ],
       },
       {
-        when: "Observing round 1",
+        when: "As the feedback partner in round 1",
         items: [
           "Note the exact moments the VCs seemed to warm up or cool down toward Hayden, and what Minyoung did right before",
           "Track what is still unresolved at the end of round 1. That is your opening",
