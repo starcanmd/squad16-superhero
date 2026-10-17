@@ -73,7 +73,7 @@ export default function MyView({
         </div>
         <div className="grid grid-2">
           {person.tryThis.map((t) => (
-            <div key={t.when} className={`card ${t.when.startsWith("As") ? "yellow" : ""}`}>
+            <div key={t.when} className="card">
               <h3>{t.when}</h3>
               <ul>
                 {t.items.map((i) => (
@@ -82,7 +82,7 @@ export default function MyView({
               </ul>
             </div>
           ))}
-          <div className="card green">
+          <div className="card">
             <h3>{both ? "Settle with Serim and Ellis" : `Ask ${partnerFirst} to`}</h3>
             <ul>
               {person.askYourPartner.map((i) => (
