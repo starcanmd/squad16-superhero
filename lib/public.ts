@@ -105,10 +105,10 @@ export const AGENDA: AgendaItem[] = [
   },
   {
     id: "pulse",
-    part: 1,
+    part: 2,
     label: "Fellow's pulse check",
     minutes: 5,
-    detail: ["Vanessa takes the squad's pulse after the role play, before we move to part 2"],
+    detail: ["Vanessa helps us cool down with a breathing exercise and shares where we are in the quarter"],
   },
   {
     id: "obj",
