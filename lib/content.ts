@@ -166,7 +166,7 @@ export const PEOPLE: Person[] = [
     playingRound: "both",
     partner: "Serim Tarcan and Ellis Wilder",
     roleSummary:
-      "You play Quinn in both rounds, so you are the thread of continuity in the meeting. Serim plays Casey in round 1 and Ellis tags in as Casey for round 2. The co-founders are Ren (Yash) and Hayden (Minyoung) in round 1, Ren (Cam) and Hayden (Yuhan) in round 2. You also close the lab with the fellow's wrap up.",
+      "You play Quinn in both rounds, so you are the thread of continuity in the meeting. Serim plays Casey in round 1 and Ellis tags in as Casey for round 2. The co-founders are Ren (Yash) and Hayden (Minyoung) in round 1, Ren (Cam) and Hayden (Yuhan) in round 2. You also run the fellow's pulse check between the two parts.",
     goals: [],
     tryThis: [
       {
@@ -197,7 +197,7 @@ export const PEOPLE: Person[] = [
       "Read both case documents, the VC version and the Co-Founders version",
       "Review the Agenda for Lab page on Canvas",
       "Participate in the team assessment as a squad member. Complete the team assessment and bring your top 2 strengths and top 2 areas to improve",
-      "Close the lab with a 5-minute wrap up",
+      "Run the 5-minute pulse check between the two parts",
     ],
   },
   {

@@ -104,6 +104,13 @@ export const AGENDA: AgendaItem[] = [
     leadNotes: ["Call the de-role explicitly before anyone speaks", "Ask the squad to take a few breaths before Part 2"],
   },
   {
+    id: "pulse",
+    part: 1,
+    label: "Fellow's pulse check",
+    minutes: 5,
+    detail: ["Vanessa takes the squad's pulse after the role play, before we move to part 2"],
+  },
+  {
     id: "obj",
     part: 2,
     label: "Objectives and agenda",
@@ -155,13 +162,6 @@ export const AGENDA: AgendaItem[] = [
         sub: ["What did the ML do well in running the lab this week?", "What can the ML improve on?"],
       },
     ],
-  },
-  {
-    id: "wrap",
-    part: 2,
-    label: "Fellow's wrap up",
-    minutes: 5,
-    detail: ["Vanessa closes the lab"],
   },
 ];
 
