@@ -110,7 +110,7 @@ export default function TimerView() {
       </section>
 
       <section className="section wrap">
-        <div className="grid grid-2">
+        <div className="grid">
           <div>
             <div className="label">Run of show</div>
             <div className="steps">
@@ -122,28 +122,6 @@ export default function TimerView() {
                   <span />
                 </div>
               ))}
-            </div>
-          </div>
-          <div>
-            <div className="label">Right now</div>
-            <div className="card">
-              <h3>{step.label}</h3>
-              <ul>
-                {step.detail.map((d) =>
-                  typeof d === "string" ? (
-                    <li key={d}>{d}</li>
-                  ) : (
-                    <li key={d.text}>
-                      {d.text}
-                      <ul>
-                        {d.sub.map((x) => (
-                          <li key={x}>{x}</li>
-                        ))}
-                      </ul>
-                    </li>
-                  ),
-                )}
-              </ul>
             </div>
           </div>
         </div>
