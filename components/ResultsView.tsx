@@ -1,6 +1,6 @@
 "use client";
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { ASSESSMENT, ITEM_TEXT, type Rating } from "@/lib/public";
+import { ASSESSMENT, ITEM_TEXT, type Rating, ACTION_PLAN } from "@/lib/public";
 import type { Results } from "@/lib/types";
 
 export default function ResultsView({ code }: { code: string }) {
@@ -73,6 +73,36 @@ export default function ResultsView({ code }: { code: string }) {
             Upstash Redis in the Vercel Storage tab. See the README.
           </p>
         )}
+      </section>
+
+      <section className="section wrap">
+        <div className="section-head stacked">
+          <h2 className="serif">Our action plan</h2>
+          <p className="subtitle">What we agreed in the week 5 lab, for the squad and for each of us.</p>
+        </div>
+        <div className="grid grid-2">
+          {ACTION_PLAN.map((a) => (
+            <div key={a.title} className="card">
+              <div className="label">{a.kind}</div>
+              <h3>{a.title}</h3>
+              <p style={{ marginTop: 6, color: "var(--ink-3)", fontSize: 15 }}>
+                From the assessment: {a.items.map((i) => `"${i}"`).join(" and ")}
+              </p>
+              <div className="label" style={{ marginTop: 14 }}>As a squad</div>
+              <ul style={{ marginTop: 0 }}>
+                {a.squad.map((i) => (
+                  <li key={i}>{i}</li>
+                ))}
+              </ul>
+              <div className="label" style={{ marginTop: 12 }}>As individual members</div>
+              <ul style={{ marginTop: 0 }}>
+                {a.individual.map((i) => (
+                  <li key={i}>{i}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </section>
 
       <section className="section wrap">
