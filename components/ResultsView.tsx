@@ -88,7 +88,7 @@ export default function ResultsView({ code }: { code: string }) {
               <p style={{ marginTop: 6, color: "var(--ink-3)", fontSize: 15 }}>
                 From the assessment: {a.items.map((i) => `"${i}"`).join(" and ")}
               </p>
-              <div className="label" style={{ marginTop: 14 }}>As the squad</div>
+              <div className="label" style={{ marginTop: 14 }}>As a squad</div>
               <ul style={{ marginTop: 0 }}>
                 {a.squad.map((i) =>
                   typeof i === "string" ? (
