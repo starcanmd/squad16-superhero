@@ -345,7 +345,7 @@ export const ACTION_PLAN: { kind: string; title: string; items: string[]; squad:
       "Write personal leadership goal(s) for the day on the board before every meeting",
       "Talk with Vanessa about how to reach your leadership goals",
       "Go beyond your feedback partner and ask for & give feedback openly",
-      "Pair feedback with a solution or a problem solving strategy",
+      "Pair feedback you give with a solution or a problem solving strategy",
     ],
   },
   {
@@ -356,7 +356,7 @@ export const ACTION_PLAN: { kind: string; title: string; items: string[]; squad:
       {
         text: "Assign a facilitator, someone other than the meeting lead, for each meeting and rotate the facilitator role",
         sub: [
-          "The facilitator sets the structure, tracks the goal, ties the conversation together, and moves on with assertion so we make the most of our time",
+          "The facilitator sets the structure, enables collectively picking a goal, tracks the goal, ties the conversation together, and moves on with assertion so we make the most of our time",
         ],
       },
       "Timebox each discussion, with the facilitator suggesting the time limits",
