@@ -328,7 +328,8 @@ export type Submission = {
 };
 
 // Action plan agreed in the week 5 lab, from the team assessment discussion.
-export const ACTION_PLAN = [
+export type PlanItem = string | { text: string; sub: string[] };
+export const ACTION_PLAN: { kind: string; title: string; items: string[]; squad: PlanItem[]; individual: PlanItem[] }[] = [
   {
     kind: "Area of strength",
     title: "Commitment, engagement, and attention to each other's leadership goals",
@@ -337,28 +338,29 @@ export const ACTION_PLAN = [
       "All squad members pay attention to each other's Leadership Goals",
     ],
     squad: [
-      "Write each person's leadership goals on the board before every meeting",
       "Use the group chat for feedback, voice notes welcome",
-      "Get dinner together",
+      "Spend more time together outside classroom (e.g., get dinner together)",
     ],
     individual: [
-      "Talk with Vanessa about how to reach your goals",
-      "Give and ask for feedback openly, beyond your feedback partner",
+      "Write personal leadership goal(s) for the day on the board before every meeting",
+      "Talk with Vanessa about how to reach your leadership goals",
+      "Go beyond your feedback partner and ask for & give feedback openly",
       "Pair feedback with a solution or a problem solving strategy",
     ],
   },
   {
     kind: "Area of improvement",
-    title: "Decision making processes",
+    title: "Effective decision making processes",
     items: ["We have effective decision making processes"],
     squad: [
-      "Assign a facilitator for each meeting, someone other than the meeting lead",
-      "The facilitator sets the structure, tracks the goal, ties the conversation together, and calls the shots so we make the most of our time",
+      {
+        text: "Assign a facilitator, someone other than the meeting lead, for each meeting and rotate the facilitator role",
+        sub: [
+          "The facilitator sets the structure, tracks the goal, ties the conversation together, and moves on with assertion so we make the most of our time",
+        ],
+      },
       "Timebox each discussion, with the facilitator suggesting the time limits",
     ],
-    individual: [
-      "Spend less time on process. Pick a goal and move on it with assertion",
-      "Respect the timebox and back the facilitator's calls",
-    ],
+    individual: ["Respect the timebox and back the facilitator's calls"],
   },
 ];

@@ -88,17 +88,39 @@ export default function ResultsView({ code }: { code: string }) {
               <p style={{ marginTop: 6, color: "var(--ink-3)", fontSize: 15 }}>
                 From the assessment: {a.items.map((i) => `"${i}"`).join(" and ")}
               </p>
-              <div className="label" style={{ marginTop: 14 }}>As a squad</div>
+              <div className="label" style={{ marginTop: 14 }}>As the squad</div>
               <ul style={{ marginTop: 0 }}>
-                {a.squad.map((i) => (
-                  <li key={i}>{i}</li>
-                ))}
+                {a.squad.map((i) =>
+                  typeof i === "string" ? (
+                    <li key={i}>{i}</li>
+                  ) : (
+                    <li key={i.text}>
+                      {i.text}
+                      <ul>
+                        {i.sub.map((x) => (
+                          <li key={x}>{x}</li>
+                        ))}
+                      </ul>
+                    </li>
+                  ),
+                )}
               </ul>
               <div className="label" style={{ marginTop: 12 }}>As individual members</div>
               <ul style={{ marginTop: 0 }}>
-                {a.individual.map((i) => (
-                  <li key={i}>{i}</li>
-                ))}
+                {a.individual.map((i) =>
+                  typeof i === "string" ? (
+                    <li key={i}>{i}</li>
+                  ) : (
+                    <li key={i.text}>
+                      {i.text}
+                      <ul>
+                        {i.sub.map((x) => (
+                          <li key={x}>{x}</li>
+                        ))}
+                      </ul>
+                    </li>
+                  ),
+                )}
               </ul>
             </div>
           ))}
